@@ -1,0 +1,2 @@
+LINK - https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/description/?envType=daily-question&envId=2026-02-28
+[1680. Concatenation of Consecutive Binary Numbers](../LEETCODE/1680. Concatenation of Consecutive Binary Numbers.md)
