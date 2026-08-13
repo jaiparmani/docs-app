@@ -12,10 +12,10 @@ A separate track from system-design-notes's distributed-systems LLD (shard route
 1. [Day 1 - SOLID Principles (LLD)](Day 1 - SOLID Principles (LLD).md) — the five principles every pattern and every "what if we need to add X" follow-up is actually testing.
 2. [Day 2 - Strategy Pattern (LLD)](Day 2 - Strategy Pattern (LLD).md) — swapping an algorithm's behavior without touching the code that uses it.
 3. [Day 3 - State Pattern (LLD)](Day 3 - State Pattern (LLD).md) — turning "what can this object legally do right now" into an explicit, extensible class hierarchy instead of a status flag.
+4. [Day 4 - Factory and Builder Patterns (LLD)](Day 4 - Factory and Builder Patterns (LLD).md) — patterns about *how objects get created*.
+5. [Day 5 - Observer Pattern (LLD)](Day 5 - Observer Pattern (LLD).md) — how a subject notifies many dependents about a change without knowing their concrete types.
 
 **Not yet written — next in sequence:**
-4. Factory & Builder — patterns about *how objects get created*.
-5. Observer — patterns about *how objects react to change without tight coupling*.
 6. Adapter, Decorator, Facade, Composite — patterns about *how objects are composed*.
 7. Applied: Design a Parking Lot (Strategy + Factory).
 8. Applied: Design an Elevator System (State + Strategy).

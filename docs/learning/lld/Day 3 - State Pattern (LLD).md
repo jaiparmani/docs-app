@@ -114,4 +114,4 @@ The question that separates "knows the GoF diagram" from "actually gets it": *"W
 An `ElevatorState` interface will need states like `Idle`, `MovingUp`, `MovingDown`, `DoorsOpen`. Name one transition that should be *illegal* (i.e., a state whose method should reject a call) and which state should reject it.
 
 ## Tomorrow
-Not yet written — Factory & Builder: patterns about *how objects get created*, next in the [roadmap](Day-by-Day Roadmap.md).
+Day 4 — Factory & Builder: patterns about *how objects get created*.
