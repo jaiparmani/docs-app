@@ -7,15 +7,14 @@ When a downstream service starts failing, retrying it endlessly (or worse, pilin
 A state machine — **CLOSED** (normal, requests flow through) → **OPEN** (failing fast, requests rejected immediately without calling downstream) → **HALF_OPEN** (a trial request checks if downstream recovered) → back to CLOSED or OPEN.
 
 ## Visual diagram
-```
-     failures exceed threshold
-CLOSED ---------------------------> OPEN
-  ^                                   |
-  |                              timeout elapsed
-  | trial succeeds                    |
-  |                                   v
-  +-------------------------- HALF_OPEN
-                trial fails -> back to OPEN
+```mermaid
+stateDiagram-v2
+    [*] --> CLOSED
+    CLOSED --> OPEN: failures >= threshold
+    OPEN --> HALF_OPEN: timeout elapsed
+    HALF_OPEN --> CLOSED: trial succeeds
+    HALF_OPEN --> OPEN: trial fails
+    OPEN --> OPEN: request rejected (fail fast)
 ```
 
 ## Explanation

@@ -7,21 +7,38 @@ A single-database transaction gives you atomicity for free (ACID). Once "the ord
 **Two-Phase Commit (2PC)** achieves atomicity across services by having a coordinator ask everyone to *prepare* (lock and stage the change), then ask everyone to *commit* only once all have confirmed they're prepared. **Saga** achieves the same business outcome differently: each service commits its own local transaction immediately, and if a later step fails, previously completed steps are undone via explicit **compensating actions**.
 
 ## Visual diagram
+```mermaid
+sequenceDiagram
+    participant C as Coordinator
+    participant O as Order Svc
+    participant P as Payment Svc
+    participant I as Inventory Svc
+    C->>O: Prepare
+    C->>P: Prepare
+    C->>I: Prepare
+    O-->>C: Vote YES
+    P-->>C: Vote YES
+    I-->>C: Vote YES
+    Note over O,I: All locks held until commit
+    C->>O: Commit
+    C->>P: Commit
+    C->>I: Commit
 ```
-2PC:
-  Coordinator -> Prepare -> [Order Svc, Payment Svc, Inventory Svc]
-              <- all vote YES -
-  Coordinator -> Commit -> [Order Svc, Payment Svc, Inventory Svc]
-  (all three hold locks the ENTIRE time between Prepare and Commit)
+*2PC — locks held across the entire round trip.*
 
-Saga:
-  Order Svc: create order (committed immediately)
-  Payment Svc: charge card (committed immediately)
-  Inventory Svc: reserve item -> FAILS (out of stock)
-  -> trigger compensating actions in reverse:
-     Payment Svc: refund charge
-     Order Svc: cancel order
+```mermaid
+sequenceDiagram
+    participant O as Order Svc
+    participant P as Payment Svc
+    participant I as Inventory Svc
+    O->>O: Create order (committed)
+    P->>P: Charge card (committed)
+    I->>I: Reserve item — FAILS (out of stock)
+    Note over P,I: Trigger compensating actions
+    P->>P: Refund charge
+    O->>O: Cancel order
 ```
+*Saga — each step commits immediately; failure triggers compensations in reverse.*
 
 ## Explanation
 - **Why 2PC is rarely used in practice at scale:** every participant holds locks on its data from the moment it says "prepared" until the coordinator's final commit/abort message arrives — if the coordinator crashes or is slow *after* collecting all "yes" votes but *before* sending commit, every participant is stuck holding locks indefinitely, unable to proceed or safely abort on their own (this is the well-known "blocking problem" of 2PC). This directly conflicts with the availability goals most of Days 11–37 have been building toward.
