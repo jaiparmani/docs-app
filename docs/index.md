@@ -37,6 +37,14 @@ from source notes — see the repo's `scripts/sync_docs.py` for what's included.
 
     [:octicons-arrow-right-24: Browse](learning/system-design/index.md)
 
+- :material-shape-outline: **LLD — OOD machine coding**
+
+    ---
+
+    SOLID principles and design patterns, day by day, with a built-in interview question on every topic.
+
+    [:octicons-arrow-right-24: Browse](learning/lld/index.md)
+
 - :material-code-braces: **Problem solving**
 
     ---

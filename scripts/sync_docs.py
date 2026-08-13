@@ -23,6 +23,7 @@ INCLUDE = [
     ("01_Active (Projects + Current Focus)/AWS Certified AI Practitioner - Remaining Lessons", "aws-ai-practitioner-remaining-lessons"),
     ("01_Active (Projects + Current Focus)/AWS Certified Generative AI Developer - Professional (AIP-C01)", "aws-genai-developer-aip-c01"),
     ("01_Active (Projects + Current Focus)/Learning System Design", "system-design"),
+    ("01_Active (Projects + Current Focus)/LLD", "lld"),
     ("02_Life Systems (Areas)/1_Learning/STUDYING/2_Problem Solving", "problem-solving"),
 ]
 
