@@ -1,5 +1,7 @@
 # Day 46 — WebSockets, Long Polling & SSE: Connection Scaling (HLD)
 
+<small>5 min read</small>
+
 ## What we're learning today
 Starts Block D. Every design through Day 45 was request/response: client asks, server answers, connection closes. [07-design-chat-system](../Claude Notes/07-design-chat-system.md) needed something structurally different — the server pushing to a client without being asked first. Today derives that primitive properly.
 

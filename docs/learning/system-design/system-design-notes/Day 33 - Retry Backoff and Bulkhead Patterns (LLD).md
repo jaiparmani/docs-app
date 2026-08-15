@@ -1,5 +1,7 @@
 # Day 33 — Retry, Backoff & Bulkhead Patterns (LLD)
 
+<small>4 min read</small>
+
 ## What we're learning today
 Day 26 gave you the circuit breaker — the "stop calling a failing dependency" pattern. Today fills in the two patterns that sit around it: what to do *before* the breaker trips (retry/backoff) and how to stop one failing dependency from starving resources needed by healthy ones (bulkhead).
 

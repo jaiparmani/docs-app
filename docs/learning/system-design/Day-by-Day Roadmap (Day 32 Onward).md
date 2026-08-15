@@ -4,6 +4,8 @@ tags: [system-design, roadmap]
 
 # Day-by-Day Roadmap — Day 32 Onward
 
+<small>5 min read</small>
+
 Continues [Day 31 - Search Systems and Elasticsearch (HLD)](system-design-notes/Day 31 - Search Systems and Elasticsearch (HLD).md) and [03-design-twitter](Claude Notes/03-design-twitter.md). Same pattern as Days 11–31: an **HLD day** (the concept, the trade-off, why it exists) paired with an **LLD day** (build/trace the actual mechanism), then periodic **Applied Design** checkpoints that force you to combine several days into one real interview-shaped system — same role [03-design-twitter](Claude Notes/03-design-twitter.md) just played for Days 11–31.
 
 Order is deliberate: each block only starts once its prerequisites exist. Don't skip ahead to Uber before geospatial indexing exists, or to Chat before you've done real-time connection scaling — the applied days are where gaps actually surface.

@@ -7,6 +7,8 @@ tasks: [3.2]
 
 # Data Security and Privacy for GenAI
 
+<small>9 min read</small>
+
 ## Core concept
 GenAI introduces a specific privacy problem traditional applications don't have to the same degree: **sensitive data can enter the system through unstructured, unpredictable input** (a user pastes a document containing PII into a chat prompt) and **can leave through unstructured, unpredictable output** (a model reproduces PII it saw in training data or in a retrieved document). Traditional data security controls (encryption, access control) are necessary but not sufficient here — you also need content-aware detection of *what* sensitive data actually is, at both the input and output boundary.
 

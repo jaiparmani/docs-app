@@ -1,5 +1,7 @@
 # Day 25 — Load Balancing & Reverse Proxy (HLD)
 
+<small>3 min read</small>
+
 ## What we're learning today
 You've referenced "Load Balancer" since Day 3 without unpacking it. Today: L4 vs L7, and the algorithms deciding which backend gets each request.
 

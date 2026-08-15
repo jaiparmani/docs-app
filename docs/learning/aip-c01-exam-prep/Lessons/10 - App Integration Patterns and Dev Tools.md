@@ -6,6 +6,8 @@ task: "2.5"
 
 # Application Integration Patterns and Development Tools
 
+<small>8 min read</small>
+
 > **Core idea:** Building a GenAI *application* — not just calling an FM API from a script — needs its own interface patterns and its own developer tooling, and this task is a grab-bag of the specific named tools that cover that gap.
 
 ## The concept, explained

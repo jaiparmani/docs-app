@@ -6,6 +6,8 @@ exam: AIF-C01
 
 # Responsible AI
 
+<small>2 min read</small>
+
 > **Goal:** Design and use AI systems so they are fair, safe, transparent, privacy-aware, and subject to appropriate oversight.
 
 ## Principles and risks

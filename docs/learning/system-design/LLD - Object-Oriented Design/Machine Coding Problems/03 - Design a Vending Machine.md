@@ -5,6 +5,8 @@ difficulty: easy-medium
 
 # Design a Vending Machine
 
+<small>6 min read</small>
+
 **Real prompt:** "Design a vending machine that accepts coins, lets a user select an item, dispenses it, and returns change."
 
 The canonical State pattern problem — smaller and cleaner than [02 - Design an Elevator System](02 - Design an Elevator System.md), deliberately placed right after it so the same pattern is reinforced in a low-noise example before you see it combined with other complexity.

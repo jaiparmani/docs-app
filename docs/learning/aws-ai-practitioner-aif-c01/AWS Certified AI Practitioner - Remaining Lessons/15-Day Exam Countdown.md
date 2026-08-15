@@ -5,6 +5,8 @@ exam: AIF-C01
 
 # 15-Day Exam Countdown
 
+<small>6 min read</small>
+
 You've already done the hard part: lessons 15–37 cover every domain, [22 - Final Revision Checklist](22 - Final Revision Checklist.md) and [32 - Service Selection Drill](32 - Service Selection Drill.md) exist, and [38 - Mock Exam 1](38 - Mock Exam 1.md) gave you one full timed pass. What's left isn't new learning — it's **spaced repetition, mock-exam reps, and closing the specific gaps your mistakes reveal.** This plan assumes ~15 days out. Compress or stretch the day numbers to fit your actual date; the *order* matters more than the exact day count.
 
 ## Domain weights (reuse this to allocate study time)

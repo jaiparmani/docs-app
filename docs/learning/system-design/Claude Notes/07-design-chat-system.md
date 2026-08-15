@@ -6,6 +6,8 @@ difficulty: hard
 
 # Design a Chat System (WhatsApp / Messenger-style)
 
+<small>9 min read</small>
+
 **Real prompt:** "Design a system supporting 1:1 and group messaging, with real-time delivery, offline support, and read receipts/presence."
 
 New primitive: previous applied designs were request/response. This one needs a **persistent, long-lived connection** per online user — the server has to be able to push to a client without the client asking first.

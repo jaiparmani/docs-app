@@ -6,6 +6,8 @@ difficulty: medium-hard
 
 # Design a Notification System (Push + Email + SMS)
 
+<small>7 min read</small>
+
 **Real prompt:** "Design a system that sends notifications to users across push (mobile), email, and SMS, triggered by other services (e.g. 'order shipped', 'someone liked your post')."
 
 This is [03-design-twitter](03-design-twitter.md)'s fan-out problem again, but the "timeline" is replaced by third-party delivery channels you don't control — which changes almost nothing about the fan-out logic and almost everything about the failure handling.

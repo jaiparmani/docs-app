@@ -6,6 +6,8 @@ exam: AIF-C01
 
 # GenAI Lifecycle, Context Engineering, and Multimodal Models
 
+<small>2 min read</small>
+
 > **Core idea:** GenAI success depends on the full lifecycle: the right model, curated context, suitable evaluation, controlled deployment, and feedback—not simply a clever prompt.
 
 ## Learning objectives

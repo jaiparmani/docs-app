@@ -6,6 +6,8 @@ task: "3.1"
 
 # AI Safety and Content Controls
 
+<small>11 min read</small>
+
 > **Core idea:** No single safety control is trusted alone. Every real design layers input filtering, generation-time enforcement, and output validation together — because you have to assume the model will eventually produce something harmful, false, or manipulated, and plan for that instead of hoping it won't.
 
 ## The concept, explained

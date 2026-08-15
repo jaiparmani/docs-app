@@ -4,6 +4,8 @@ tags: [system-design, lld, ood, solid]
 
 # SOLID Principles
 
+<small>6 min read</small>
+
 ## What we're learning today
 Every design pattern in [02 - Creational Design Patterns](02 - Creational Design Patterns.md), [03 - Structural Design Patterns](03 - Structural Design Patterns.md), and [04 - Behavioral Design Patterns](04 - Behavioral Design Patterns.md) exists to satisfy one or more of these five principles. Learn these first, deeply, and patterns stop looking like a memorization list — they start looking like the *obvious* answer to "how do I keep this SOLID."
 

@@ -7,6 +7,8 @@ tasks: [1.1, 1.2]
 
 # Bedrock Model Catalog, Selection & Integration Patterns
 
+<small>9 min read</small>
+
 ## Core concept
 Bedrock's value isn't "managed access to FMs" — you know that from AIF-C01. The AIP-C01 question is: **given a specific business constraint (latency SLA, cost ceiling, regional availability, data residency, need for guaranteed throughput), which model and which invocation pattern satisfies it, and how do you build the integration so the model choice isn't hardcoded into your application?** Model selection at this level is an ongoing architectural decision, not a one-time pick — models get deprecated, cheaper/better options ship constantly, and a production system that can't swap models without a code deploy is already behind.
 

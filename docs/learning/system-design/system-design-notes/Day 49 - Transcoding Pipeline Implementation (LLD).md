@@ -1,5 +1,7 @@
 # Day 49 — Transcoding Pipeline, Sketched (LLD)
 
+<small>6 min read</small>
+
 ## What we're learning today
 Closes Block D. Day 48 assumed multi-resolution, segmented output already existed. Today traces how it's actually produced — the async pipeline turning one raw upload into the manifest-plus-segments structure the player consumes, tying together nearly every pattern from Blocks A–C in one pipeline.
 

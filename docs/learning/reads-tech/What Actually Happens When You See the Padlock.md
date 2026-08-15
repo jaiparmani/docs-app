@@ -4,6 +4,8 @@ tags: [reads, tech, security, tls, networking]
 
 # What Actually Happens When You See the Padlock
 
+<small>6 min read</small>
+
 You type a domain into a browser. Your packets leave your laptop, cross a café's router, a residential ISP, and two or three transit networks you have never heard of, then arrive at a machine you have no prior relationship with. At every hop the operator can read every byte and, with a little more effort, change them. The problem TLS solves is genuinely hard when you state it plainly: **hold a private, tamper-proof conversation with a stranger, over a channel controlled by people who may be hostile, having exchanged no secrets in advance.** The padlock in the address bar summarises a fairly elegant answer to that, and is also routinely misread.
 
 ## Two kinds of encryption, each insufficient alone

@@ -5,6 +5,8 @@ exam: AIP-C01
 
 # Rapid Recall Cram Sheet
 
+<small>5 min read</small>
+
 One page. Read this the morning of the exam and nothing else new. Pulled from every deep note's "Rapid recall" section.
 
 ## Domain 1 — FM Integration, Data, Compliance (31%)

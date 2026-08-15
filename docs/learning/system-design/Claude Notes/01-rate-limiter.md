@@ -6,6 +6,8 @@ difficulty: medium
 
 # Design a Rate Limiter
 
+<small>4 min read</small>
+
 **Real prompt (as usually asked):** "Design a rate limiter for an API gateway that limits each client to N requests per time window."
 
 ## 1. Clarifying Questions (ask these out loud in the interview)

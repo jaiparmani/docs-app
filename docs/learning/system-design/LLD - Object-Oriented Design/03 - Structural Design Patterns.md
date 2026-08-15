@@ -4,6 +4,8 @@ tags: [system-design, lld, ood, design-patterns]
 
 # Structural Design Patterns: Adapter, Decorator, Facade, Composite
 
+<small>6 min read</small>
+
 ## What we're learning today
 [02 - Creational Design Patterns](02 - Creational Design Patterns.md) answered how objects get created. Structural patterns answer how existing objects get **composed** into larger structures — without inheritance explosion, and without forcing incompatible interfaces to pretend they're compatible.
 

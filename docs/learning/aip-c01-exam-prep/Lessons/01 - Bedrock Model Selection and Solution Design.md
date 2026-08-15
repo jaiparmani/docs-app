@@ -6,6 +6,8 @@ task: "1.1, 1.2"
 
 # Bedrock Model Selection & Solution Design
 
+<small>11 min read</small>
+
 > **Core idea:** Model selection is a constrained optimization — capability vs. cost vs. latency vs. context window vs. regional availability — and your architecture must let that choice change without a redeploy.
 
 ## The concept, explained

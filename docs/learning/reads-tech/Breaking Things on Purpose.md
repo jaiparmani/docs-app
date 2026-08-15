@@ -4,6 +4,8 @@ tags: [reads, tech, system-design, reliability, chaos-engineering, netflix, oper
 
 # Breaking Things on Purpose
 
+<small>6 min read</small>
+
 Somewhere in the middle of Netflix's migration from its own data centres to AWS, the engineering organisation arrived at an uncomfortable realisation. They had built a system spread across thousands of instances, in which any individual machine could vanish without warning — because in a cloud environment, machines really do vanish without warning, and no amount of complaining to a provider changes that. Their architecture was designed to tolerate this. The design documents said so. And nobody actually knew whether it was true, because the only evidence would come from an event nobody had scheduled, at a time nobody had chosen, in a configuration nobody had inspected recently.
 
 That gap — between a system that is designed to be resilient and a system that is *known* to be resilient — is the entire subject of chaos engineering. The response Netflix built, Chaos Monkey, is famous enough now to be a punchline: a service that wanders through production and terminates instances at random. It sounds like vandalism dressed up as methodology. The detail that turns it from vandalism into engineering is the scheduling. **Chaos Monkey ran during business hours, on weekdays, when engineers were at their desks, caffeinated, and available.**

@@ -6,6 +6,8 @@ difficulty: hard
 
 # Design Uber (Ride-Hailing: Driver-Rider Matching)
 
+<small>8 min read</small>
+
 **Real prompt:** "Design a system that matches riders with nearby available drivers, tracks driver locations in real time, and handles the request-to-pickup flow."
 
 New primitive not seen in Days 11–31 or the earlier applied notes: **geospatial queries** ("find things near this point") at high write volume. Everything else — matching, consistency, locks — reuses tools you already have.

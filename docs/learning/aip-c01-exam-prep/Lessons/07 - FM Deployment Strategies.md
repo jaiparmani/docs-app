@@ -6,6 +6,8 @@ task: "2.2"
 
 # FM Deployment Strategies
 
+<small>9 min read</small>
+
 > **Core idea:** Serving a large language model in production has a different resource-sizing problem than serving a typical web service — because a single request's cost can vary enormously depending on how much text it involves, in a way that "requests per second" doesn't capture.
 
 ## The concept, explained

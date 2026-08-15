@@ -7,6 +7,8 @@ tasks: [3.1]
 
 # AI Safety and Guardrails: Content Moderation and Hallucination Mitigation
 
+<small>9 min read</small>
+
 ## Core concept
 Task 3.1 is about **defense in depth**: no single control (a guardrail, a prompt instruction, a post-processing filter) is treated as sufficient on its own — the exam expects layered controls at input, generation, and output stages, plus explicit handling for the two GenAI-specific threat classes that don't exist in traditional software: **hallucination** (the model confidently states something false) and **prompt injection/jailbreak** (adversarial input trying to override the model's intended behavior).
 

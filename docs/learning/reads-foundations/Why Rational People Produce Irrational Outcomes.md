@@ -4,6 +4,8 @@ tags: [reads, foundations, game-theory, incentives]
 
 # Why Rational People Produce Irrational Outcomes
 
+<small>6 min read</small>
+
 When you see a group of people producing an obviously bad collective result — a team that won't fix its shared tooling, an industry burning money on advertising that cancels out, a fishery collapsing while everyone involved watches it happen — the instinctive explanation is that somebody is being stupid or selfish.
 
 Usually they aren't. Usually each person is making the choice that is genuinely best for them given what everyone else is doing, and the bad outcome emerges anyway. This is not a paradox. It's the central subject of game theory, and once you can see it, a lot of otherwise baffling human behaviour resolves into something predictable.

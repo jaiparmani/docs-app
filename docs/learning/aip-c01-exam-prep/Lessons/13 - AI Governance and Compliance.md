@@ -6,6 +6,8 @@ task: "3.3"
 
 # AI Governance and Compliance
 
+<small>10 min read</small>
+
 > **Core idea:** Governance is about being able to prove, after the fact, what your system did and why. A GenAI system can work perfectly and still fail an audit, because "it worked" was never the question — "can you demonstrate control over it" is.
 
 ## The concept, explained

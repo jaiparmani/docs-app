@@ -6,6 +6,8 @@ task: "5.2"
 
 # Troubleshooting GenAI Applications
 
+<small>12 min read</small>
+
 > **Core idea:** This is the applied counterpart to everything else in the exam — monitoring tells you something's wrong, evaluation tells you whether quality is acceptable, this task is about diagnosing root cause once you know something's broken. There are five distinct failure categories, and the exam's real test is whether you can correctly classify a symptom into the right one, because the fix genuinely differs across them.
 
 ## The concept, explained

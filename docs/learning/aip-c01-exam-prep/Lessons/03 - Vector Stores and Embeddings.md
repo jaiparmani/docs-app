@@ -6,6 +6,8 @@ task: "1.4"
 
 # Vector Stores and Embeddings
 
+<small>10 min read</small>
+
 > **Core idea:** Vector store choice depends more on your existing infrastructure and your metadata/filtering needs than on raw search-speed benchmarks — and a stale vector store isn't a minor inconvenience, it's a correctness bug.
 
 ## The concept, explained

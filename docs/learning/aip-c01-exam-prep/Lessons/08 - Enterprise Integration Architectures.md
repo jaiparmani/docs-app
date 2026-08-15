@@ -6,6 +6,8 @@ task: "2.3"
 
 # Enterprise Integration Architectures
 
+<small>9 min read</small>
+
 > **Core idea:** Bringing FM capabilities into an existing enterprise isn't a new category of problem — it's the same enterprise integration discipline you already know (loose coupling, federated identity, least privilege) applied to a new capability, plus one genuinely new wrinkle: sometimes the data can't leave the building at all.
 
 ## The concept, explained

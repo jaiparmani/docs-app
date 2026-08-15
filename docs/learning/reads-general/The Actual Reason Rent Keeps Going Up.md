@@ -4,6 +4,8 @@ tags: [reads, economics, housing, cities, policy]
 
 # The Actual Reason Rent Keeps Going Up
 
+<small>7 min read</small>
+
 Every expensive city has its own folk explanation for why it became expensive. In one, it's foreign buyers parking money in empty condos. In another, it's Airbnb hollowing out the rental stock. In a third, it's private equity firms buying single-family homes, or landlords who simply decided to charge more because they could. These stories share a satisfying shape: someone is doing something, and if they stopped, prices would fall.
 
 The trouble isn't that these explanations are false. Most of them describe something real. The trouble is that they're almost all downstream of a more basic condition, and they only become severe when that condition is present. A city with room to build absorbs a wave of investor demand or short-term rentals with a shrug — a few thousand more units get built, and the market moves on. A city that cannot build absorbs the same wave entirely through price. The villain in each story is real; the reason the villain matters so much is structural.

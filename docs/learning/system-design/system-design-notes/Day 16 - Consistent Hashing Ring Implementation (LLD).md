@@ -1,5 +1,7 @@
 # Day 16 — Consistent Hashing Ring Implementation (LLD)
 
+<small>3 min read</small>
+
 ## What we're learning today
 Coding yesterday's ring with virtual nodes — the exact structure behind DynamoDB/Cassandra partitioning.
 

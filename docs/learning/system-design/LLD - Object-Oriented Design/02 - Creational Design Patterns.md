@@ -4,6 +4,8 @@ tags: [system-design, lld, ood, design-patterns]
 
 # Creational Design Patterns: Singleton, Factory, Builder
 
+<small>5 min read</small>
+
 ## What we're learning today
 Creational patterns answer one question: **how does an object get created without the calling code knowing (or caring) about the concrete class or the construction complexity?** This is DIP ([01 - SOLID Principles](01 - SOLID Principles.md)) turned into concrete, reusable recipes.
 

@@ -1,5 +1,7 @@
 # Day 34 — Delivery Semantics (HLD)
 
+<small>5 min read</small>
+
 ## What we're learning today
 Day 24 (idempotency) and Day 28 (Kafka) both quietly relied on "at-least-once" delivery without naming it as a formal category. Today makes the three delivery semantics explicit — this is vocabulary you've needed since Day 24 and will keep needing through every applied design ([04-design-notification-system](../Claude Notes/04-design-notification-system.md), [05-design-job-scheduler](../Claude Notes/05-design-job-scheduler.md)) that promises "effectively-once" behavior.
 

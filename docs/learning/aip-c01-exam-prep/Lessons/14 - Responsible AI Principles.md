@@ -6,6 +6,8 @@ task: "3.4"
 
 # Responsible AI Principles
 
+<small>9 min read</small>
+
 > **Core idea:** Transparency, fairness, and policy compliance aren't abstract values to gesture at — they're concrete engineering practices, each with a specific AWS implementation, and the exam wants the implementation, not the platitude.
 
 ## The concept, explained

@@ -4,6 +4,8 @@ tags: [reads, tech, fundamentals, unicode, text]
 
 # The Mess Underneath Every String You Have Ever Handled
 
+<small>6 min read</small>
+
 A string looks like the simplest type in your language. It is a sequence of characters. You can measure it, slice it, uppercase it, reverse it, compare it. Every one of those operations is more complicated than it appears, and the complexity is not incidental — it is the accumulated weight of every writing system humans have invented, compressed into a type that pretends to be a list.
 
 ## Seven bits and a lot of leftover room

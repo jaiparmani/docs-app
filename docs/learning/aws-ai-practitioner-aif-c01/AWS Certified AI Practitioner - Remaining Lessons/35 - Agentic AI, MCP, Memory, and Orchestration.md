@@ -6,6 +6,8 @@ exam: AIF-C01
 
 # Agentic AI, MCP, Memory, and Orchestration
 
+<small>2 min read</small>
+
 > **Core idea:** Agentic AI extends a model from answering into planning, using approved tools, retaining relevant state, and completing multi-step goals.
 
 ## Learning objectives

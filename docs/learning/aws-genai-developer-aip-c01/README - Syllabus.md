@@ -5,6 +5,8 @@ exam: AIP-C01
 
 # AWS Certified Generative AI Developer – Professional (AIP-C01) — Syllabus
 
+<small>6 min read</small>
+
 > AIF-C01 (AI Practitioner) is done. This is a different, harder exam: 2+ years of production AWS experience and ~1 year of hands-on GenAI experience are the assumed baseline, and the questions are scenario/architecture-driven, not recall-driven. 65 scored questions (+10 unscored), 750/1000 to pass, compensatory scoring across domains (no per-domain minimum).
 
 Source: [official AWS exam guide](https://docs.aws.amazon.com/aws-certification/latest/ai-professional-01/ai-professional-01.html) and its five domain pages.

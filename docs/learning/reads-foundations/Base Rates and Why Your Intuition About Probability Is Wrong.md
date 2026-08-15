@@ -4,6 +4,8 @@ tags: [reads, foundations, reasoning, statistics]
 
 # Base Rates and Why Your Intuition About Probability Is Wrong
 
+<small>6 min read</small>
+
 Here is a question that has been put to doctors, medical students, and statisticians for decades, and which most of them get wrong.
 
 A disease affects 1 in 1,000 people. There is a test for it. The test correctly identifies the disease essentially every time someone has it. It also has a 5% false positive rate — meaning that of healthy people who take it, 5% will be told they have the disease anyway.

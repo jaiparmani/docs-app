@@ -4,6 +4,8 @@ tags: [system-design, lld, ood]
 
 # LLD / Object-Oriented Design — Roadmap
 
+<small>3 min read</small>
+
 Everything in system-design-notes and Claude Notes so far has been **distributed-systems LLD** — implementing a mechanism like a shard router or a Redis lock. This track is different: **classic OOD machine-coding** — the "design a Parking Lot / Elevator / Vending Machine in 45 minutes" round, testing SOLID principles and design patterns through class diagrams and working code, not distributed-systems trade-offs. Common at product companies as a distinct interview stage from HLD system design.
 
 The two tracks share almost nothing except vocabulary overlap ("LLD"). Distributed LLD asks "how does this mechanism behave under concurrency/failure." OOD machine coding asks "is this class hierarchy extensible without modification, and did you reach for the right pattern instead of an if/else ladder."

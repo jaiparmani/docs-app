@@ -4,6 +4,8 @@ tags: [reads, foundations, economics, trade]
 
 # Comparative Advantage Is the Most Counterintuitive Idea in Economics
 
+<small>6 min read</small>
+
 Suppose you are the best surgeon in your city. You are also, as it happens, the fastest typist — nobody else comes close. Should you type your own medical notes?
 
 Obviously not, and everyone knows this instinctively. But notice that the reason is not the obvious one. You aren't delegating because someone else types better. You're delegating despite being better, because **every hour you spend typing is an hour not spent operating**, and that trade is terrible.

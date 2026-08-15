@@ -6,6 +6,8 @@ difficulty: hard
 
 # Design a Distributed Job Scheduler (Cron-as-a-Service)
 
+<small>8 min read</small>
+
 **Real prompt:** "Design a system where clients schedule jobs to run at a specific time (or on a recurring schedule), and the system executes them reliably across a fleet of worker nodes — each job runs exactly once at its trigger time, even if machines crash."
 
 Unlike [03-design-twitter](03-design-twitter.md) and [04-design-notification-system](04-design-notification-system.md), the interesting problem here isn't fan-out — it's **coordination**: many scheduler nodes exist for availability, but a given job must not run zero times or run twice.

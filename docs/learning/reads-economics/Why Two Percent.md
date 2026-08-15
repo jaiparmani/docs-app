@@ -4,6 +4,8 @@ tags: [reads, finance, economics, central-banking, inflation]
 
 # Why Two Percent
 
+<small>6 min read</small>
+
 If you follow financial news at all, you have absorbed the number without ever being told where it came from. The Federal Reserve targets 2 percent inflation. So do the European Central Bank, the Bank of England, the Bank of Japan, the Bank of Canada, and most of the developed world's monetary authorities. It is repeated in press conferences with the tone of a physical constant.
 
 It is not one. It is a judgement call that hardened into a global convention, and the interesting question is not whether 2 is correct — economists genuinely disagree — but why the answer should be a small positive number at all, rather than the intuitively obvious zero.

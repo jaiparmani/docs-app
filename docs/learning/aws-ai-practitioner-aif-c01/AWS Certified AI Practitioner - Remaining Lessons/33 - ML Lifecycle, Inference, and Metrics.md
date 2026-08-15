@@ -6,6 +6,8 @@ exam: AIF-C01
 
 # ML Lifecycle, Inference, and Metrics
 
+<small>2 min read</small>
+
 > **Core idea:** A useful AI solution moves through data, experimentation, training, evaluation, deployment, monitoring, and improvement. Model metrics and business metrics answer different questions.
 
 ## Learning objectives

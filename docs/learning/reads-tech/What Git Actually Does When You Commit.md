@@ -4,6 +4,8 @@ tags: [reads, tech, git, internals]
 
 # What Git Actually Does When You Commit
 
+<small>6 min read</small>
+
 Most people use Git for years with a mental model that goes something like: it saves a snapshot of my changes, remembers what I changed, and lets me go back. That model gets you through daily work fine. But it's wrong in an interesting way, and the actual answer is simpler and stranger than what most people assume.
 
 Git doesn't store changes. It stores complete snapshots of every file, every time, and gets away with it through one clever trick.

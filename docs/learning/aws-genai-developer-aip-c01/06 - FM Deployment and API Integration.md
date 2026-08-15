@@ -7,6 +7,8 @@ tasks: [2.2, 2.4]
 
 # FM Deployment Strategies and API Integration Patterns
 
+<small>10 min read</small>
+
 ## Core concept
 Two related but distinct problems live here: **how do you serve an FM to meet a given performance/cost profile** (Task 2.2), and **how does your application talk to that FM reliably, in real time, at scale** (Task 2.4). Both are "LLMs aren't just another microservice" problems — token-based processing, streaming responses, and highly variable per-request cost/latency break assumptions that hold for typical stateless API deployments.
 

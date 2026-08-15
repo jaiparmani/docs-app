@@ -1,5 +1,7 @@
 # Day 28 — Kafka Producer/Consumer Design (LLD)
 
+<small>4 min read</small>
+
 ## What we're learning today
 Turning yesterday's Kafka concepts into a concrete producer/consumer design — partition key selection and delivery guarantees.
 

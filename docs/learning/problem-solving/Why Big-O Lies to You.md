@@ -4,6 +4,8 @@ tags: [reads, algorithms, complexity, performance, mental-models]
 
 # Why Big-O Lies to You
 
+<small>6 min read</small>
+
 Big-O notation is the first serious abstraction most engineers learn, and like most first abstractions it gets absorbed as a truth about the world rather than as a deliberately lossy summary of one. The notation is not wrong. It is exactly as correct as it claims to be, which is much narrower than the way it gets used. Big-O describes how the cost of an algorithm grows as the input size grows without bound. That is the whole claim. It says nothing about how fast your program runs on the input you actually have, and it was never designed to.
 
 The imprecision is intentional and it is load-bearing. When we say an algorithm is O(n log n), we are asserting that there exists some constant c and some input size n₀ beyond which the running time never exceeds c·n log n. Both of those quantifiers are escape hatches. The constant c can be a thousand. The threshold n₀ can be larger than any input you will ever see. Everything that happens below n₀ is, by definition, outside the claim. Big-O throws away constant factors, throws away lower-order terms, and — most consequentially — assumes that every elementary operation costs the same. An array index, a pointer dereference, a division, a virtual call, a cache miss: in the model, all of them are one unit. In the machine, they differ by three orders of magnitude.

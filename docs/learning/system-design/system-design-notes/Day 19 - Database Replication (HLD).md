@@ -1,5 +1,7 @@
 # Day 19 — Database Replication (HLD)
 
+<small>3 min read</small>
+
 ## What we're learning today
 Indexing (Day 18) made single-node reads fast. Replication is the next lever: scaling reads across multiple machines, and surviving a node failure.
 

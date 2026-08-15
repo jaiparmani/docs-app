@@ -1,5 +1,7 @@
 # Day 51 — Multi-Region & Disaster Recovery (HLD)
 
+<small>7 min read</small>
+
 ## What we're learning today
 Closes the roadmap. Every failure scenario since Day 19 asked "what if this node dies." Today asks the same question at the largest reasonable blast radius: what if an entire AWS region — power, network, everything — goes away. This is where every idea in the roadmap (replication, consensus, CAP, sharding) gets applied at one more level of scale.
 

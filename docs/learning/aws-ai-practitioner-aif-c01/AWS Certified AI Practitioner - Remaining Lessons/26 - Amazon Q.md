@@ -6,6 +6,8 @@ exam: AIF-C01
 
 # Amazon Q
 
+<small>2 min read</small>
+
 > **Core idea:** Amazon Q provides generative-AI assistance for business productivity and software development.
 
 ## Learning objectives

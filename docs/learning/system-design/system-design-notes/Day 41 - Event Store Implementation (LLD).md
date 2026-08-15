@@ -1,5 +1,7 @@
 # Day 41 — Event Store & Replay, Implemented (LLD)
 
+<small>6 min read</small>
+
 ## What we're learning today
 Closes Block B. Day 40 explained why you'd want an event-sourced model. Today builds the two operations that actually make it work: appending events safely, and folding them into a projection efficiently — including the one optimization every real event-sourced system needs (snapshots) once history gets long.
 

@@ -1,5 +1,7 @@
 # Day 26 — Circuit Breaker (LLD)
 
+<small>3 min read</small>
+
 ## What we're learning today
 When a downstream service starts failing, retrying it endlessly (or worse, piling up threads waiting on it) drags your entire system down. The Circuit Breaker pattern stops that cascade.
 

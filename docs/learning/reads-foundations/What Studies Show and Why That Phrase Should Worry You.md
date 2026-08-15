@@ -4,6 +4,8 @@ tags: [reads, foundations, science, reasoning]
 
 # What "Studies Show" and Why That Phrase Should Worry You
 
+<small>6 min read</small>
+
 Sometime around the early 2010s, psychology had a bad decade. Researchers began systematically re-running well-known experiments — famous ones, textbook ones, results that had been cited thousands of times and taught to undergraduates as established fact — and discovered that a substantial fraction of them did not come out the same way twice.
 
 This became known as the replication crisis, and it was not confined to psychology. Similar concerns surfaced in medicine, economics, cancer biology, and elsewhere. It is genuinely one of the more important things to understand about how knowledge gets made, and — this matters — it is not an argument that science is broken.

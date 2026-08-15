@@ -1,5 +1,7 @@
 # Day 35 — Bloom Filters (LLD)
 
+<small>5 min read</small>
+
 ## What we're learning today
 Closes Block A. Day 34 ended on "how do you cheaply check if you've seen this key before" — a Bloom filter is the concrete data structure that answers exactly that, when the set of "seen" keys is too large to store and look up directly.
 

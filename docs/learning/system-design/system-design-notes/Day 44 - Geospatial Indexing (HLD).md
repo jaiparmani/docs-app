@@ -1,5 +1,7 @@
 # Day 44 — Geospatial Indexing (HLD)
 
+<small>5 min read</small>
+
 ## What we're learning today
 [06-design-uber](../Claude Notes/06-design-uber.md) leaned on geohash and quadtrees without deriving them. Today builds that prerequisite properly — a genuinely new access pattern ("find things near this point") that none of Days 11–31's indexing structures (B-Tree, inverted index) are shaped for.
 

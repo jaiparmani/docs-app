@@ -1,5 +1,7 @@
 # Day 21 — Database Sharding & Partitioning (HLD)
 
+<small>4 min read</small>
+
 ## What we're learning today
 Replication (Day 19) scaled reads. It doesn't help when your *write* volume or total data size exceeds what one machine can hold. That's what sharding solves.
 

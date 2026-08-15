@@ -1,5 +1,7 @@
 # Day 17 — CDNs & Edge Caching (HLD)
 
+<small>3 min read</small>
+
 ## What we're learning today
 Redis solved "close to your app server." CDNs solve "close to the user, anywhere in the world" — the last piece of the latency puzzle before a response reaches a browser.
 

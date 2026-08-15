@@ -1,5 +1,7 @@
 # Day 31 — Search Systems & Elasticsearch (HLD)
 
+<small>4 min read</small>
+
 ## What we're learning today
 Closing this arc by tying B+Tree indexing (Day 18), sharding (Day 21), and consistent hashing (Day 15) together into how full-text search actually works at scale.
 

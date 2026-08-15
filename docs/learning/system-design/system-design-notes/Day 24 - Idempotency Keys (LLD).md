@@ -1,5 +1,7 @@
 # Day 24 — Idempotency Keys (LLD)
 
+<small>3 min read</small>
+
 ## What we're learning today
 Direct consequence of Day 23: if your system favors availability, clients *will* retry timed-out requests. Without idempotency, a retried "charge $50" becomes "charge $100."
 

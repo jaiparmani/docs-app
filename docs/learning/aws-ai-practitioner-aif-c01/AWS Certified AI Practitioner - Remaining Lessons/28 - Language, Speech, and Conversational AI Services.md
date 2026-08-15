@@ -6,6 +6,8 @@ exam: AIF-C01
 
 # Language, Speech, and Conversational AI Services
 
+<small>2 min read</small>
+
 > **Core idea:** Match the direction and language task precisely: analyze text, translate it, convert text to speech, convert speech to text, or build an intent-based bot.
 
 ## Learning objectives

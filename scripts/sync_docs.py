@@ -47,6 +47,40 @@ EXCLUDE_PATTERNS = [
 
 WIKILINK_RE = re.compile(r"!?\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|([^\]]+))?\]\]")
 
+# Average adult reading speed for non-fiction prose. Deliberately conservative --
+# these notes are dense, so over-estimating the pace would be unhelpful.
+READING_WPM = 200
+FRONTMATTER_RE = re.compile(r"\A---\n.*?\n---\n", re.DOTALL)
+
+
+def add_reading_time(dst: Path):
+    """Stamp an estimated reading time under each page's H1, so a page can be
+    picked to fit the time actually available. Skips generated index stubs and
+    anything too short for the estimate to mean anything."""
+    for md_file in sorted(dst.rglob("*.md")):
+        if md_file.name == "index.md":
+            continue
+        text = md_file.read_text(encoding="utf-8", errors="ignore")
+        if "min read*" in text:
+            continue
+
+        body = FRONTMATTER_RE.sub("", text)
+        words = len(re.findall(r"\b[\w'-]+\b", body))
+        if words < 300:
+            continue
+        minutes = max(1, round(words / READING_WPM))
+
+        lines = text.split("\n")
+        in_fence = False
+        for i, line in enumerate(lines):
+            if line.lstrip().startswith("```"):
+                in_fence = not in_fence
+                continue
+            if not in_fence and line.startswith("# "):
+                lines.insert(i + 1, f"\n<small>{minutes} min read</small>")
+                md_file.write_text("\n".join(lines), encoding="utf-8")
+                break
+
 
 def is_excluded(path: Path) -> bool:
     return any(path.match(pat) for pat in EXCLUDE_PATTERNS)
@@ -164,6 +198,7 @@ def main():
         if dst.exists():
             convert_wikilinks(dst, DOCS_DIR.parent, name_to_relpath)
             fix_readme_links(dst)
+            add_reading_time(dst)
 
     print("Done.")
 

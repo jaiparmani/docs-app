@@ -6,6 +6,8 @@ task: "1.3"
 
 # Data Validation and Processing Pipelines for FM Consumption
 
+<small>9 min read</small>
+
 > **Core idea:** Garbage in, confident-sounding garbage out. Before data ever reaches an FM, it needs to pass through four distinct steps — validation, type-specific processing, model-specific formatting, and quality enhancement — and each step has a different, purpose-built AWS tool.
 
 ## The concept, explained

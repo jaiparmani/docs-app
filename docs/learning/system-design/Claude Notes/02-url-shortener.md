@@ -6,6 +6,8 @@ difficulty: easy-medium
 
 # Design a URL Shortener (e.g. bit.ly / TinyURL)
 
+<small>4 min read</small>
+
 **Real prompt:** "Design a service that shortens long URLs and redirects short URLs to the original."
 
 Considered "easy" — but most candidates fail it by not going deep enough on the parts below. This is a filter question: interviewers use it to see if you can go past the obvious.

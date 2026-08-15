@@ -7,6 +7,8 @@ tasks: [4.3]
 
 # Observability and Monitoring for GenAI Applications
 
+<small>10 min read</small>
+
 ## Core concept
 Traditional observability answers "is the service up, how fast, how many errors." GenAI observability has to answer a second, harder set of questions on top of that: **is the model's output actually good, is it degrading over time, and why did this specific response come out the way it did.** Task 4.3 is explicitly about building visibility into failure modes that don't exist in traditional systems — hallucination rate, prompt effectiveness, response drift, tool-calling behavior in agents — none of which show up in a standard uptime/latency dashboard.
 

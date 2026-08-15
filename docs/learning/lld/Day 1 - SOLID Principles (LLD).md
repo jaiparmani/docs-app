@@ -1,5 +1,7 @@
 # Day 1 — SOLID Principles (LLD)
 
+<small>5 min read</small>
+
 ## What we're learning today
 Every design pattern you'll learn this track is, underneath, someone applying one of five principles to a recurring problem shape. Learn the principles first and patterns stop looking like memorized recipes — they start looking like the obvious answer to "how do I keep this extensible."
 

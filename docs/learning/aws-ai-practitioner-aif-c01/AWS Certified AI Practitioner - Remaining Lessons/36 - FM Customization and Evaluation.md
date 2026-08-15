@@ -6,6 +6,8 @@ exam: AIF-C01
 
 # FM Customization and Evaluation
 
+<small>2 min read</small>
+
 > **Core idea:** Choose the least costly technique that satisfies the need, then evaluate it against both task quality and business outcomes.
 
 ## Learning objectives

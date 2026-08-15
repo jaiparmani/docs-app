@@ -1,5 +1,7 @@
 # Day 22 — Shard Router (LLD)
 
+<small>3 min read</small>
+
 ## What we're learning today
 Wiring together Day 16's consistent hashing ring with Day 21's sharding concept into a router your application code actually calls.
 

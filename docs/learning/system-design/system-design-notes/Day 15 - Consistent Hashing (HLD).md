@@ -1,5 +1,7 @@
 # Day 15 — Consistent Hashing (HLD)
 
+<small>3 min read</small>
+
 ## What we're learning today
 Every sharded system you'll design from here on — databases, caches, Kafka partitions — depends on this. It's the answer to: "how do you distribute keys across N servers without a full reshuffle every time N changes?"
 

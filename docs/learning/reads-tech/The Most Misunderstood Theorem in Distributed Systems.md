@@ -4,6 +4,8 @@ tags: [reads, tech, system-design, distributed-systems, cap-theorem, consistency
 
 # The Most Misunderstood Theorem in Distributed Systems
 
+<small>6 min read</small>
+
 Few results in computer science have travelled as far, or arrived as badly damaged, as the CAP theorem. It began as a conjecture in a conference keynote by Eric Brewer around the turn of the millennium, was formalised and proved a couple of years later by Seth Gilbert and Nancy Lynch, and then escaped into industry, where it was compressed into a phrase — "consistency, availability, partition tolerance: pick two" — repeated in interviews, database marketing, and architecture reviews by people who would be surprised by what the proof actually claims.
 
 What it claims is narrow and precise. In an asynchronous network where messages between nodes can be lost or arbitrarily delayed, no system can simultaneously guarantee that every request to a non-failing node receives a non-error response and that all responses are linearizable. If the network splits a cluster into two groups that cannot reach each other, and a write arrives at one side, that side faces a genuine dilemma with only two exits. It can accept the write, in which case the other side is now serving stale data and linearizability is gone. Or it can refuse to answer until it can talk to its peers, in which case it has stopped being available. There is no third option, and the proof of this is short enough to fit on a page. That is the whole theorem.

@@ -7,6 +7,8 @@ tasks: [5.2]
 
 # Troubleshooting GenAI Applications
 
+<small>10 min read</small>
+
 ## Core concept
 This note is the applied counterpart to every other note in this folder — [12 - Observability and Monitoring](12 - Observability and Monitoring.md) tells you *that* something is wrong, [13 - Model Evaluation Systems](13 - Model Evaluation Systems.md) tells you *whether* quality is acceptable, this note is about **diagnosing root cause once you know something's broken**. Task 5.2 covers five distinct failure categories (content handling, integration, prompt engineering, retrieval, prompt maintenance) — the exam's implicit test is whether you can correctly classify a described symptom into the right category, because the fix differs meaningfully across them.
 

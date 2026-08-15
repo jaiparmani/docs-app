@@ -1,5 +1,7 @@
 # Day 23 — CAP Theorem & PACELC Revisited (HLD)
 
+<small>4 min read</small>
+
 ## What we're learning today
 You touched CAP briefly on Day 5 (Rate Limiter). Now, with replication, sharding, and consistent hashing under your belt, we go deeper — and add PACELC, the extension interviewers increasingly expect.
 

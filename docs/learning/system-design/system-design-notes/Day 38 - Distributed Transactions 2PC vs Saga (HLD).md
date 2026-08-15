@@ -1,5 +1,7 @@
 # Day 38 — Distributed Transactions: 2PC vs Saga (HLD)
 
+<small>5 min read</small>
+
 ## What we're learning today
 A single-database transaction gives you atomicity for free (ACID). Once "the order" and "the payment" and "the inventory" live in separate services with separate databases, atomicity has to be engineered explicitly. Today covers the two dominant approaches — and why the industry mostly moved away from the first one.
 

@@ -6,6 +6,8 @@ exam: AIF-C01
 
 # Amazon SageMaker AI
 
+<small>2 min read</small>
+
 > **Core idea:** Amazon SageMaker AI supports the broader machine-learning lifecycle: prepare data, build/train/customize models, deploy them, and operate them.
 
 ## Learning objectives

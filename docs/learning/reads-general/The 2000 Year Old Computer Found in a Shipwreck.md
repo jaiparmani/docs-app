@@ -4,6 +4,8 @@ tags: [reads, history, archaeology, technology]
 
 # The 2,000-Year-Old Computer Found in a Shipwreck
 
+<small>7 min read</small>
+
 In 1900, a crew of Greek sponge divers was blown off course near the small island of Antikythera, in the channel between Crete and the Peloponnese. Waiting out the weather, they dove and found a Roman-era shipwreck on the seabed — and in it, the kind of cargo that makes a career: bronze and marble statues, glassware, jewellery, coins. Over the following months, in punishing conditions and at depths that were genuinely dangerous with the equipment of the day, they brought up one of the richest recoveries of ancient art ever made from the sea.
 
 Among the crates that arrived at the National Archaeological Museum in Athens was a lump of corroded bronze and rotted wood, roughly shoebox-sized, that nobody paid much attention to. It looked like debris. It sat there while the museum worked through the statues, which were the obvious prize.

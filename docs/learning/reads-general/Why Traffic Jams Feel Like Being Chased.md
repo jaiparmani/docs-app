@@ -4,6 +4,8 @@ tags: [reads, biology, stress, evolution]
 
 # Why Traffic Jams Feel Like Being Chased
 
+<small>6 min read</small>
+
 You are sitting in stationary traffic. Nothing is happening. No one is hurt, nothing is on fire, and the worst realistic outcome is that you arrive somewhere late and mildly embarrassed. And yet your jaw is tight, your heart is going faster than it should be for a person who is technically seated, and there is a hot restless feeling in your chest that wants you to *do* something — swerve, honk, take the exit, anything. Your body has quietly concluded that you are being hunted.
 
 It is not confused, exactly. It is running a very old program with excellent engineering and a badly outdated input filter.

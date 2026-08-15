@@ -5,6 +5,8 @@ difficulty: medium
 
 # Design a Parking Lot
 
+<small>6 min read</small>
+
 **Real prompt:** "Design a parking lot system that supports multiple vehicle types, multiple spot types, tracks availability, and calculates a parking fee on exit."
 
 The canonical first machine-coding problem — not hard algorithmically, but a dense test of whether you reach for the right patterns unprompted.

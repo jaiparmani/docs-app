@@ -7,6 +7,8 @@ tasks: [1.4]
 
 # Vector Stores and Embeddings for FM Augmentation
 
+<small>8 min read</small>
+
 ## Core concept
 A vector store is only as good as two decisions made upstream of it: **which embedding model** produced the vectors, and **how the data is organized/indexed** for the queries you'll actually run. This exam doesn't test "what is an embedding" — it tests whether you can pick the right storage architecture for a given scale, query pattern, and existing-infrastructure constraint, and whether you understand that a vector store is a **living system requiring maintenance** (stale embeddings are a correctness bug, not a cosmetic issue), not a one-time load-and-forget index.
 

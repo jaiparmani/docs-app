@@ -7,6 +7,8 @@ tasks: [2.1]
 
 # Agentic AI: Agents, Tool Use, MCP, and Multi-Agent Orchestration
 
+<small>9 min read</small>
+
 ## Core concept
 An agent is an FM given **memory, tools, and a reasoning loop** so it can break a task into steps, decide which tool to call at each step, and act on the results — instead of producing one response to one prompt. The AIP-C01 framing is explicitly production-safety-conscious: every skill in Task 2.1 pairs a capability ("give the model autonomy") with a corresponding control ("bound that autonomy so it fails safely"). This is the single most exam-relevant lens for this whole domain: **an agent architecture question is rarely just "how does it work," it's "how does it work, and what stops it from running away."**
 

@@ -6,6 +6,8 @@ task: "4.3"
 
 # Observability and Monitoring for GenAI Applications
 
+<small>11 min read</small>
+
 > **Core idea:** Traditional monitoring answers "is the service up, how fast, how many errors." A GenAI system can score perfectly on every one of those and still be silently producing worse and worse answers — traditional monitoring is completely blind to that, which is exactly the gap this task closes.
 
 ## The concept, explained

@@ -1,5 +1,7 @@
 # Day 43 — Multipart/Resumable Upload, Implemented (LLD)
 
+<small>5 min read</small>
+
 ## What we're learning today
 Day 42 explained why object storage treats objects as immutable wholes. Today builds the client-side mechanism that reconciles that with "how do you reliably get a 2GB file into storage over a flaky connection" — the exact thing [08-design-youtube](../Claude Notes/08-design-youtube.md) referenced but didn't open up.
 

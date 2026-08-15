@@ -6,6 +6,8 @@ exam: AIF-C01
 
 # Bedrock Inference and Model Selection
 
+<small>2 min read</small>
+
 > **Core idea:** Inference is using a pretrained foundation model to produce an output. Choose a model by the business task, modality, quality, latency, context window, and cost.
 
 ## Learning objectives

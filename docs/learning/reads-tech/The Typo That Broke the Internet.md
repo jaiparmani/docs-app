@@ -4,6 +4,8 @@ tags: [reads, tech, engineering-history, aws]
 
 # The Typo That Broke the Internet
 
+<small>5 min read</small>
+
 On the morning of February 28, 2017, an engineer at Amazon Web Services was debugging a slowdown in the billing system for S3, the storage service that quietly underpins a huge chunk of the internet — Slack, Trello, Medium, dozens of news sites, and thousands of businesses nobody's heard of, all keeping their files in S3 buckets scattered across Amazon's US-EAST-1 region in Virginia.
 
 The billing subsystem was running slower than it should. The playbook for this, established and routine, was to take a small number of servers out of the subsystem to free up capacity. The engineer ran the command. It was supposed to remove a small set of servers. Instead, due to how the input was entered, it removed a much larger set than intended — including servers that two other, completely unrelated S3 subsystems depended on to function.

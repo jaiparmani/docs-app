@@ -1,5 +1,7 @@
 # Day 45 — Geohash Proximity Search, Implemented (LLD)
 
+<small>6 min read</small>
+
 ## What we're learning today
 Closes Block C. Day 44 explained geohashing conceptually. Today traces the actual encode → neighbor-lookup → expanding-search logic, the concrete mechanism behind [06-design-uber](../Claude Notes/06-design-uber.md)'s `GEORADIUS` call.
 

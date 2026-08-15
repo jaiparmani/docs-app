@@ -6,6 +6,8 @@ difficulty: hard
 
 # Design Twitter (Post + Follow + Home Timeline)
 
+<small>11 min read</small>
+
 **Real prompt:** "Design a system where users post short text updates, follow other users, and see a home timeline aggregating posts from everyone they follow — roughly in order, at scale."
 
 This is the capstone of the caching → sharding → messaging → consistency arc (Days 11–31). Nothing here is a new primitive — it's those primitives combined under one asymmetric, adversarial constraint: **follower count is a power-law distribution**, and that single fact drives almost every real decision below.

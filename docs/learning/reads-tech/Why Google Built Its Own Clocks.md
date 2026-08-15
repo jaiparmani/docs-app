@@ -4,6 +4,8 @@ tags: [reads, tech, system-design, distributed-systems, databases, spanner, time
 
 # Why Google Built Its Own Clocks
 
+<small>6 min read</small>
+
 There is a particular kind of problem that shows up in every distributed system eventually, and it is deceptively simple to state: two things happened, on two different machines, and you would like to know which happened first. Not approximately. Not usually. Actually first, in a way you can build correctness guarantees on top of.
 
 The obvious answer is to look at the clocks. Machine A says the write landed at 10:00:00.000, machine B says its write landed at 10:00:00.005, therefore A came first. Except that this is not sound reasoning, and the reason it is not sound is one of the more underappreciated facts about computers. **Clocks on different machines disagree, they disagree by amounts you cannot easily bound, and the disagreement changes over time.** Quartz oscillators drift with temperature and age. NTP corrects them, but NTP measures time over a network whose latency is asymmetric and variable, so its corrections carry their own error. Worse, clocks can jump: an NTP step correction can move a machine's clock backwards, which means a naive system can generate a timestamp, then generate an "earlier" one a moment later. Virtualisation compounds this, because a VM can be descheduled for an unbounded interval and wake up with a stale idea of the present. The wall clock is not a shared truth. It is a per-machine opinion that happens to be roughly correlated with everyone else's.

@@ -1,5 +1,7 @@
 # Day 2 — Strategy Pattern (LLD)
 
+<small>4 min read</small>
+
 ## What we're learning today
 Yesterday's `AreaCalculator` fix already *was* Strategy — today it gets a name, and you learn to recognize the shape on sight: "an object needs one of several interchangeable algorithms, and the caller shouldn't need an if/else to pick one."
 

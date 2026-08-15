@@ -5,6 +5,8 @@ exam: AIP-C01
 
 # Service Selection Drill
 
+<small>3 min read</small>
+
 Quick requirement → service lookup. AIP-C01's in-scope surface (~90 services across 13 categories) is far bigger than AIF-C01's — this drill exists because you can't hold it all in working memory without repetition. Cover the right column and test yourself.
 
 ## Model access, customization, deployment

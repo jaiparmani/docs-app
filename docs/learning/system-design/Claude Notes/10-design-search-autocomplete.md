@@ -6,6 +6,8 @@ difficulty: medium
 
 # Design Search Autocomplete (Typeahead Suggestions)
 
+<small>9 min read</small>
+
 **Real prompt:** "As a user types into a search box, suggest the top completions in real time, ranked by popularity."
 
 Smaller in scope than the other applied designs, and deliberately closes this set — it forces you to justify *why neither* of the two indexing structures you've already learned (B-Tree from [Day 18](../system-design-notes/Day 18 - Database Indexing - B-Trees (LLD).md), inverted index from [Day 31](../system-design-notes/Day 31 - Search Systems and Elasticsearch (HLD).md)) is the right fit, and pick a third.

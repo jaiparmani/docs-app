@@ -7,6 +7,8 @@ tasks: [4.2]
 
 # Performance and Latency Optimization for FM Applications
 
+<small>10 min read</small>
+
 ## Core concept
 Task 4.2 is the mirror image of [10 - Cost Optimization](10 - Cost Optimization.md) — same underlying levers (model choice, caching, batching, resource allocation), viewed through the latency/UX lens instead of the cost lens. The exam consistently pairs these two, and a strong answer to a performance question often *names the cost trade-off it's making*, and vice versa — treating them as two views of the same optimization space, not separate problems.
 

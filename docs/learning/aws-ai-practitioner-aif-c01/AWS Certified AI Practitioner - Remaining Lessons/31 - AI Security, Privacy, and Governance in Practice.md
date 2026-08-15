@@ -6,6 +6,8 @@ exam: AIF-C01
 
 # AI Security, Privacy, and Governance in Practice
 
+<small>2 min read</small>
+
 > **Core idea:** Secure AI applications with least privilege, encryption, auditability, data governance, and monitoring—while retaining customer responsibility for configuration and use.
 
 ## Learning objectives

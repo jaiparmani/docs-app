@@ -1,5 +1,7 @@
 # Day 37 — Raft Leader Election, Traced (LLD)
 
+<small>5 min read</small>
+
 ## What we're learning today
 Day 36 explained *why* consensus prevents split-brain. Today traces Raft's actual state machine and message flow so "leader election" stops being a vocabulary word and becomes a mechanism you could reason about node-by-node.
 

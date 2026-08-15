@@ -1,5 +1,7 @@
 # Day 47 — Connection & Session Management at Scale (LLD)
 
+<small>6 min read</small>
+
 ## What we're learning today
 Day 46 identified statefulness as the hard problem. Today builds the actual mechanism — the presence registry and reconnection handling — that makes routing to a stateful, specific connection server actually work, the concrete version of [07-design-chat-system](../Claude Notes/07-design-chat-system.md)'s architecture.
 

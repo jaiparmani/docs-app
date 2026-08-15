@@ -1,5 +1,7 @@
 # Day 27 — Message Queues Deep Dive: Kafka vs RabbitMQ vs SQS (HLD)
 
+<small>4 min read</small>
+
 ## What we're learning today
 Your Notification Service (Day 7-8) used "a queue" abstractly. Today: the real differences between the three you'll be asked to choose between in interviews.
 

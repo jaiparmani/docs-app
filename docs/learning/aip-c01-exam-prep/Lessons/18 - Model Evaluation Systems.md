@@ -6,6 +6,8 @@ task: "5.1"
 
 # Model Evaluation Systems for GenAI
 
+<small>11 min read</small>
+
 > **Core idea:** "Is this a good response" doesn't have a clean objective metric the way traditional ML accuracy does. This task is about building systematic, repeatable evaluation despite that — the opposite of someone eyeballing a few outputs and declaring it looks fine.
 
 ## The concept, explained

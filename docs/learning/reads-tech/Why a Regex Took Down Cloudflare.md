@@ -4,6 +4,8 @@ tags: [reads, tech, engineering-history, incidents, security]
 
 # Why a Regex Took Down Cloudflare
 
+<small>7 min read</small>
+
 On July 2, 2019, a large fraction of the internet returned 502 errors for about half an hour. Cloudflare sits in front of an enormous number of websites as a reverse proxy, so when Cloudflare's HTTP serving path stops serving HTTP, the failure is not localized to one company's users — it is localized to "the web," approximately. Traffic across their global network dropped sharply and stayed down until engineers found the cause and hit a kill switch.
 
 The cause was a deploy to their Web Application Firewall. Specifically, a new managed rule intended to catch inline JavaScript in requests, and specifically, one regular expression inside it. The regex was not malicious, not obviously wrong, and was not caught by the review and testing the change went through. When it hit production it drove CPU utilization to 100% on every machine running the WAF, worldwide, essentially at once. There was no capacity left to serve requests, so requests were not served.

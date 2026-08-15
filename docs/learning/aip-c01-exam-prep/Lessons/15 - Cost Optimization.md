@@ -6,6 +6,8 @@ task: "4.1"
 
 # Cost Optimization for GenAI Workloads
 
+<small>11 min read</small>
+
 > **Core idea:** GenAI cost scales with tokens processed, not requests handled — a genuinely different shape than traditional application cost, and one that makes "how many tokens does this actually need to send" the first question worth asking, before any infrastructure change.
 
 ## The concept, explained

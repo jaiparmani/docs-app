@@ -4,6 +4,8 @@ tags: [reads, investing, finance, history]
 
 # The Grudge That Built Index Investing
 
+<small>7 min read</small>
+
 The most consequential idea in modern personal finance did not arrive as a triumphant insight. It arrived as the consolation prize of a man who had just been fired from the job he expected to hold for life.
 
 Jack Bogle joined Wellington Management as a young man and spent his twenties and thirties climbing it, eventually running the place. Wellington was a conservative shop built around a balanced fund — stocks and bonds, sober allocation, the kind of product that looked increasingly boring as the 1960s went on. That decade produced what the industry later called the go-go years: a bull market in which individual fund managers became famous, aggressive growth funds attracted enormous inflows, and a firm selling prudence looked like a firm selling nothing. Bogle, watching money walk out the door toward flashier competitors, did the thing that ambitious executives do when the market seems to have changed permanently. He bought the trend. Wellington merged with a Boston firm whose young managers ran one of the era's hot performance funds, and Bogle handed a meaningful share of the company to people whose entire edge was that the market had recently gone up. He spent the rest of his life describing that merger publicly as the worst mistake of his career.

@@ -1,5 +1,7 @@
 # Day 20 — Write-Ahead Log (LLD)
 
+<small>3 min read</small>
+
 ## What we're learning today
 The mechanism underneath yesterday's replication and every DB's crash recovery: log the intent before you touch the actual data.
 

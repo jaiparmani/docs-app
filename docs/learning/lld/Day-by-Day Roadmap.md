@@ -4,6 +4,8 @@ tags: [lld, ood]
 
 # LLD — Day-by-Day Roadmap
 
+<small>2 min read</small>
+
 A separate track from system-design-notes's distributed-systems LLD (shard routers, distributed locks — "how does this mechanism behave under concurrency/failure"). This track is classic **OOD machine coding** — the "design a Parking Lot in 45 minutes" interview round, testing SOLID principles and design-pattern recognition through class diagrams and working code. There's already an older [LLD - Object-Oriented Design](../system-design/LLD - Object-Oriented Design/README - Roadmap.md) set of notes; this track covers the same ground from scratch in the Day-N format, with a built-in interview question + collapsible answer on every topic, so it's active recall, not re-reading.
 
 ## Sequence

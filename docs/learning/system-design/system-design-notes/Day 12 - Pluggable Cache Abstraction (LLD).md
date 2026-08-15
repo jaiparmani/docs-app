@@ -1,5 +1,7 @@
 # Day 12 — Pluggable Cache Abstraction (LLD)
 
+<small>3 min read</small>
+
 ## What we're learning today
 Turning yesterday's 4 caching strategies into swappable Java code — same Strategy Pattern you used for Rate Limiter (Day 6) and Feed Ranking (Day 10).
 

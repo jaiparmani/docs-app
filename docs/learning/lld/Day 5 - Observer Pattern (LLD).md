@@ -1,5 +1,7 @@
 # Day 5 — Observer Pattern (LLD)
 
+<small>5 min read</small>
+
 ## What we're learning today
 Every pattern so far involved one object and its own behavior or construction. Observer is the first pattern about **relationships between objects** — specifically, how one object (a subject) notifies many others (observers) about a state change, without the subject needing to know anything concrete about who's listening.
 

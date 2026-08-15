@@ -35,10 +35,14 @@ theme:
     - navigation.instant
     - navigation.instant.progress
     - navigation.tracking
+    - navigation.path
+    - navigation.prune
     - toc.follow
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
+    - content.tooltips
 
 extra_css:
   - stylesheets/custom.css
@@ -68,3 +72,6 @@ plugins:
   - search
   - callouts
   - awesome-pages
+  # Notes already carry `tags:` frontmatter; this turns it into a browsable index.
+  # The listing page is marked inline with <!-- material/tags --> in docs/tags.md.
+  - tags

@@ -7,6 +7,8 @@ tasks: [4.1]
 
 # Cost Optimization for GenAI Workloads
 
+<small>9 min read</small>
+
 ## Core concept
 GenAI cost has a shape traditional application cost doesn't: **cost scales with tokens processed, not just requests handled**, and token count is highly variable per-request in a way request-count-based cost models never had to deal with. This domain is only 12% of the exam by weight but is conceptually dense — Task 4.1's four skills (token efficiency, model selection, throughput/utilization, caching) form a genuinely reusable toolkit you'll reach for in nearly every scenario question across the whole exam, not just dedicated cost questions.
 

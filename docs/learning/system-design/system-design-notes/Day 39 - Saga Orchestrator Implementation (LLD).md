@@ -1,5 +1,7 @@
 # Day 39 — Saga Orchestrator, Implemented (LLD)
 
+<small>5 min read</small>
+
 ## What we're learning today
 Day 38 described Saga conceptually. Today builds the actual orchestrator state machine — the piece of code that knows which steps ran, and exactly which compensations to fire, in what order, when something fails.
 

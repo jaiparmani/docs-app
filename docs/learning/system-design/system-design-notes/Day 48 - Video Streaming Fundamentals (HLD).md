@@ -1,5 +1,7 @@
 # Day 48 — Video Streaming Fundamentals (HLD)
 
+<small>5 min read</small>
+
 ## What we're learning today
 [08-design-youtube](../Claude Notes/08-design-youtube.md) used adaptive bitrate streaming and CDN delivery without deriving either. Today opens up the actual mechanism — how a video becomes many small, independently-requestable segments, and why that's what makes smooth playback under changing network conditions possible at all.
 

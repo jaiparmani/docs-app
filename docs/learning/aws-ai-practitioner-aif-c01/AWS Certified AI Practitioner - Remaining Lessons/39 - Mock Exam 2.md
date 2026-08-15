@@ -6,6 +6,8 @@ exam: AIF-C01
 
 # Mock Exam 2 (65 Questions)
 
+<small>22 min read</small>
+
 > Same domain weighting as [38 - Mock Exam 1](38 - Mock Exam 1.md): Domain 1 – Fundamentals of AI/ML (~20%), Domain 2 – Fundamentals of Generative AI (~24%), Domain 3 – Applications of Foundation Models (~28%), Domain 4 – Guidelines for Responsible AI (~14%), Domain 5 – Security, Compliance & Governance (~14%).
 >
 > Time yourself: 90 minutes. Click each answer to reveal it — don't peek before you've committed to a choice. All 65 questions here are new, not repeats of Mock 1.

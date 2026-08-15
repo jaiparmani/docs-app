@@ -6,6 +6,8 @@ exam: AIF-C01
 
 # AWS AI Services: Use-Case Matching
 
+<small>2 min read</small>
+
 > On the exam, choose the managed service that directly solves the stated business problem.
 
 | Service | Best-fit use case | Key clue |

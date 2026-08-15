@@ -4,6 +4,8 @@ tags: [reads, foundations, economics, money]
 
 # Where Money Actually Comes From
 
+<small>6 min read</small>
+
 Most educated adults carry a mental model of banking that goes roughly like this: savers deposit money at a bank, the bank keeps a fraction in reserve, and lends the rest out to borrowers. Money moves from the people who have it to the people who need it, and the bank takes a cut for arranging the introduction.
 
 This picture is intuitive, widely taught, and substantially wrong about the direction of causation. The Bank of England published a widely-cited explainer in 2014 making this point directly, and it remains one of the more useful things a non-economist can read, precisely because the correct version is so counterintuitive.

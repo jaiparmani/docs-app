@@ -6,6 +6,8 @@ exam: AIF-C01
 
 # Service Selection Drill
 
+<small>2 min read</small>
+
 > **Core idea:** Start with the business outcome. On the exam, the most direct managed AWS service is usually the right answer.
 
 ## Learning objectives

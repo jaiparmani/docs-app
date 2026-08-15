@@ -6,6 +6,8 @@ task: "2.4"
 
 # FM API Integration Patterns
 
+<small>10 min read</small>
+
 > **Core idea:** How your application actually talks to an FM — synchronously or asynchronously, streamed or not, retried carefully or carelessly — matters as much as which model you picked. This task is about the calling conventions.
 
 ## The concept, explained

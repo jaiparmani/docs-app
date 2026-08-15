@@ -1,5 +1,7 @@
 # Day 36 — Leader Election & Consensus (HLD)
 
+<small>5 min read</small>
+
 ## What we're learning today
 Starts Block B — "where seniority begins." Day 29's distributed lock assumed *something* coordinates who holds the lock. Today asks the question one level down: how do a group of equal nodes agree on a single coordinator (leader) with no single point of failure, when any node can crash at any time?
 

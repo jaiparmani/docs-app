@@ -1,5 +1,7 @@
 # Day 11 — Caching Strategies at Scale
 
+<small>4 min read</small>
+
 ## What we're learning today
 You've used Redis three times already (TinyURL redirect cache, Rate Limiter counters, Feed cache). Today we formalize the **decision framework**: which caching strategy to use, and why picking the wrong one silently corrupts data or tanks performance.
 

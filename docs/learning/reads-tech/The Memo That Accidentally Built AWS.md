@@ -4,6 +4,8 @@ tags: [reads, tech, engineering-history, aws, architecture]
 
 # The Memo That Accidentally Built AWS
 
+<small>6 min read</small>
+
 Sometime around 2002, Jeff Bezos sent an internal email to engineering at Amazon. It was short. It was not a strategy document, it did not lay out a product vision, and as far as anyone outside the company can tell, it was never published, leaked in full, or officially confirmed. What we have instead is a paraphrase from memory, written nine years later by Steve Yegge — an engineer who spent several years at Amazon before moving to Google — in a long internal rant about platform thinking that he accidentally posted publicly in 2011. The rant went viral. The memo became canon. It is worth holding that provenance in mind: this is one of the most influential architectural documents in modern computing, and we know it the way we know most oral history, which is imperfectly.
 
 The substance, as Yegge recalled it, ran roughly like this. All teams will expose their data and functionality through service interfaces. Teams must communicate with each other only through those interfaces — no direct linking, no reading another team's data store, no shared-memory backdoor, no back door of any kind. It doesn't matter what technology you use to do it. All service interfaces, without exception, must be designed from the ground up to be externalizable — meaning the team must plan and design to be able to expose the interface to developers outside the company. And then the closing line, which is why anyone remembers the memo at all: anyone who doesn't do this will be fired.

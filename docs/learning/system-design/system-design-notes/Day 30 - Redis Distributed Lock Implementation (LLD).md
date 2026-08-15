@@ -1,5 +1,7 @@
 # Day 30 — Redis Distributed Lock Implementation (LLD)
 
+<small>4 min read</small>
+
 ## What we're learning today
 Coding yesterday's Redis lock correctly — including the unique-token release pattern that prevents the classic "deleted someone else's lock" bug.
 

@@ -4,6 +4,8 @@ tags: [reads, foundations, physics, information-theory]
 
 # Entropy Is Why Time Only Goes One Way
 
+<small>6 min read</small>
+
 Show someone a video of a glass shattering on a floor and ask whether it's playing forwards or backwards. They'll answer instantly and correctly, every time, without thinking.
 
 Now ask *why* they know. The obvious answer — that shards don't spontaneously assemble into glasses — is true but doesn't explain anything. The genuinely strange fact is this: **nearly every fundamental law of physics works identically forwards and backwards in time.** Run the equations governing every atom in that shattering glass in reverse and nothing is violated. The reassembly is not forbidden by any law of motion. And yet you have never seen it, and never will.

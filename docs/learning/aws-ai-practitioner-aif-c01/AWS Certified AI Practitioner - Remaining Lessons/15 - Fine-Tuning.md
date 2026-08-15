@@ -11,6 +11,8 @@ status: pending-review
 
 # Fine-Tuning
 
+<small>4 min read</small>
+
 > **Exam importance:** High  
 > **Core idea:** Fine-tuning adapts an existing foundation model to a specific task, domain, tone, or output pattern by training it further on curated examples.
 

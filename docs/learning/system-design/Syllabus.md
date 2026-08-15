@@ -1,5 +1,7 @@
 # System Design Roadmap — From 0 → Strong Engineer
 
+<small>3 min read</small>
+
 You’re already a backend-minded engineer. Don’t learn “for interviews only.” Learn to think in systems.  
 Goal: become someone who can design scalable products, debug bottlenecks, and make architecture decisions confidently.
 

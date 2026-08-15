@@ -7,6 +7,8 @@ tasks: [3.3, 3.4]
 
 # AI Governance, Compliance, and Responsible AI Principles
 
+<small>9 min read</small>
+
 ## Core concept
 Where [07 - AI Safety and Guardrails](07 - AI Safety and Guardrails.md) is about *preventing* bad outputs and [08 - Data Security and Privacy](08 - Data Security and Privacy.md) is about *protecting* sensitive data, this note is about **being able to prove, after the fact, what your system did and why** — traceability, accountability, and evidence. Governance at this exam's level means concretely: can you show which data source produced a given answer, can you show a model's documented limitations, can you show ongoing monitoring for bias/drift, and can you show this was designed against a policy framework rather than ad hoc.
 

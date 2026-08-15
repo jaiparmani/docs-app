@@ -6,6 +6,8 @@ exam: AIF-C01
 
 # Bedrock Prompt Management, Evaluation, and Flows
 
+<small>2 min read</small>
+
 > **Core idea:** Production GenAI needs reusable, tested prompts; task-specific model evaluation; and clear orchestration of multi-step workflows.
 
 ## Learning objectives

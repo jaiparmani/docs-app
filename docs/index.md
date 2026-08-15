@@ -15,6 +15,10 @@ and a set of **essay-style reads** meant for actual reading rather than drilling
 | Prep OOP / machine-coding rounds | [Object-oriented design](learning/system-design/LLD%20-%20Object-Oriented%20Design/README%20-%20Roadmap.md) |
 | Pass AWS Gen AI Developer — Professional | [AIP-C01 exam prep](learning/aip-c01-exam-prep/index.md) |
 | Read something interesting | [Foundations](learning/reads-foundations/index.md) |
+| Find everything on one topic | [Browse by tag](tags.md) |
+
+Every page shows an estimated reading time under its title, so you can pick something
+that fits the time you actually have.
 
 ## Certifications
 

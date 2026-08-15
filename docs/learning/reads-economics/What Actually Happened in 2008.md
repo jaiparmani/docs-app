@@ -4,6 +4,8 @@ tags: [reads, finance, history, crisis, systems]
 
 # What Actually Happened in 2008
 
+<small>6 min read</small>
+
 Most explanations of the 2008 financial crisis fail in one of two directions. Either they collapse into a morality play with a single villain — greedy bankers, reckless borrowers, asleep regulators, take your pick — or they retreat into jargon so dense the reader concludes it was too complicated to have been anyone's fault. The truth is that it was a chain of individually reasonable decisions that combined into something nobody had designed and few could see. That is the less satisfying story and the more useful one, because chains like it are still being built.
 
 ## The Assumption Underneath Everything

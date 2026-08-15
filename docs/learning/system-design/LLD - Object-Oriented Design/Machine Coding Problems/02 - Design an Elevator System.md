@@ -5,6 +5,8 @@ difficulty: hard
 
 # Design an Elevator System
 
+<small>7 min read</small>
+
 **Real prompt:** "Design an elevator control system for a building with multiple elevators and multiple floors, handling both internal (inside-car) and external (hallway) requests efficiently."
 
 Harder than [01 - Design a Parking Lot](01 - Design a Parking Lot.md) for two reasons: the elevator is a genuine state machine (State pattern, not just a data holder), and the scheduling problem (which elevator responds to which request) has real algorithmic content, not just OOD structure.

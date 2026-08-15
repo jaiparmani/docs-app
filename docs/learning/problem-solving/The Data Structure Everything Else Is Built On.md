@@ -4,6 +4,8 @@ tags: [reads, algorithms, data-structures, hash-tables, security]
 
 # The Data Structure Everything Else Is Built On
 
+<small>6 min read</small>
+
 If you had to delete one data structure from computing and accept the consequences, the hash table would be the most expensive thing to lose. Not the array, which is a hardware fact more than a design; not the tree, which is elegant and replaceable. The hash table. It is the substrate under database indexes, compiler symbol tables, caches, deduplication, set membership, object property lookup in every dynamic language, and the partitioning schemes that decide which machine owns which key. Most of the code you have written today performed dozens of hash lookups without you thinking about it once.
 
 The idea is almost insultingly simple. You want to find a value by key, and arrays already give you constant-time access by integer index. So convert the key into an integer, take it modulo the array size, and look there. Everything hard about hash tables is a consequence of that one shortcut, because the conversion is many-to-one: you are compressing an unbounded key space into a bounded number of slots, and by pigeonhole, distinct keys will land in the same place.

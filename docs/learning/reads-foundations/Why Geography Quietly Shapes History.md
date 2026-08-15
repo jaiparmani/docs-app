@@ -4,6 +4,8 @@ tags: [reads, foundations, history, geography]
 
 # Why Geography Quietly Shapes History
 
+<small>5 min read</small>
+
 For most of human history, moving a heavy object overland was brutally expensive. Roads were bad or nonexistent, animals needed feeding, and the amount a cart could carry was limited by what the axle could bear and the animal could pull. Moving the same object by water was, by comparison, almost free — a boat carries an enormous load, the water bears the weight, and the current or wind does much of the work.
 
 That single asymmetry, applied over thousands of years, did more to determine where cities exist, which regions grew rich, and which political units held together than almost any deliberate human decision. It's the clearest example of a broader point: **geography doesn't determine history, but it relentlessly shapes the odds.**

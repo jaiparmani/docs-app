@@ -6,6 +6,8 @@ exam: AIF-C01
 
 # AI Agents
 
+<small>2 min read</small>
+
 > **Core idea:** An agent uses a foundation model to reason about a goal, choose actions or tools, and complete a multi-step task.
 
 ## Key concepts

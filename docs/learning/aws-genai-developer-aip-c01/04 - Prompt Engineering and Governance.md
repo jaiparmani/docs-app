@@ -7,6 +7,8 @@ tasks: [1.6]
 
 # Prompt Engineering, Management, and Governance
 
+<small>8 min read</small>
+
 ## Core concept
 At this exam's level, "prompt engineering" isn't temperature/top-p trivia — it's treated as a **software artifact that needs the same lifecycle discipline as code**: versioning, testing, approval workflows, regression detection, and auditability. The core shift from AIF-C01: prompts in production aren't hand-typed strings in application code, they're managed, parameterized, tested assets — and the exam tests whether you can build that management system, not just write a good prompt.
 

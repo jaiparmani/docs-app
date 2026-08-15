@@ -4,6 +4,8 @@ tags: [reads, foundations, history, technology]
 
 # What Happens When Information Gets Cheap
 
+<small>6 min read</small>
+
 Before movable type reached Europe in the mid-fifteenth century, producing a book meant a person copying it out by hand, for months. Books were correspondingly rare and expensive, and the set of people who could participate in producing written ideas was tiny — largely institutional, largely religious, largely constrained by who could afford the labour.
 
 Then the cost per copy collapsed. Not to zero, but by an order of magnitude that changed who could publish and what was worth publishing at all.

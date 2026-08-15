@@ -6,6 +6,8 @@ task: "3.2"
 
 # Data Security and Privacy for GenAI
 
+<small>11 min read</small>
+
 > **Core idea:** GenAI creates a privacy problem traditional applications don't have to the same degree — sensitive data enters and exits through unstructured, unpredictable natural language, not clean database fields. Network security alone can't catch that; you need content-aware detection too.
 
 ## The concept, explained

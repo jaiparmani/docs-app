@@ -1,5 +1,7 @@
 # Day 4 — Factory & Builder Patterns (LLD)
 
+<small>5 min read</small>
+
 ## What we're learning today
 Days 1–3 covered patterns about *behavior* (which algorithm runs, what's legal right now). Today starts the creational family — patterns about *how objects get made*, starting with the two you'll use in almost every applied problem this track builds toward.
 

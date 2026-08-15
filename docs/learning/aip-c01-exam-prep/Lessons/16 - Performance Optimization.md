@@ -6,6 +6,8 @@ task: "4.2"
 
 # Performance and Latency Optimization for FM Applications
 
+<small>11 min read</small>
+
 > **Core idea:** This is the mirror image of cost optimization — same underlying levers, viewed through the speed/UX lens instead of the dollar lens. A strong answer here often names the cost trade-off it's making, and vice versa.
 
 ## The concept, explained

@@ -4,6 +4,8 @@ tags: [reads, algorithms, dynamic-programming, recursion, problem-solving]
 
 # Dynamic Programming Is One Idea Wearing Many Costumes
 
+<small>6 min read</small>
+
 Dynamic programming has a reputation problem. It arrives in most curricula as a catalogue: knapsack, longest common subsequence, edit distance, coin change, matrix chain multiplication, each with its own table layout and recurrence to be memorised. Presented that way it looks like a family of unrelated tricks, and the natural conclusion is that competence means having seen enough of them. That conclusion is wrong, and it is why so many otherwise strong engineers describe DP as the thing they never quite got.
 
 There is only one idea. **If a problem's solution can be assembled from solutions to subproblems, and those subproblems recur, compute each one once and reuse the answer.** Everything else — tables, loops, iteration order, dimension counts, space optimisation — is bookkeeping around that single observation.

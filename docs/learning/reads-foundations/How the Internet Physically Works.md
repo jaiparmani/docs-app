@@ -4,6 +4,8 @@ tags: [reads, foundations, networking, infrastructure]
 
 # How the Internet Physically Works
 
+<small>6 min read</small>
+
 If you build software for a living, you spend all day on top of something you may never have looked underneath. "The cloud" is an abstraction that works extraordinarily well — right up until a cable is cut somewhere in the Red Sea, or a routing misconfiguration in one country makes half a continent's traffic vanish, and suddenly the abstraction has a very physical shape.
 
 The single most useful correction to most people's mental model: **the internet is not a network.** It's thousands of independently owned networks that have agreed to carry each other's traffic, held together by protocols that run substantially on trust.

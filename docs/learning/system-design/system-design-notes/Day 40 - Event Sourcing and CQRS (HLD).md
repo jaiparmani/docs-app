@@ -1,5 +1,7 @@
 # Day 40 — Event Sourcing & CQRS (HLD)
 
+<small>6 min read</small>
+
 ## What we're learning today
 Every system so far stored **current state** (a row gets updated in place). Today introduces a different model: store the **sequence of events** that led to the current state, and derive state by replaying them. This reframes several things you already know (Day 20's WAL, Day 39's Saga log) as instances of a more general pattern.
 

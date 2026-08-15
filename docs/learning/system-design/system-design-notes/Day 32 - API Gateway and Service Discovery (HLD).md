@@ -1,5 +1,7 @@
 # Day 32 — API Gateway & Service Discovery (HLD)
 
+<small>4 min read</small>
+
 ## What we're learning today
 Everything from Day 11–31 assumed "the client talks to the app server" as a given. Once you have more than a handful of services, two new questions appear: what does the client actually talk to, and how does one service find another? This day answers both, and sets up the vocabulary the rest of Block A/B leans on.
 

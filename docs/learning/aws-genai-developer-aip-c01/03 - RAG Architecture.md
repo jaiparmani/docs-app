@@ -7,6 +7,8 @@ tasks: [1.5]
 
 # RAG Architecture: Chunking, Retrieval, and Query Handling
 
+<small>9 min read</small>
+
 ## Core concept
 [02 - Vector Stores and Embeddings](02 - Vector Stores and Embeddings.md) covered *where* vectors live. This note covers what happens *around* the vector store: how documents get chunked before embedding, how a raw user query gets transformed before it hits the index, how results get reranked after retrieval, and how all of that gets exposed to the FM in a consistent way. RAG quality is decided far more by these surrounding decisions than by the vector store's raw search speed — a poorly-chunked corpus or an unprocessed query will produce bad retrieval regardless of how good the underlying index is.
 

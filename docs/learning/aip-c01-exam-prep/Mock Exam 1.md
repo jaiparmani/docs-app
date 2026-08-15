@@ -5,6 +5,8 @@ exam: AIP-C01
 
 # Mock Exam 1 (65 Questions)
 
+<small>24 min read</small>
+
 > Domain weighting mirrors the real blueprint: Domain 1 – FM Integration, Data Management & Compliance (31%, Q1–20), Domain 2 – Implementation and Integration (26%, Q21–37), Domain 3 – AI Safety, Security & Governance (20%, Q38–50), Domain 4 – Operational Efficiency & Optimization (12%, Q51–58), Domain 5 – Testing, Validation & Troubleshooting (11%, Q59–65).
 >
 > Time yourself: 170 minutes (the real exam's limit). Most questions are single-answer multiple choice; a few marked **(Select TWO)** are multiple-response — you must get all correct selections to earn credit, same as the real exam. Click each answer to reveal it — don't peek before committing.

@@ -1,5 +1,7 @@
 # Day 29 — Distributed Locks (HLD)
 
+<small>4 min read</small>
+
 ## What we're learning today
 Day 24's idempotency lock and Day 22's shard-router assumed "a lock" existed. Today we examine what that actually means across machines — a much harder problem than `synchronized` in Java.
 

@@ -6,6 +6,8 @@ task: "2.1"
 
 # Agentic AI: Agents, Tool Use, MCP, Multi-Agent Orchestration
 
+<small>12 min read</small>
+
 > **Core idea:** Every question about giving an agent more autonomy comes paired with a question about how you bound it. This pairing — capability plus boundary — is the single most repeated pattern across the entire exam, not just this task.
 
 ## The concept, explained

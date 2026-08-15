@@ -1,5 +1,7 @@
 # Day 50 — Observability: Metrics, Logging, Distributed Tracing (HLD)
 
+<small>5 min read</small>
+
 ## What we're learning today
 Starts Block E. Every design in this roadmap answered "how do I build this." Today starts answering the question you'll actually live with in production: "how do I know what's happening inside it, and where's the bottleneck when something's slow or broken." This applies across every prior design at once, not as a new component in any single one.
 

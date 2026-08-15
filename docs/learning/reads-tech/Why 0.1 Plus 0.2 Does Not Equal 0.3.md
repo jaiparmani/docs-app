@@ -4,6 +4,8 @@ tags: [reads, tech, fundamentals, numbers, correctness]
 
 # Why 0.1 Plus 0.2 Does Not Equal 0.3
 
+<small>6 min read</small>
+
 Open a Python REPL, a Node shell, a Java `jshell`, a Ruby console, or a browser's dev tools, and type `0.1 + 0.2`. Every one of them will tell you `0.30000000000000004`. This is not a bug in any of those languages. It is the same answer, from the same hardware, for the same reason, and it has been the same answer since the mid-1980s. The interesting question is not "why is it wrong" — it isn't wrong — but "what exactly did I ask for that I did not realize I was asking for."
 
 ## The fraction that never ends

@@ -4,6 +4,8 @@ tags: [reads, memory, psychology, learning]
 
 # Why You Forget Things (and Why That's a Feature)
 
+<small>5 min read</small>
+
 In the 1880s, a German psychologist named Hermann Ebbinghaus did something slightly deranged in the name of science: he invented thousands of meaningless syllables — *WID*, *ZOF*, *KEL* — memorised lists of them, and then tested himself at intervals to measure exactly how fast they leaked out of his head.
 
 The curve he found has held up remarkably well. Forgetting is steep at first and then flattens. You lose a large fraction of new material within the first day, and then the remainder decays much more slowly. Most of what you'll ever forget about something you learned today, you'll forget by tomorrow.

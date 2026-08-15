@@ -6,6 +6,8 @@ exam: AIF-C01
 
 # Responsible AI in Practice
 
+<small>2 min read</small>
+
 > **Core idea:** Responsible AI is an ongoing lifecycle of defining intended use, assessing risks, testing, deploying safeguards, monitoring, and improving.
 
 ## Learning objectives

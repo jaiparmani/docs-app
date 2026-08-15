@@ -5,6 +5,8 @@ difficulty: hard
 
 # Design Splitwise (Expense Sharing)
 
+<small>8 min read</small>
+
 **Real prompt:** "Design a system where a group of users can log shared expenses, split them in different ways (equally, by exact amounts, by percentage), and see a simplified view of who owes whom."
 
 The last problem in this set, and the odd one out: every prior problem was almost purely structural (right classes, right patterns). This one has a genuine graph algorithm at its center — debt simplification — alongside the OOD structure, and interviewers use it specifically to see whether you can combine both skill types in one problem.

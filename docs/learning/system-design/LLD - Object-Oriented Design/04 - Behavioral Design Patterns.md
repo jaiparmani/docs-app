@@ -4,6 +4,8 @@ tags: [system-design, lld, ood, design-patterns]
 
 # Behavioral Design Patterns: Strategy, Observer, State, Command
 
+<small>7 min read</small>
+
 ## What we're learning today
 The last pattern group, and the one you'll reach for most in Machine Coding Problems/01 - Design a Parking Lot through Machine Coding Problems/04 - Design Splitwise (Expense Sharing). Behavioral patterns answer how objects communicate, delegate, and change behavior at runtime — this is where most machine-coding interviews are actually won or lost, because "which behavioral pattern fits this requirement" is the recurring question underneath almost every applied problem.
 

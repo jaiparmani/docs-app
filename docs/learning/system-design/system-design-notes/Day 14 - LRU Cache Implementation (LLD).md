@@ -1,5 +1,7 @@
 # Day 14 — LRU Cache From Scratch (LLD)
 
+<small>3 min read</small>
+
 ## What we're learning today
 Yesterday you learned Redis approximates LRU eviction. Today you build the real thing — a classic that shows up both as a LeetCode problem (#146) and inside real cache implementations.
 

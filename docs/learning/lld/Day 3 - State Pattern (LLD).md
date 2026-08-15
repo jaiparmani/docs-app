@@ -1,5 +1,7 @@
 # Day 3 — State Pattern (LLD)
 
+<small>5 min read</small>
+
 ## What we're learning today
 Strategy swaps *which algorithm* runs. State swaps *what's even legal to call* — an object behaves differently, and allows different operations, depending on an internal state that changes over its lifetime. This is the pattern behind almost every "design a Vending Machine / Elevator / Order lifecycle" machine-coding question, and it's the same idea as [the Circuit Breaker's state machine](../system-design/system-design-notes/Day 26 - Circuit Breaker Implementation (LLD).md) — just applied to OOD instead of a resilience mechanism.
 

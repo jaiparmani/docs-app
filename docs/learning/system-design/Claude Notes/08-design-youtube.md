@@ -6,6 +6,8 @@ difficulty: hard
 
 # Design YouTube (Video Upload + Streaming)
 
+<small>8 min read</small>
+
 **Real prompt:** "Design a system where users upload videos, the system processes them, and other users stream them smoothly across different devices and network conditions."
 
 Two almost-independent subsystems hide inside this prompt: an **upload/processing pipeline** (write-heavy, latency-tolerant) and a **serving/streaming path** (read-heavy, latency-critical). Conflating them is the most common weak answer.

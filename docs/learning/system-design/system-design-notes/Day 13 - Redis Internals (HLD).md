@@ -1,5 +1,7 @@
 # Day 13 — Redis Internals (HLD)
 
+<small>3 min read</small>
+
 ## What we're learning today
 You've used Redis four times without asking *how* it delivers sub-millisecond latency and what happens if it crashes. Today we open the box.
 

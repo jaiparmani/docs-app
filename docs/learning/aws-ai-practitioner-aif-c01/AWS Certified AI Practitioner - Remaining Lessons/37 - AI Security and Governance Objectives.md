@@ -6,6 +6,8 @@ exam: AIF-C01
 
 # AI Security and Governance Objectives
 
+<small>3 min read</small>
+
 > **Core idea:** Secure AI by controlling access and data, validating inputs and outputs, documenting data origins, monitoring activity, and following governance rules over the full data lifecycle.
 
 ## Learning objectives

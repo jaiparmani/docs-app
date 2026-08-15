@@ -1,5 +1,7 @@
 # Day 42 — Object/Blob Storage Internals (HLD)
 
+<small>5 min read</small>
+
 ## What we're learning today
 Starts Block C. Every applied design that touched large files ([08-design-youtube](../Claude Notes/08-design-youtube.md), [03-design-twitter](../Claude Notes/03-design-twitter.md)'s media, [04-design-notification-system](../Claude Notes/04-design-notification-system.md)'s attachments) waved at "object storage" without opening it up. Today does — and it's a direct bridge into your existing AWS S3 knowledge, same trade-offs, different vocabulary.
 

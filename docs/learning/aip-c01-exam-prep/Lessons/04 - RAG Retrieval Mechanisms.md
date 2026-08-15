@@ -6,6 +6,8 @@ task: "1.5"
 
 # RAG Retrieval Mechanisms
 
+<small>10 min read</small>
+
 > **Core idea:** Naive RAG — chunk the documents, embed them, retrieve the top-K most similar, stuff them into the prompt — is only the starting point. Everything in this task is a specific answer to a specific way that naive approach breaks, and the exam wants you to diagnose which failure you're looking at before reaching for a fix.
 
 ## The concept, explained

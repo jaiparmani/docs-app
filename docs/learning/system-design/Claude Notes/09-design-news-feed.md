@@ -6,6 +6,8 @@ difficulty: hard
 
 # Design a News Feed (Instagram/Facebook-style, Ranked)
 
+<small>8 min read</small>
+
 **Real prompt:** "Design a home feed showing posts from people/pages a user follows, ranked by relevance rather than strict chronological order, including photo/video posts."
 
 Almost the entire storage and fan-out skeleton is [03-design-twitter](03-design-twitter.md), unchanged. The new problem is **ranking**: "reverse-chronological merge" becomes "retrieve candidates, then score and order them" — and that single change ripples into caching, freshness, and infrastructure in ways worth being explicit about.

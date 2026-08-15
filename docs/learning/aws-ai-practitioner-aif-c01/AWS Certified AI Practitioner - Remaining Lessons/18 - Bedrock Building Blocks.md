@@ -6,6 +6,8 @@ exam: AIF-C01
 
 # Bedrock Building Blocks
 
+<small>2 min read</small>
+
 ## Knowledge Bases
 
 **Amazon Bedrock Knowledge Bases** provides managed RAG. It ingests source documents, creates embeddings, stores them in a supported vector store, retrieves relevant chunks, and provides them to an FM.

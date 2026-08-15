@@ -4,6 +4,8 @@ tags: [reads, finance, compounding, mental-models]
 
 # Why Humans Are Terrible at Exponentials
 
+<small>6 min read</small>
+
 Ask someone to estimate how far a car travels in six hours at sixty miles an hour and they will get it right without writing anything down. Ask the same person how much a pot of money becomes after forty years at seven percent a year and they will almost certainly guess low, often by a factor of several. Both questions are arithmetic. Only one of them is arithmetic the human nervous system evolved to do.
 
 The linear question is easy because linear things are what a body encounters. Walking, throwing, pouring, stacking — direct physical experience is almost entirely additive, and a brain calibrated on it develops a reliable feel for rates. Exponential processes are rarer and, crucially, boring for a long time before they are dramatic. By the time one becomes visually obvious, most of the interesting decisions about it have already been made. This is not a failure of intelligence. It is a mismatch between the shape of the process and the shape of the intuition.

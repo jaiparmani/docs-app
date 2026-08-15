@@ -7,6 +7,8 @@ tasks: [5.1]
 
 # Model Evaluation Systems for GenAI
 
+<small>10 min read</small>
+
 ## Core concept
 Traditional ML evaluation has clean, objective metrics (accuracy, F1, RMSE) because the "correct answer" is usually well-defined. GenAI evaluation doesn't have that luxury — "is this a good response" is inherently more subjective, multi-dimensional (relevance, factual accuracy, consistency, fluency), and often requires either human judgment or another model acting as judge. Task 5.1 is about building **systematic, repeatable evaluation** despite that subjectivity — the opposite of "someone eyeballed a few outputs and it looked fine."
 

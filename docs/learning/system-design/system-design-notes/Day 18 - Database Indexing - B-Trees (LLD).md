@@ -1,5 +1,7 @@
 # Day 18 — Database Indexing: B-Trees & B+Trees (LLD)
 
+<small>3 min read</small>
+
 ## What we're learning today
 Every `WHERE` clause you've ever written that returned fast relied on this structure. Today we look inside the index.
 

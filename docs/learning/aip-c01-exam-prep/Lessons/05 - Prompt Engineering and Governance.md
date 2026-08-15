@@ -6,6 +6,8 @@ task: "1.6"
 
 # Prompt Engineering, Management, and Governance
 
+<small>10 min read</small>
+
 > **Core idea:** In production, a prompt is a governed software artifact — versioned, tested, reviewed — not a string someone typed once and forgot about. And a prompt instruction is a *request*, never a *guarantee*.
 
 ## The concept, explained
