@@ -61,3 +61,8 @@ You will forget most of what you read, including most of this. That's not a fail
 The practical version: if something matters, don't reread it. Close it, and try to say what it said. Come back in a week and try again. Sleep in between.
 
 And hold your most confident, most vivid memories a little more loosely than they ask to be held — because those are precisely the ones you've reconstructed most often, and each reconstruction was a chance for them to quietly become something else.
+
+
+## Linked from
+
+- [5_General Reads](index.md)

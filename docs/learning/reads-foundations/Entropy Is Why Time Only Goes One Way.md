@@ -67,3 +67,8 @@ Follow that chain all the way back and you reach an inescapable conclusion: **th
 Why the universe started that way is not known. It's not explained by any law we have; it's an initial condition those laws take as given. Some of the most serious work in cosmology circles this question.
 
 Which means the answer to why you can tell that video is playing forwards is not really about glass, or floors, or physics as we usually mean it. It's that you are embedded in a universe that started in a fantastically improbable configuration and has been relaxing toward the ordinary ever since — and your sense of time passing is you, riding that slope downhill.
+
+
+## Linked from
+
+- [6_Foundations](index.md)

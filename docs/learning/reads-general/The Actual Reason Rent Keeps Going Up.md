@@ -49,3 +49,8 @@ For most homeowners, the house is not just shelter. It's the largest asset they 
 Now add who shows up. Local elections, planning commission hearings, and zoning board meetings draw a fraction of the electorate, and that fraction skews sharply toward older, longer-tenured, homeowning residents. Renters vote less in local races, move more often, and are far less likely to spend a Tuesday evening at a public comment session. The people who would benefit most from more housing are disproportionately people who haven't moved to the city yet and therefore cannot vote there at all. The costs of new construction — construction noise, changed views, more traffic, a different-looking street — are concentrated and immediate. The benefits are diffuse, delayed, and land partly on strangers.
 
 So the honest way to describe the situation is not that the housing market failed. Markets fail when prices stop conveying information, and housing prices are conveying their information loudly and accurately: this place is scarce, bid more. The system is working exactly as designed. It's just that the design gives decisive weight to the people who already got in, and grants no standing whatsoever to the people who would come next. High rent isn't the market's verdict on a city. It's the aggregated preference of everyone who was already in the room when the vote was taken.
+
+
+## Linked from
+
+- [5_General Reads](index.md)

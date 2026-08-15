@@ -76,3 +76,12 @@ Agent actions deserve the same least-privilege design and approval boundaries as
 ## Related notes
 
 [21 - Security Compliance and Governance](21 - Security Compliance and Governance.md) · [16 - AI Agents](16 - AI Agents.md) · [30 - Responsible AI in Practice](30 - Responsible AI in Practice.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [Agentic AI, MCP, Memory, and Orchestration](35%20-%20Agentic%20AI%2C%20MCP%2C%20Memory%2C%20and%20Orchestration.md)
+- [AI Security and Governance Objectives](37%20-%20AI%20Security%20and%20Governance%20Objectives.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)
+- [Responsible AI in Practice](30%20-%20Responsible%20AI%20in%20Practice.md)

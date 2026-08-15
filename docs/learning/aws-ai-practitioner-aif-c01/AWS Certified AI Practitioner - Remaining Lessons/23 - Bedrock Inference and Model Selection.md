@@ -74,3 +74,11 @@ Start model selection with a small, representative evaluation set. It is more us
 ## Related notes
 
 [17 - Amazon Bedrock](17 - Amazon Bedrock.md) · [15 - Fine-Tuning](15 - Fine-Tuning.md) · [24 - Bedrock Prompt Management, Evaluation, and Flows](24 - Bedrock Prompt Management, Evaluation, and Flows.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)
+- [Bedrock Prompt Management, Evaluation, and Flows](24%20-%20Bedrock%20Prompt%20Management%2C%20Evaluation%2C%20and%20Flows.md)
+- [GenAI Lifecycle, Context Engineering, and Multimodal Models](34%20-%20GenAI%20Lifecycle%2C%20Context%20Engineering%2C%20and%20Multimodal%20Models.md)

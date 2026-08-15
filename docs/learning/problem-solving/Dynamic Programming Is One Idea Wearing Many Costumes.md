@@ -64,3 +64,8 @@ A state must be a sufficient summary: everything about the past that affects the
 Notice the pattern: in each case, once the state is stated correctly in a single English sentence, the recurrence is nearly forced. You ask "what is the last decision that produced this state, and what states could have preceded it?" and the transitions fall out. This is why experienced solvers spend most of their time before writing any code, articulating what the table means, and why writing that sentence down explicitly — as a comment, in plain language, including exactly what the value at a cell represents — catches most DP bugs before they exist.
 
 So when someone says they find DP hard, they are almost never describing difficulty with caching, or tables, or iteration order. They are describing difficulty modelling a problem: looking at a tangle of choices and seeing which handful of numbers separates one situation from another. That skill is not specific to dynamic programming at all — it is the same act of abstraction that produces good schemas, good APIs, and good type definitions. DP just happens to be the place where getting it wrong fails loudly and immediately, which makes it an unusually honest place to practise.
+
+
+## Linked from
+
+- [2_Problem Solving](index.md)

@@ -75,3 +75,11 @@ Your Feed cache (Day 9) currently uses cache-aside. A PM asks you to add a "like
 
 ## Tomorrow
 Day 12 (LLD) — we implement a **pluggable Cache abstraction** in Java (interface + Cache-Aside and Write-Back implementations) so your services can swap strategies without touching business logic.
+
+
+## Linked from
+
+- [Day 48 — Video Streaming Fundamentals (HLD)](Day%2048%20-%20Video%20Streaming%20Fundamentals%20%28HLD%29.md)
+- [Design Twitter (Post + Follow + Home Timeline)](../Claude%20Notes/03-design-twitter.md)
+- [Design Uber (Ride-Hailing: Driver-Rider Matching)](../Claude%20Notes/06-design-uber.md)
+- [Learning System Design](../index.md)

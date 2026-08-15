@@ -127,3 +127,9 @@ Write your own answer first — then expand.
 
 ## Next
 [02 - Design an Elevator System](02 - Design an Elevator System.md) — introduces State as the primary pattern, on a problem where the object's own behavior genuinely changes based on internal transitions, not external configuration.
+
+
+## Linked from
+
+- [Design an Elevator System](02%20-%20Design%20an%20Elevator%20System.md)
+- [Design Splitwise (Expense Sharing)](04%20-%20Design%20Splitwise%20%28Expense%20Sharing%29.md)

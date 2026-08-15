@@ -98,3 +98,9 @@ A. Nothing was missed; sounding reasonable at each step is sufficient evidence o
 
 ## Next
 [19 - Troubleshooting GenAI Applications](19 - Troubleshooting GenAI Applications.md)
+
+
+## Linked from
+
+- [AIP-C01 Exam Prep — Everything Needed to Pass](../index.md)
+- [Observability and Monitoring for GenAI Applications](17%20-%20Monitoring%20for%20GenAI%20Applications.md)

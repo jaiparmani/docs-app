@@ -121,3 +121,12 @@ Write your own answer first — then expand.
 
 ## Next
 [08-design-youtube](08-design-youtube.md) — moves from small, real-time text payloads to large, asynchronously-processed media, and reuses CDN edge caching (Day 17) for a new content type.
+
+
+## Linked from
+
+- [Day 45 — Geohash Proximity Search, Implemented (LLD)](../system-design-notes/Day%2045%20-%20Geohash%20Proximity%20Search%20Implementation%20%28LLD%29.md)
+- [Day 46 — WebSockets, Long Polling & SSE: Connection Scaling (HLD)](../system-design-notes/Day%2046%20-%20WebSockets%20Long%20Polling%20and%20SSE%20%28HLD%29.md)
+- [Day 47 — Connection & Session Management at Scale (LLD)](../system-design-notes/Day%2047%20-%20Connection%20Session%20Management%20%28LLD%29.md)
+- [Day 49 — Transcoding Pipeline, Sketched (LLD)](../system-design-notes/Day%2049%20-%20Transcoding%20Pipeline%20Implementation%20%28LLD%29.md)
+- [Design Uber (Ride-Hailing: Driver-Rider Matching)](06-design-uber.md)

@@ -94,3 +94,9 @@ A. The reasoning is entirely correct and no change is needed B. The reasoning co
 
 ## Next
 [16 - Performance Optimization](16 - Performance Optimization.md)
+
+
+## Linked from
+
+- [AIP-C01 Exam Prep — Everything Needed to Pass](../index.md)
+- [Responsible AI Principles](14%20-%20Responsible%20AI%20Principles.md)

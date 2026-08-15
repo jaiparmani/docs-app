@@ -99,3 +99,9 @@ A. Reduce the knowledge base's retrieval top-K to 1 B. Give the agent a structur
 
 ## Next
 [05 - Prompt Engineering and Governance](05 - Prompt Engineering and Governance.md)
+
+
+## Linked from
+
+- [AIP-C01 Exam Prep — Everything Needed to Pass](../index.md)
+- [Vector Stores and Embeddings](03%20-%20Vector%20Stores%20and%20Embeddings.md)

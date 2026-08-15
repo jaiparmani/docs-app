@@ -92,3 +92,9 @@ A. AWS Cost Explorer B. CloudWatch Logs Insights, for querying and analyzing the
 
 ## Next
 Closes Domain 2. Next up: [11 - AI Safety and Content Controls](11 - AI Safety and Content Controls.md) — starts Domain 3.
+
+
+## Linked from
+
+- [AIP-C01 Exam Prep — Everything Needed to Pass](../index.md)
+- [FM API Integration Patterns](09%20-%20FM%20API%20Integration%20Patterns.md)

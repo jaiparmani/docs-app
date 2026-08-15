@@ -142,3 +142,22 @@ Write your own answer first — then expand.
 
 ## Next
 Same hybrid fan-out reasoning generalizes almost unchanged to a "News Feed" (Instagram/Facebook) design — the interesting delta there is ranking (not just chronological merge) and media storage, not fan-out itself. A good next applied design to attempt using this same skeleton: **Design a Notification System** (push fan-out, but to devices instead of timelines — same celebrity-style fan-out asymmetry shows up for anything with a "broadcast" event).
+
+
+## Linked from
+
+- [Day 40 — Event Sourcing & CQRS (HLD)](../system-design-notes/Day%2040%20-%20Event%20Sourcing%20and%20CQRS%20%28HLD%29.md)
+- [Day 42 — Object/Blob Storage Internals (HLD)](../system-design-notes/Day%2042%20-%20Object%20Storage%20Internals%20%28HLD%29.md)
+- [Day 49 — Transcoding Pipeline, Sketched (LLD)](../system-design-notes/Day%2049%20-%20Transcoding%20Pipeline%20Implementation%20%28LLD%29.md)
+- [Day 51 — Multi-Region & Disaster Recovery (HLD)](../system-design-notes/Day%2051%20-%20Multi-Region%20and%20Disaster%20Recovery%20%28HLD%29.md)
+- [Day-by-Day Roadmap — Day 32 Onward](../Day-by-Day%20Roadmap%20%28Day%2032%20Onward%29.md)
+- [Design a Chat System (WhatsApp / Messenger-style)](07-design-chat-system.md)
+- [Design a Distributed Job Scheduler (Cron-as-a-Service)](05-design-job-scheduler.md)
+- [Design a News Feed (Instagram/Facebook-style, Ranked)](09-design-news-feed.md)
+- [Design a Notification System (Push + Email + SMS)](04-design-notification-system.md)
+- [Design a Rate Limiter](01-rate-limiter.md)
+- [Design a URL Shortener (e.g. bit.ly / TinyURL)](02-url-shortener.md)
+- [Design Search Autocomplete (Typeahead Suggestions)](10-design-search-autocomplete.md)
+- [Design Uber (Ride-Hailing: Driver-Rider Matching)](06-design-uber.md)
+- [Design YouTube (Video Upload + Streaming)](08-design-youtube.md)
+- [LLD / Object-Oriented Design — Roadmap](../LLD%20-%20Object-Oriented%20Design/README%20-%20Roadmap.md)

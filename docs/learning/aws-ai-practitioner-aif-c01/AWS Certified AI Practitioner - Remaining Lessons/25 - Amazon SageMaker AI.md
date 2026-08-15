@@ -70,3 +70,12 @@ The right question is not “which is more powerful?” It is “do we need mana
 ## Related notes
 
 [17 - Amazon Bedrock](17 - Amazon Bedrock.md) · [19 - AWS AI Services](19 - AWS AI Services.md) · [21 - Security Compliance and Governance](21 - Security Compliance and Governance.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)
+- [ML Lifecycle, Inference, and Metrics](33%20-%20ML%20Lifecycle%2C%20Inference%2C%20and%20Metrics.md)
+- [Recommendations and Personalization](29%20-%20Recommendations%20and%20Personalization.md)
+- [Service Selection Drill](32%20-%20Service%20Selection%20Drill.md)

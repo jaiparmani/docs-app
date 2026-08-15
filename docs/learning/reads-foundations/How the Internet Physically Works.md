@@ -59,3 +59,8 @@ Several practical things fall out of the physical picture, and they're the reaso
 **Your service depends on organisations you have no relationship with.** Between your users and your servers sit transit providers, exchange points, and cable operators you've never heard of and cannot call. Most of the time this is invisible. Occasionally one of them makes a mistake and your dashboards show a problem that is entirely real and entirely not yours.
 
 The abstraction is genuinely excellent — it's why any of this is buildable. But it's worth knowing, at least once, that underneath the API calls there is glass on a seabed, a building where cables meet, and a protocol quietly assuming that everyone is being honest.
+
+
+## Linked from
+
+- [6_Foundations](index.md)

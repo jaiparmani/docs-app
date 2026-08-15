@@ -61,3 +61,13 @@ Guardrails reduce risk; they do **not** guarantee factual correctness or replace
 ## Next
 
 [19 - AWS AI Services](19 - AWS AI Services.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [AI Security and Governance Objectives](37%20-%20AI%20Security%20and%20Governance%20Objectives.md)
+- [Amazon Bedrock](17%20-%20Amazon%20Bedrock.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)
+- [GenAI Lifecycle, Context Engineering, and Multimodal Models](34%20-%20GenAI%20Lifecycle%2C%20Context%20Engineering%2C%20and%20Multimodal%20Models.md)
+- [Responsible AI in Practice](30%20-%20Responsible%20AI%20in%20Practice.md)

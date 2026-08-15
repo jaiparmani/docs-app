@@ -92,3 +92,9 @@ A. Nothing is wrong — Bedrock automatically transcribes any audio sent to it B
 
 ## Next
 [03 - Vector Stores and Embeddings](03 - Vector Stores and Embeddings.md)
+
+
+## Linked from
+
+- [AIP-C01 Exam Prep — Everything Needed to Pass](../index.md)
+- [Bedrock Model Selection & Solution Design](01%20-%20Bedrock%20Model%20Selection%20and%20Solution%20Design.md)

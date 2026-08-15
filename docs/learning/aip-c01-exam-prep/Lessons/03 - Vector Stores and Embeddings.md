@@ -103,3 +103,9 @@ A. The embedding model is not good enough at distinguishing between companies B.
 
 ## Next
 [04 - RAG Retrieval Mechanisms](04 - RAG Retrieval Mechanisms.md)
+
+
+## Linked from
+
+- [AIP-C01 Exam Prep — Everything Needed to Pass](../index.md)
+- [Data Validation and Processing Pipelines for FM Consumption](02%20-%20Data%20Validation%20and%20Processing%20Pipelines.md)

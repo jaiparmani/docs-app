@@ -31,3 +31,9 @@ Each day's "Interview question" has a collapsed answer — write your own answer
 ## Related
 
 [Syllabus](../system-design/Syllabus.md) · system-design-notes · [README - Roadmap](../system-design/LLD - Object-Oriented Design/README - Roadmap.md)
+
+
+## Linked from
+
+- [Day 5 — Observer Pattern (LLD)](Day%205%20-%20Observer%20Pattern%20%28LLD%29.md)
+- [LLD](index.md)

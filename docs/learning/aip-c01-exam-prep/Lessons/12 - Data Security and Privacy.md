@@ -95,3 +95,9 @@ A. It's sufficient — trust-based policies work fine B. Insufficient, because i
 
 ## Next
 [13 - AI Governance and Compliance](13 - AI Governance and Compliance.md)
+
+
+## Linked from
+
+- [AI Safety and Content Controls](11%20-%20AI%20Safety%20and%20Content%20Controls.md)
+- [AIP-C01 Exam Prep — Everything Needed to Pass](../index.md)

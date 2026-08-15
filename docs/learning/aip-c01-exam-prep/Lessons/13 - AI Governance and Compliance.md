@@ -94,3 +94,9 @@ A. The second business unit simply needs to work harder B. The absence of a sing
 
 ## Next
 [14 - Responsible AI Principles](14 - Responsible AI Principles.md)
+
+
+## Linked from
+
+- [AIP-C01 Exam Prep — Everything Needed to Pass](../index.md)
+- [Data Security and Privacy for GenAI](12%20-%20Data%20Security%20and%20Privacy.md)

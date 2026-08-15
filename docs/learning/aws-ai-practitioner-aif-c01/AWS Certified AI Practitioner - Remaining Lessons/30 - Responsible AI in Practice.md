@@ -70,3 +70,10 @@ Define unacceptable outcomes before launch. It makes test cases, escalation path
 ## Related notes
 
 [20 - Responsible AI](20 - Responsible AI.md) · [18 - Bedrock Building Blocks](18 - Bedrock Building Blocks.md) · [31 - AI Security, Privacy, and Governance in Practice](31 - AI Security, Privacy, and Governance in Practice.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [AI Security, Privacy, and Governance in Practice](31%20-%20AI%20Security%2C%20Privacy%2C%20and%20Governance%20in%20Practice.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)

@@ -93,3 +93,15 @@ Write your own answer first — then expand.
 
 ## Related
 [README - Syllabus](README - Syllabus.md) · [07 - AI Safety and Guardrails](07 - AI Safety and Guardrails.md) · [08 - Data Security and Privacy](08 - Data Security and Privacy.md) · [12 - Observability and Monitoring](12 - Observability and Monitoring.md) · [13 - Model Evaluation Systems](13 - Model Evaluation Systems.md)
+
+
+## Linked from
+
+- [AI Safety and Guardrails: Content Moderation and Hallucination Mitigation](07%20-%20AI%20Safety%20and%20Guardrails.md)
+- [AWS Certified Generative AI Developer - Professional (AIP-C01)](index.md)
+- [AWS Certified Generative AI Developer – Professional (AIP-C01) — Syllabus](README%20-%20Syllabus.md)
+- [Data Security and Privacy for GenAI](08%20-%20Data%20Security%20and%20Privacy.md)
+- [Model Evaluation Systems for GenAI](13%20-%20Model%20Evaluation%20Systems.md)
+- [Observability and Monitoring for GenAI Applications](12%20-%20Observability%20and%20Monitoring.md)
+- [Prompt Engineering, Management, and Governance](04%20-%20Prompt%20Engineering%20and%20Governance.md)
+- [Responsible AI Principles](../aip-c01-exam-prep/Lessons/14%20-%20Responsible%20AI%20Principles.md)

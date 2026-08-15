@@ -47,3 +47,8 @@ The two correct approaches are both boring. Store integer minor units — paise,
 It is tempting to file all this under "computers are janky." It isn't jank. The people who designed IEEE 754 knew perfectly well that binary fractions cannot represent tenths, and they chose it anyway, because the alternative — exact decimal arithmetic everywhere — is dramatically slower and cannot span sixteen orders of magnitude in eight bytes. Floating point is a bargain: you surrender exactness on a specific, well-defined class of values, and in exchange you get enormous dynamic range and arithmetic that a CPU can do billions of times per second in dedicated silicon.
 
 That bargain is excellent for physics, graphics, machine learning, and statistics, where the inputs were approximate to begin with and a relative error of 10⁻¹⁶ is far below the noise floor. It is a catastrophically bad bargain for money, where the inputs are exact by definition and a discrepancy of one paise is a defect. The floating point unit is not making a mistake when it hands you `0.30000000000000004`. It is telling you, precisely and honestly, what it agreed to compute — and the engineering skill is knowing which of your numbers were ever approximate in the first place.
+
+
+## Linked from
+
+- [1_Tech & Engineering](index.md)

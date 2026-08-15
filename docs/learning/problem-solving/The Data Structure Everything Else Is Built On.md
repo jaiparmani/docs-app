@@ -37,3 +37,8 @@ Miss the first property with attacker-controlled keys and you have handed over a
 Set that against what the structure buys. A join between a million-row table and a thousand-row table becomes a single pass after building a hash table on the smaller side, rather than a nested scan. A cache is a hash table with an eviction policy stapled on. A compiler resolves every identifier through one. Deduplication and Bloom filters descend from the same primitive, and consistent hashing — the thing that lets a distributed cache add a node without invalidating everything — is the same idea applied to machines instead of memory slots.
 
 What all of this rests on is a bet: give up the worst-case guarantee that a balanced tree provides, and take a constant-time average instead. It is a strange bet on paper, and it is almost always the right one, because average case is what you experience a billion times a day and worst case is what you experience when something has already gone wrong. The engineers worth having are the ones who can name the exceptions — a hard-real-time deadline where an unbounded probe sequence is unacceptable, an ordered traversal where a tree was always the right structure, an endpoint where the keys arrive from strangers — because knowing exactly when your default is wrong is a different and rarer thing than knowing how to use it.
+
+
+## Linked from
+
+- [2_Problem Solving](index.md)

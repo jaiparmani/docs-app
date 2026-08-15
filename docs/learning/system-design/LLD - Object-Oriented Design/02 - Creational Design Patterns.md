@@ -117,3 +117,12 @@ The signal isn't "can you write a Singleton from memory" — it's whether you re
 
 ## Next
 [03 - Structural Design Patterns](03 - Structural Design Patterns.md) — once objects are created, structural patterns answer how they're composed together into larger structures.
+
+
+## Linked from
+
+- [Behavioral Design Patterns: Strategy, Observer, State, Command](04%20-%20Behavioral%20Design%20Patterns.md)
+- [Design a Parking Lot](Machine%20Coding%20Problems/01%20-%20Design%20a%20Parking%20Lot.md)
+- [LLD / Object-Oriented Design — Roadmap](README%20-%20Roadmap.md)
+- [SOLID Principles](01%20-%20SOLID%20Principles.md)
+- [Structural Design Patterns: Adapter, Decorator, Facade, Composite](03%20-%20Structural%20Design%20Patterns.md)

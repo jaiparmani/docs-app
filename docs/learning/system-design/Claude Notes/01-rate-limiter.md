@@ -109,3 +109,11 @@ This sequence diagram is the one to redraw from memory before an interview — i
 - [03-design-twitter](03-design-twitter.md) — same hot-path/async-decoupling thinking applied to fan-out
 - Caching (link to your existing note)
 - Consistent Hashing (link to your existing note)
+
+
+## Linked from
+
+- [Day 32 — API Gateway & Service Discovery (HLD)](../system-design-notes/Day%2032%20-%20API%20Gateway%20and%20Service%20Discovery%20%28HLD%29.md)
+- [Design a URL Shortener (e.g. bit.ly / TinyURL)](02-url-shortener.md)
+- [Design Twitter (Post + Follow + Home Timeline)](03-design-twitter.md)
+- [Learning System Design](../index.md)

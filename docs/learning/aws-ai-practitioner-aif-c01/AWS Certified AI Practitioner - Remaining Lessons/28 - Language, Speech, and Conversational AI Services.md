@@ -72,3 +72,10 @@ Multi-service pipelines are normal. Keep each managed service focused on its str
 ## Related notes
 
 [19 - AWS AI Services](19 - AWS AI Services.md) · [27 - Computer Vision and Document Extraction](27 - Computer Vision and Document Extraction.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)
+- [Computer Vision and Document Extraction](27%20-%20Computer%20Vision%20and%20Document%20Extraction.md)

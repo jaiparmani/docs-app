@@ -47,3 +47,9 @@ The plan below deliberately spends the most days on Applications of FMs and GenA
 
 ## Related
 [22 - Final Revision Checklist](22 - Final Revision Checklist.md) · [32 - Service Selection Drill](32 - Service Selection Drill.md) · [38 - Mock Exam 1](38 - Mock Exam 1.md) · [39 - Mock Exam 2](39 - Mock Exam 2.md)
+
+
+## Linked from
+
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)
+- [Mock Exam 2 (65 Questions)](39%20-%20Mock%20Exam%202.md)

@@ -33,3 +33,8 @@ Absent those conditions, breaking production on purpose is simply breaking produ
 ## Believing Versus Knowing
 
 What lingers, past the tooling and the monkey metaphors, is an epistemological point that applies well beyond infrastructure. There is a real and often invisible difference between believing your system is resilient and knowing it. Belief is assembled from design intent, from code review, from the comforting fact that nothing has gone wrong lately. Knowledge comes only from having watched the thing fail and observed what happened next. Every system carries some set of failure behaviours that are already determined — they are in the code right now, fixed, waiting. Your only real choice is whether you find out what they are on a Tuesday morning of your choosing, or on some future night of theirs.
+
+
+## Linked from
+
+- [1_Tech & Engineering](index.md)

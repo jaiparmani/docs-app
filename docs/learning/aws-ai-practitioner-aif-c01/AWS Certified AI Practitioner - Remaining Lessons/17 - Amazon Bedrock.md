@@ -51,3 +51,14 @@ exam: AIF-C01
 ## Next
 
 [18 - Bedrock Building Blocks](18 - Bedrock Building Blocks.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [AI Agents](16%20-%20AI%20Agents.md)
+- [Amazon Q](26%20-%20Amazon%20Q.md)
+- [Amazon SageMaker AI](25%20-%20Amazon%20SageMaker%20AI.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)
+- [Bedrock Inference and Model Selection](23%20-%20Bedrock%20Inference%20and%20Model%20Selection.md)
+- [Bedrock Prompt Management, Evaluation, and Flows](24%20-%20Bedrock%20Prompt%20Management%2C%20Evaluation%2C%20and%20Flows.md)

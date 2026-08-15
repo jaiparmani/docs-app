@@ -89,3 +89,9 @@ A. Yes, consistency should always be the top priority B. No — the chatbot is a
 
 ## Next
 [08 - Enterprise Integration Architectures](08 - Enterprise Integration Architectures.md)
+
+
+## Linked from
+
+- [Agentic AI: Agents, Tool Use, MCP, Multi-Agent Orchestration](06%20-%20Agentic%20AI%20and%20Tool%20Use.md)
+- [AIP-C01 Exam Prep — Everything Needed to Pass](../index.md)

@@ -55,3 +55,11 @@ exam: AIF-C01
 ## Next
 
 [21 - Security Compliance and Governance](21 - Security Compliance and Governance.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [AWS AI Services: Use-Case Matching](19%20-%20AWS%20AI%20Services.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)
+- [Responsible AI in Practice](30%20-%20Responsible%20AI%20in%20Practice.md)

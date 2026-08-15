@@ -65,3 +65,8 @@ When someone says a government "has run out of money" in the way a household doe
 When you read about a central bank raising rates to fight inflation, you can see the actual mechanism rather than a vague gesture: raising the price of credit reduces the volume of new lending, which reduces the rate at which new broad money enters the economy, which cools demand.
 
 And when someone explains a financial crisis as banks having "lent out too much of the deposits," you'll know the story is describing something that doesn't happen — and that the real story, about credit quality and capital adequacy and what happens when a great many loans that created money simultaneously stop being repaid, is both more accurate and considerably more alarming.
+
+
+## Linked from
+
+- [6_Foundations](index.md)

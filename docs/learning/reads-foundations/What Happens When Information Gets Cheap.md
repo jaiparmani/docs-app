@@ -73,3 +73,8 @@ When the cost of something collapses, the question worth asking is not "what wil
 The people living through the first century of print did not experience it as an information revolution. They experienced it as a period of unusual religious violence, political instability, and a bewildering amount of printed nonsense — alongside, largely unremarked at the time, the quiet construction of the intellectual infrastructure that made modern science possible.
 
 Both were the same event. It just took a few hundred years to see it that way.
+
+
+## Linked from
+
+- [6_Foundations](index.md)

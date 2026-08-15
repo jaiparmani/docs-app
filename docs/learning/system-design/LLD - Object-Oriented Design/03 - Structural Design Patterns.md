@@ -150,3 +150,11 @@ The differentiator across all four: can you say *which specific problem* each on
 
 ## Next
 [04 - Behavioral Design Patterns](04 - Behavioral Design Patterns.md) — the last pattern group, covering how objects communicate and change behavior at runtime (Strategy, Observer, State, Command) — the patterns you'll reach for most in the applied problems that follow.
+
+
+## Linked from
+
+- [Creational Design Patterns: Singleton, Factory, Builder](02%20-%20Creational%20Design%20Patterns.md)
+- [Design a Parking Lot](Machine%20Coding%20Problems/01%20-%20Design%20a%20Parking%20Lot.md)
+- [LLD / Object-Oriented Design — Roadmap](README%20-%20Roadmap.md)
+- [SOLID Principles](01%20-%20SOLID%20Principles.md)

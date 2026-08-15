@@ -83,3 +83,9 @@ Keep a held-out evaluation set. Do not judge an application only on the same exa
 ## Related notes
 
 [15 - Fine-Tuning](15 - Fine-Tuning.md) · [24 - Bedrock Prompt Management, Evaluation, and Flows](24 - Bedrock Prompt Management, Evaluation, and Flows.md) · [34 - GenAI Lifecycle, Context Engineering, and Multimodal Models](34 - GenAI Lifecycle, Context Engineering, and Multimodal Models.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)

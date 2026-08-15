@@ -53,3 +53,12 @@ AWS secures the underlying cloud infrastructure. Customers remain responsible fo
 ## Next
 
 [22 - Final Revision Checklist](22 - Final Revision Checklist.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [AI Security, Privacy, and Governance in Practice](31%20-%20AI%20Security%2C%20Privacy%2C%20and%20Governance%20in%20Practice.md)
+- [Amazon SageMaker AI](25%20-%20Amazon%20SageMaker%20AI.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)
+- [Responsible AI](20%20-%20Responsible%20AI.md)

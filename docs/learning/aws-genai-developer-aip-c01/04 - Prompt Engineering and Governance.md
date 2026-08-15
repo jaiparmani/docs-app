@@ -90,3 +90,14 @@ Write your own answer first — then expand.
 
 ## Related
 [README - Syllabus](README - Syllabus.md) · [03 - RAG Architecture](03 - RAG Architecture.md) · [05 - Agentic AI and Tool Use](05 - Agentic AI and Tool Use.md) · [07 - AI Safety and Guardrails](07 - AI Safety and Guardrails.md) · [09 - Governance and Responsible AI](09 - Governance and Responsible AI.md)
+
+
+## Linked from
+
+- [AI Safety and Guardrails: Content Moderation and Hallucination Mitigation](07%20-%20AI%20Safety%20and%20Guardrails.md)
+- [AWS Certified Generative AI Developer - Professional (AIP-C01)](index.md)
+- [AWS Certified Generative AI Developer – Professional (AIP-C01) — Syllabus](README%20-%20Syllabus.md)
+- [Model Evaluation Systems for GenAI](13%20-%20Model%20Evaluation%20Systems.md)
+- [Prompt Engineering, Management, and Governance](../aip-c01-exam-prep/Lessons/05%20-%20Prompt%20Engineering%20and%20Governance.md)
+- [RAG Architecture: Chunking, Retrieval, and Query Handling](03%20-%20RAG%20Architecture.md)
+- [Troubleshooting GenAI Applications](14%20-%20Troubleshooting%20GenAI%20Applications.md)

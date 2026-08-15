@@ -135,3 +135,16 @@ A `PaymentProcessor` class has a method `process(Payment p)` that checks `if (p.
 
 ## Next
 [02 - Creational Design Patterns](02 - Creational Design Patterns.md) — the first pattern group, and the direct DIP-in-practice answer to "how do you actually construct the right implementation without the caller knowing the concrete class."
+
+
+## Linked from
+
+- [Behavioral Design Patterns: Strategy, Observer, State, Command](04%20-%20Behavioral%20Design%20Patterns.md)
+- [Creational Design Patterns: Singleton, Factory, Builder](02%20-%20Creational%20Design%20Patterns.md)
+- [Design a Parking Lot](Machine%20Coding%20Problems/01%20-%20Design%20a%20Parking%20Lot.md)
+- [Design a Vending Machine](Machine%20Coding%20Problems/03%20-%20Design%20a%20Vending%20Machine.md)
+- [Design an Elevator System](Machine%20Coding%20Problems/02%20-%20Design%20an%20Elevator%20System.md)
+- [Design Splitwise (Expense Sharing)](Machine%20Coding%20Problems/04%20-%20Design%20Splitwise%20%28Expense%20Sharing%29.md)
+- [Learning System Design](../index.md)
+- [LLD / Object-Oriented Design — Roadmap](README%20-%20Roadmap.md)
+- [Structural Design Patterns: Adapter, Decorator, Facade, Composite](03%20-%20Structural%20Design%20Patterns.md)

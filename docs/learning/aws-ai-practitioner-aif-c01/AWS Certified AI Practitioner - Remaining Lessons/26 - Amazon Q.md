@@ -59,3 +59,9 @@ Prefer a managed assistant when the business need matches it; build custom only 
 ## Related notes
 
 [17 - Amazon Bedrock](17 - Amazon Bedrock.md) · [19 - AWS AI Services](19 - AWS AI Services.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)

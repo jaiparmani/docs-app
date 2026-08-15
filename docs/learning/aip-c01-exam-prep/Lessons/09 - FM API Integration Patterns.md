@@ -93,3 +93,9 @@ A. Nothing is wrong, retrying is always correct B. The immediate, no-delay retry
 
 ## Next
 [10 - App Integration Patterns and Dev Tools](10 - App Integration Patterns and Dev Tools.md) — closes Domain 2.
+
+
+## Linked from
+
+- [AIP-C01 Exam Prep — Everything Needed to Pass](../index.md)
+- [Enterprise Integration Architectures](08%20-%20Enterprise%20Integration%20Architectures.md)

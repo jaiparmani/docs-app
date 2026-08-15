@@ -59,3 +59,9 @@ A personalized recommendation needs meaningful interaction data and a clear outc
 ## Related notes
 
 [19 - AWS AI Services](19 - AWS AI Services.md) · [25 - Amazon SageMaker AI](25 - Amazon SageMaker AI.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)

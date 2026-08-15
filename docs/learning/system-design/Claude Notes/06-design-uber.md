@@ -123,3 +123,15 @@ Write your own answer first — then expand.
 
 ## Next
 [07-design-chat-system](07-design-chat-system.md) — moves from "periodic location pings" to genuinely real-time, persistent connections (WebSockets), and revisits Day 23's CAP framing once more: message delivery vs. presence/typing indicators.
+
+
+## Linked from
+
+- [Day 41 — Event Store & Replay, Implemented (LLD)](../system-design-notes/Day%2041%20-%20Event%20Store%20Implementation%20%28LLD%29.md)
+- [Day 43 — Multipart/Resumable Upload, Implemented (LLD)](../system-design-notes/Day%2043%20-%20Multipart%20Upload%20Implementation%20%28LLD%29.md)
+- [Day 44 — Geospatial Indexing (HLD)](../system-design-notes/Day%2044%20-%20Geospatial%20Indexing%20%28HLD%29.md)
+- [Day 45 — Geohash Proximity Search, Implemented (LLD)](../system-design-notes/Day%2045%20-%20Geohash%20Proximity%20Search%20Implementation%20%28LLD%29.md)
+- [Day 51 — Multi-Region & Disaster Recovery (HLD)](../system-design-notes/Day%2051%20-%20Multi-Region%20and%20Disaster%20Recovery%20%28HLD%29.md)
+- [Design a Chat System (WhatsApp / Messenger-style)](07-design-chat-system.md)
+- [Design a Distributed Job Scheduler (Cron-as-a-Service)](05-design-job-scheduler.md)
+- [Design a News Feed (Instagram/Facebook-style, Ranked)](09-design-news-feed.md)

@@ -54,3 +54,13 @@ An LLM answers a prompt. An **agent** can also decide what information it needs,
 ## Next
 
 [17 - Amazon Bedrock](17 - Amazon Bedrock.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [Agentic AI, MCP, Memory, and Orchestration](35%20-%20Agentic%20AI%2C%20MCP%2C%20Memory%2C%20and%20Orchestration.md)
+- [AI Security, Privacy, and Governance in Practice](31%20-%20AI%20Security%2C%20Privacy%2C%20and%20Governance%20in%20Practice.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)
+- [Bedrock Prompt Management, Evaluation, and Flows](24%20-%20Bedrock%20Prompt%20Management%2C%20Evaluation%2C%20and%20Flows.md)
+- [Fine-Tuning](15%20-%20Fine-Tuning.md)

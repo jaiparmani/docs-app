@@ -100,3 +100,9 @@ A. No concern — Lambda is always the right choice for any tool B. Lambda funct
 
 ## Next
 [07 - FM Deployment Strategies](07 - FM Deployment Strategies.md)
+
+
+## Linked from
+
+- [AIP-C01 Exam Prep — Everything Needed to Pass](../index.md)
+- [Prompt Engineering, Management, and Governance](05%20-%20Prompt%20Engineering%20and%20Governance.md)

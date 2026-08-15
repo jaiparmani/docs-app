@@ -106,3 +106,8 @@ A. Nothing needs to change — just edit the model ID in code and redeploy when 
 
 ## Next
 [02 - Data Validation and Processing Pipelines](02 - Data Validation and Processing Pipelines.md)
+
+
+## Linked from
+
+- [AIP-C01 Exam Prep — Everything Needed to Pass](../index.md)

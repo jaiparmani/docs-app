@@ -30,3 +30,9 @@ Once you have 10+ entries, look for clustering:
 
 ## Related
 README · [Mock Exam 1](Mock Exam 1.md) · [Rapid Recall Cram Sheet](Rapid Recall Cram Sheet.md) · [Service Selection Drill](Service Selection Drill.md)
+
+
+## Linked from
+
+- [AIP-C01 Exam Prep — Everything Needed to Pass](index.md)
+- [Mock Exam 1 (65 Questions)](Mock%20Exam%201.md)

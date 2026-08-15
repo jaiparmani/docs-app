@@ -87,3 +87,14 @@ Write your own answer first — then expand.
 
 ## Related
 [README - Syllabus](README - Syllabus.md) · [03 - RAG Architecture](03 - RAG Architecture.md) · [04 - Prompt Engineering and Governance](04 - Prompt Engineering and Governance.md) · [06 - FM Deployment and API Integration](06 - FM Deployment and API Integration.md) · [12 - Observability and Monitoring](12 - Observability and Monitoring.md) · [13 - Model Evaluation Systems](13 - Model Evaluation Systems.md)
+
+
+## Linked from
+
+- [AI Safety and Guardrails: Content Moderation and Hallucination Mitigation](07%20-%20AI%20Safety%20and%20Guardrails.md)
+- [AWS Certified Generative AI Developer - Professional (AIP-C01)](index.md)
+- [AWS Certified Generative AI Developer – Professional (AIP-C01) — Syllabus](README%20-%20Syllabus.md)
+- [FM Deployment Strategies and API Integration Patterns](06%20-%20FM%20Deployment%20and%20API%20Integration.md)
+- [Model Evaluation Systems for GenAI](13%20-%20Model%20Evaluation%20Systems.md)
+- [Observability and Monitoring for GenAI Applications](12%20-%20Observability%20and%20Monitoring.md)
+- [Troubleshooting GenAI Applications](../aip-c01-exam-prep/Lessons/19%20-%20Troubleshooting%20GenAI%20Applications.md)

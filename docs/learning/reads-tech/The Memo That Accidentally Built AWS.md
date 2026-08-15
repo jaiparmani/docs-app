@@ -45,3 +45,8 @@ The reason "designed to be externalizable" works isn't that it makes interfaces 
 An internal interface is a contract between people who can renegotiate it in a hallway. That renegotiability feels like velocity, and it is, right up until the point where it means nothing about the boundary is actually true — the interface is only a suggestion, and the real contract is a shared understanding that dies when people change teams. An externalizable interface can't be renegotiated in a hallway, because one party isn't in the building. Every guarantee has to be written down, enforced in code, and honored by strangers.
 
 That constraint costs you real speed in year one. What it buys is a system whose boundaries are load-bearing rather than aspirational — and, as it turned out, a system whose parts could be sold individually, because each of them was already a thing that could stand up in front of someone who owed you nothing.
+
+
+## Linked from
+
+- [1_Tech & Engineering](index.md)

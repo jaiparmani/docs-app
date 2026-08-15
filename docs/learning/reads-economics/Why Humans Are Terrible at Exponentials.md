@@ -43,3 +43,8 @@ Once the shape is familiar, it shows up far from money. Epidemics are the obviou
 Software engineers meet it as technical debt. A codebase degrades non-linearly because each new piece of complexity interacts with the complexity already present, so the cost of the next change grows in proportion to the mess rather than adding to it. A team that feels the slowdown has already spent most of the runway.
 
 The uncomfortable conclusion is that there is no fix at the level of intuition. You do not get better at feeling exponentials with practice; experienced investors and epidemiologists still guess low when caught without a calculator. What changes is that they stop trusting the guess. The defence against a process your mind cannot represent is not a better mind. It is the discipline of writing the numbers down every single time — and treating the moment when a growth curve still looks flat as the moment the decision actually matters.
+
+
+## Linked from
+
+- [4_Finance](index.md)

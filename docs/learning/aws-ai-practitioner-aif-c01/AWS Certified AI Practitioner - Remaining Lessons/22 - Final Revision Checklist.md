@@ -47,3 +47,12 @@ exam: AIF-C01
 3. Eliminate answers that require unneeded custom model building or retraining.
 4. For GenAI, separate **knowledge** (RAG) from **behavior** (fine-tuning) and **safety** (guardrails/oversight).
 5. Select all required answers for multiple-response items; there is no penalty for guessing.
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)
+- [ML Lifecycle, Inference, and Metrics](33%20-%20ML%20Lifecycle%2C%20Inference%2C%20and%20Metrics.md)
+- [Security, Compliance, and Governance for AI Solutions](21%20-%20Security%20Compliance%20and%20Governance.md)
+- [Service Selection Drill](32%20-%20Service%20Selection%20Drill.md)

@@ -57,3 +57,8 @@ A landlocked country faces a real trade disadvantage. It can be overcome — thr
 The genuinely interesting analytical work is in the interaction. Why did some societies facing hard geographic constraints build institutions that overcame them while others didn't? Why did some regions with enormous natural advantages squander them — the resource-curse pattern, where mineral wealth funds extractive politics and undermines the broader economy, is a case where good geography produces bad outcomes through institutional channels?
 
 Those questions are more interesting than either determinism or its denial, and they're the ones that geographic literacy actually helps you ask. The map isn't the explanation. But you can't read the explanation without it.
+
+
+## Linked from
+
+- [6_Foundations](index.md)

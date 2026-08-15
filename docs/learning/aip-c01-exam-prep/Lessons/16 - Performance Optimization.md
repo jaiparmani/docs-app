@@ -102,3 +102,9 @@ A. Nothing is wrong, pre-compute everything possible B. Pre-computation only pay
 
 ## Next
 [17 - Monitoring for GenAI Applications](17 - Monitoring for GenAI Applications.md)
+
+
+## Linked from
+
+- [AIP-C01 Exam Prep — Everything Needed to Pass](../index.md)
+- [Cost Optimization for GenAI Workloads](15%20-%20Cost%20Optimization.md)

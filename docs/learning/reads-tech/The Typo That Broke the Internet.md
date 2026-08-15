@@ -33,3 +33,8 @@ The second is about the danger of components that never restart. A system that's
 ## Why this particular story stuck
 
 Outages happen constantly, most of them boring and local, fixed before most users notice. This one stuck in the industry's collective memory for a specific reason: it was a moment where a huge number of engineers, at a huge number of companies, discovered simultaneously just how much of the internet's apparent stability was resting on the assumption that a single regional storage service would simply never have a bad morning. It wasn't really a story about one typo. It was a story about how much invisible, unexamined dependency had quietly accumulated underneath everyone's applications — and how a four-hour outage in one AWS region was enough to make that dependency visible to millions of people who had no idea it existed until their app stopped loading images.
+
+
+## Linked from
+
+- [1_Tech & Engineering](index.md)

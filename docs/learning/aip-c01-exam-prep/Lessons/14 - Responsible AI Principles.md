@@ -89,3 +89,9 @@ A. Yes, having a written policy is sufficient by itself B. No — policy-complia
 
 ## Next
 Closes Domain 3. Next up: [15 - Cost Optimization](15 - Cost Optimization.md) — starts Domain 4.
+
+
+## Linked from
+
+- [AI Governance and Compliance](13%20-%20AI%20Governance%20and%20Compliance.md)
+- [AIP-C01 Exam Prep — Everything Needed to Pass](../index.md)

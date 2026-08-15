@@ -115,3 +115,17 @@ Write your own answer first — then expand.
 
 ## Next
 [05-design-job-scheduler](05-design-job-scheduler.md) — a different coordination problem: instead of "deliver this once to many recipients," it's "run this exactly once at a specific time," which needs leader election/locking instead of fan-out.
+
+
+## Linked from
+
+- [Day 33 — Retry, Backoff & Bulkhead Patterns (LLD)](../system-design-notes/Day%2033%20-%20Retry%20Backoff%20and%20Bulkhead%20Patterns%20%28LLD%29.md)
+- [Day 34 — Delivery Semantics (HLD)](../system-design-notes/Day%2034%20-%20Delivery%20Semantics%20%28HLD%29.md)
+- [Day 35 — Bloom Filters (LLD)](../system-design-notes/Day%2035%20-%20Bloom%20Filters%20%28LLD%29.md)
+- [Day 38 — Distributed Transactions: 2PC vs Saga (HLD)](../system-design-notes/Day%2038%20-%20Distributed%20Transactions%202PC%20vs%20Saga%20%28HLD%29.md)
+- [Day 42 — Object/Blob Storage Internals (HLD)](../system-design-notes/Day%2042%20-%20Object%20Storage%20Internals%20%28HLD%29.md)
+- [Day 47 — Connection & Session Management at Scale (LLD)](../system-design-notes/Day%2047%20-%20Connection%20Session%20Management%20%28LLD%29.md)
+- [Day 49 — Transcoding Pipeline, Sketched (LLD)](../system-design-notes/Day%2049%20-%20Transcoding%20Pipeline%20Implementation%20%28LLD%29.md)
+- [Day 5 — Observer Pattern (LLD)](../../lld/Day%205%20-%20Observer%20Pattern%20%28LLD%29.md)
+- [Design a Chat System (WhatsApp / Messenger-style)](07-design-chat-system.md)
+- [Design a Distributed Job Scheduler (Cron-as-a-Service)](05-design-job-scheduler.md)

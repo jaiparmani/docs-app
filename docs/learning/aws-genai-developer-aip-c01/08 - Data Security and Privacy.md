@@ -91,3 +91,16 @@ Write your own answer first — then expand.
 
 ## Related
 [README - Syllabus](README - Syllabus.md) · [07 - AI Safety and Guardrails](07 - AI Safety and Guardrails.md) · [09 - Governance and Responsible AI](09 - Governance and Responsible AI.md) · [05 - Agentic AI and Tool Use](05 - Agentic AI and Tool Use.md)
+
+
+## Linked from
+
+- [Agentic AI: Agents, Tool Use, MCP, and Multi-Agent Orchestration](05%20-%20Agentic%20AI%20and%20Tool%20Use.md)
+- [AI Governance, Compliance, and Responsible AI Principles](09%20-%20Governance%20and%20Responsible%20AI.md)
+- [AI Safety and Guardrails: Content Moderation and Hallucination Mitigation](07%20-%20AI%20Safety%20and%20Guardrails.md)
+- [AWS Certified Generative AI Developer - Professional (AIP-C01)](index.md)
+- [AWS Certified Generative AI Developer – Professional (AIP-C01) — Syllabus](README%20-%20Syllabus.md)
+- [Data Security and Privacy for GenAI](../aip-c01-exam-prep/Lessons/12%20-%20Data%20Security%20and%20Privacy.md)
+- [Model Evaluation Systems for GenAI](13%20-%20Model%20Evaluation%20Systems.md)
+- [Observability and Monitoring for GenAI Applications](12%20-%20Observability%20and%20Monitoring.md)
+- [Troubleshooting GenAI Applications](14%20-%20Troubleshooting%20GenAI%20Applications.md)

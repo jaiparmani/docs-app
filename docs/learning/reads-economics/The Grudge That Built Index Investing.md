@@ -49,3 +49,8 @@ The index fund itself turned out to be trivially copyable. Every large asset man
 The ownership structure was not copied. No major competitor has replicated it, and the obstacle is structural rather than a failure of imagination — you cannot retroactively give away your own management company to your customers and expect your existing owners to applaud. And that structure is what made the index fund credible rather than a marketing position. Any firm can launch a cheap fund; sustaining low costs for decades requires that no one inside the building benefits from raising them. Bogle's real insight was not that markets are hard to beat. It was that the fee, not the strategy, was the variable investors could actually control, and that a company's incentives will eventually overwhelm its intentions unless the incentives are wired correctly from the start.
 
 Which is a strange legacy for a decision that began as a bad merger and a firing. The go-go years taught Bogle what chasing performance costs. Getting removed taught him what happens when ownership and interest diverge. He built a company that solved for both, and the industry has spent fifty years adopting one half of it.
+
+
+## Linked from
+
+- [4_Finance](index.md)

@@ -120,3 +120,9 @@ Write your own answer first — then expand.
 
 ## Next
 [03 - Design a Vending Machine](03 - Design a Vending Machine.md) — the same State pattern, deliberately in a smaller, cleaner example, right after seeing it combined with a scheduling algorithm here.
+
+
+## Linked from
+
+- [Design a Parking Lot](01%20-%20Design%20a%20Parking%20Lot.md)
+- [Design a Vending Machine](03%20-%20Design%20a%20Vending%20Machine.md)

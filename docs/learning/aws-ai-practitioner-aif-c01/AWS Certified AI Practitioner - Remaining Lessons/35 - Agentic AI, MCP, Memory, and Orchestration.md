@@ -79,3 +79,10 @@ Use the least autonomous design that meets the outcome. Sensitive and irreversib
 ## Related notes
 
 [16 - AI Agents](16 - AI Agents.md) · [24 - Bedrock Prompt Management, Evaluation, and Flows](24 - Bedrock Prompt Management, Evaluation, and Flows.md) · [31 - AI Security, Privacy, and Governance in Practice](31 - AI Security, Privacy, and Governance in Practice.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [AI Security and Governance Objectives](37%20-%20AI%20Security%20and%20Governance%20Objectives.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)

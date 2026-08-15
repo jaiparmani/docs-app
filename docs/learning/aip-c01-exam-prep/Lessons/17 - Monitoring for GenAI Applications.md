@@ -96,3 +96,9 @@ A. No risk — the generation model is always the right place to look first when
 
 ## Next
 Closes Domain 4. Next up: [18 - Model Evaluation Systems](18 - Model Evaluation Systems.md) — starts Domain 5.
+
+
+## Linked from
+
+- [AIP-C01 Exam Prep — Everything Needed to Pass](../index.md)
+- [Performance and Latency Optimization for FM Applications](16%20-%20Performance%20Optimization.md)

@@ -47,3 +47,8 @@ The number itself has a modest history. New Zealand pioneered explicit inflation
 Serious economists argue for a higher target, on the grounds that the lower bound binds more often than anyone expected; others defend the current level, on the grounds that a target you have changed once is a target you might change again. Central banks have adjusted the framing — the Fed's 2020 shift toward tolerating periods above target to offset periods below, the ECB's 2021 move to an explicitly symmetric formulation — while leaving the figure alone.
 
 That reluctance is the tell. If 2 were optimal, the case for defending it would be that it is optimal. The actual case is that it is established, which is not a weaker argument but a different one: the target's real function is to give millions of independent price-setters a common reference point. A coordination point does not need to be the best available option. It needs everyone to believe everyone else is using it. Which is why the number is arbitrary and changing it is not.
+
+
+## Linked from
+
+- [4_Finance](index.md)

@@ -65,3 +65,8 @@ A startup pitches an idea that sounds brilliant. How many brilliant-sounding pit
 You are not being cynical by asking. You're doing the thing the medical test example demands: refusing to jump straight to where the evidence points, and insisting on knowing where you started from.
 
 The uncomfortable implication is that when you're looking for something genuinely rare, **most of your positive signals will be wrong even with a good detector**. That isn't a failure of your tools. It's arithmetic. And the practical response is usually not to hunt for a better detector, but to accept that a single positive result is only ever the start of an investigation — never the end of one.
+
+
+## Linked from
+
+- [6_Foundations](index.md)

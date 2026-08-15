@@ -13,6 +13,7 @@ import os
 import re
 import shutil
 from pathlib import Path
+from urllib.parse import quote, unquote
 
 VAULT_ROOT = Path(__file__).resolve().parents[2] / "second-brain"
 DOCS_DIR = Path(__file__).resolve().parents[1] / "docs" / "learning"
@@ -145,6 +146,46 @@ def fix_readme_links(dst: Path):
             md_file.write_text(new_text, encoding="utf-8")
 
 
+MD_LINK_RE = re.compile(r"\]\(([^)]+\.md)\)")
+
+
+def add_backlinks(docs_root: Path):
+    """Append a 'Linked from' section to each note listing the pages that point at
+    it. The vault is a graph; without this the published copy is only a tree."""
+    incoming = {}   # canonical target path -> set of (title, source path)
+    titles = {}
+
+    pages = sorted(docs_root.rglob("*.md"))
+    for md in pages:
+        text = md.read_text(encoding="utf-8", errors="ignore")
+        m = re.search(r"^#\s+(.+)$", text, re.MULTILINE)
+        titles[md] = m.group(1).strip() if m else md.stem
+
+    for md in pages:
+        text = md.read_text(encoding="utf-8", errors="ignore")
+        for raw in MD_LINK_RE.findall(text):
+            if raw.startswith(("http://", "https://", "#")):
+                continue
+            target = (md.parent / unquote(raw)).resolve()
+            if target == md.resolve() or not target.exists():
+                continue
+            incoming.setdefault(target, set()).add(md)
+
+    for md in pages:
+        sources = incoming.get(md.resolve())
+        if not sources or md.name == "index.md":
+            continue
+        entries = []
+        for src in sorted(sources, key=lambda p: titles[p].lower()):
+            rel = Path(os.path.relpath(src, md.parent)).as_posix()
+            entries.append(f"- [{titles[src]}]({quote(rel)})")
+        if not entries:
+            continue
+        block = "\n\n## Linked from\n\n" + "\n".join(entries) + "\n"
+        with md.open("a", encoding="utf-8") as fh:
+            fh.write(block)
+
+
 def write_pages_title(dst: Path, title: str):
     """awesome-pages: give the nav section a readable title instead of the slugged folder name."""
     (dst / ".pages").write_text(f"title: {title}\n", encoding="utf-8")
@@ -199,6 +240,8 @@ def main():
             convert_wikilinks(dst, DOCS_DIR.parent, name_to_relpath)
             fix_readme_links(dst)
             add_reading_time(dst)
+
+    add_backlinks(DOCS_DIR)
 
     print("Done.")
 

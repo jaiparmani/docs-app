@@ -414,3 +414,10 @@ A. Encrypting data at rest automatically B. Requiring an additional verification
 
 ## Next
 40 - Mock Exam 3 — a third timed pass; per the [15-Day Exam Countdown](15-Day Exam Countdown.md), the value at this point is repeated timed-pressure practice and a shrinking Missed Questions Log, not novelty.
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)
+- [Mock Exam 1 (65 Questions)](38%20-%20Mock%20Exam%201.md)

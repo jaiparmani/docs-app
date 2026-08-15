@@ -61,3 +61,8 @@ So the tradition existed, and then it didn't — not because the idea was dispro
 We tend to narrate technology as a ratchet: things get invented, and then humanity *has* them, and the line goes up. The Antikythera mechanism is a hole in that story. It says that advanced capability can exist, work beautifully, and simply fail to continue — that the ratchet has no teeth of its own, and that what keeps a technology alive is not its brilliance but the unglamorous continuity of people teaching other people. Progress isn't a property of history. It's a thing that has to be actively handed along, and the handing along can stop.
 
 Somebody, sometime in the last century or so BCE, sat down with fine tools and cut a gear that modeled the moon's changing speed across the sky. Then that ended, and the next comparable thing is more than a millennium away.
+
+
+## Linked from
+
+- [5_General Reads](index.md)

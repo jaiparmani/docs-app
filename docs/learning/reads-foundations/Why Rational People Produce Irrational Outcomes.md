@@ -71,3 +71,8 @@ When you encounter a persistently bad collective outcome, the unproductive quest
 Because if the answer is that each person is doing the sensible thing given their position, then appealing to people to be better will not work, and neither will replacing them — the new people will face the same structure and make the same choices. What has to change is the payoff structure itself: making the cost of defection land on the defector, making the shared resource someone's actual responsibility, converting a one-shot interaction into a repeated one, or simply making the good outcome the coordinated default.
 
 The people were never the problem. The shape of the game was.
+
+
+## Linked from
+
+- [6_Foundations](index.md)

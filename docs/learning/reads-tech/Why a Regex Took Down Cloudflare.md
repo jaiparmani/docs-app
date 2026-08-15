@@ -51,3 +51,8 @@ That reasoning is sound in isolation and wrong in aggregate, because it quietly 
 This is the generalizable lesson, and it applies well beyond regex. Config, feature flags, ML models, DNS records, IAM policies, routing tables — the categories of change that teams exempt from staged rollout are almost never exempted because they are provably safe. They are exempted because they don't look like code, and the deploy safety culture attaches itself to things that look like code. The failure domain doesn't care about that distinction. If a change can take down every machine, it needs a canary, an automatic health check, and a fast rollback path, no matter how small the diff is or how obviously correct it looks in review.
 
 The regex was the bug. The reason a bug became a global outage was a taxonomy — an implicit belief that some changes are too small to need a blast radius.
+
+
+## Linked from
+
+- [1_Tech & Engineering](index.md)

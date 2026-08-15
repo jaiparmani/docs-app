@@ -331,3 +331,7 @@ Revision Checklist
 - Practice Questions
 - Mock Exams
 - Final Revision
+
+## Linked from
+
+- [AWS Certified AI Practitioner - AIF C01](index.md)

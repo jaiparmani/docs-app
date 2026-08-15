@@ -60,3 +60,17 @@ exam: AIF-C01
 ## Next
 
 [20 - Responsible AI](20 - Responsible AI.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [Amazon Q](26%20-%20Amazon%20Q.md)
+- [Amazon SageMaker AI](25%20-%20Amazon%20SageMaker%20AI.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)
+- [Bedrock Building Blocks](18%20-%20Bedrock%20Building%20Blocks.md)
+- [Computer Vision and Document Extraction](27%20-%20Computer%20Vision%20and%20Document%20Extraction.md)
+- [Final Revision Checklist](22%20-%20Final%20Revision%20Checklist.md)
+- [Language, Speech, and Conversational AI Services](28%20-%20Language%2C%20Speech%2C%20and%20Conversational%20AI%20Services.md)
+- [Recommendations and Personalization](29%20-%20Recommendations%20and%20Personalization.md)
+- [Service Selection Drill](32%20-%20Service%20Selection%20Drill.md)

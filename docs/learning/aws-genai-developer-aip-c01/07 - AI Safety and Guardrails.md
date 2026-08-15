@@ -92,3 +92,14 @@ Write your own answer first — then expand.
 
 ## Related
 [README - Syllabus](README - Syllabus.md) · [04 - Prompt Engineering and Governance](04 - Prompt Engineering and Governance.md) · [08 - Data Security and Privacy](08 - Data Security and Privacy.md) · [09 - Governance and Responsible AI](09 - Governance and Responsible AI.md) · [13 - Model Evaluation Systems](13 - Model Evaluation Systems.md) · [14 - Troubleshooting GenAI Applications](14 - Troubleshooting GenAI Applications.md)
+
+
+## Linked from
+
+- [Agentic AI: Agents, Tool Use, MCP, and Multi-Agent Orchestration](05%20-%20Agentic%20AI%20and%20Tool%20Use.md)
+- [AI Governance, Compliance, and Responsible AI Principles](09%20-%20Governance%20and%20Responsible%20AI.md)
+- [AI Safety and Content Controls](../aip-c01-exam-prep/Lessons/11%20-%20AI%20Safety%20and%20Content%20Controls.md)
+- [AWS Certified Generative AI Developer - Professional (AIP-C01)](index.md)
+- [AWS Certified Generative AI Developer – Professional (AIP-C01) — Syllabus](README%20-%20Syllabus.md)
+- [Data Security and Privacy for GenAI](08%20-%20Data%20Security%20and%20Privacy.md)
+- [Prompt Engineering, Management, and Governance](04%20-%20Prompt%20Engineering%20and%20Governance.md)

@@ -80,3 +80,10 @@ Managed services accelerate delivery, but selection should still account for dat
 ## Related notes
 
 [19 - AWS AI Services](19 - AWS AI Services.md) · [25 - Amazon SageMaker AI](25 - Amazon SageMaker AI.md) · [22 - Final Revision Checklist](22 - Final Revision Checklist.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)
+- [ML Lifecycle, Inference, and Metrics](33%20-%20ML%20Lifecycle%2C%20Inference%2C%20and%20Metrics.md)

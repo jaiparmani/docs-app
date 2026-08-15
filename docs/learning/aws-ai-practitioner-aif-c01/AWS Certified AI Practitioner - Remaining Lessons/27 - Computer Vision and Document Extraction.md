@@ -63,3 +63,10 @@ The input can be an image in both cases. The deciding factor is the outcome: **d
 ## Related notes
 
 [19 - AWS AI Services](19 - AWS AI Services.md) · [28 - Language, Speech, and Conversational AI Services](28 - Language, Speech, and Conversational AI Services.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)
+- [Language, Speech, and Conversational AI Services](28%20-%20Language%2C%20Speech%2C%20and%20Conversational%20AI%20Services.md)

@@ -70,3 +70,12 @@ Treat prompts as application assets: test them with representative inputs and ma
 ## Related notes
 
 [17 - Amazon Bedrock](17 - Amazon Bedrock.md) · [16 - AI Agents](16 - AI Agents.md) · [23 - Bedrock Inference and Model Selection](23 - Bedrock Inference and Model Selection.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [Agentic AI, MCP, Memory, and Orchestration](35%20-%20Agentic%20AI%2C%20MCP%2C%20Memory%2C%20and%20Orchestration.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)
+- [Bedrock Inference and Model Selection](23%20-%20Bedrock%20Inference%20and%20Model%20Selection.md)
+- [FM Customization and Evaluation](36%20-%20FM%20Customization%20and%20Evaluation.md)

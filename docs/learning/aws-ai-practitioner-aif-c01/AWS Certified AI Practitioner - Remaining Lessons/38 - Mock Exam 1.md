@@ -414,3 +414,10 @@ A. Increase temperature B. Configure a Bedrock Guardrail with denied topics C. U
 
 ## Next
 [39 - Mock Exam 2](39 - Mock Exam 2.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)
+- [Mock Exam 2 (65 Questions)](39%20-%20Mock%20Exam%202.md)

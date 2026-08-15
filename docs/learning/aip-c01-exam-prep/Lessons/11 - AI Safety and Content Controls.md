@@ -94,3 +94,9 @@ A. Yes, the same Guardrail configuration covers all use cases equally B. No — 
 
 ## Next
 [12 - Data Security and Privacy](12 - Data Security and Privacy.md)
+
+
+## Linked from
+
+- [AIP-C01 Exam Prep — Everything Needed to Pass](../index.md)
+- [Application Integration Patterns and Development Tools](10%20-%20App%20Integration%20Patterns%20and%20Dev%20Tools.md)

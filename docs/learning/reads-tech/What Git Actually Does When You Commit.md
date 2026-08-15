@@ -51,3 +51,8 @@ This is why branching in Git is instant and free, and why it felt like such a dr
 The interesting thing about Git internals isn't the trivia — it's that a whole set of Git's user-facing behaviors that seem arbitrary or confusing turn out to be direct, unavoidable consequences of one design decision. Content-addressed storage gives you deduplication, cheap branching, tamper-evident history, and the reason rebase rewrites rather than moves, all for free, without any of those being separately designed features.
 
 That's a fairly rare thing in software. Most systems get their properties by implementing them deliberately, one at a time. Git got a surprising number of its best properties by picking the right way to name things and letting the rest follow.
+
+
+## Linked from
+
+- [1_Tech & Engineering](index.md)

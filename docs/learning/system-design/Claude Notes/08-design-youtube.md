@@ -116,3 +116,17 @@ Write your own answer first — then expand.
 
 ## Next
 [09-design-news-feed](09-design-news-feed.md) — reuses Twitter's exact fan-out skeleton, but replaces "chronological merge" with a ranking stage, and reuses this note's storage-tiering thinking for media-heavy posts.
+
+
+## Linked from
+
+- [Day 41 — Event Store & Replay, Implemented (LLD)](../system-design-notes/Day%2041%20-%20Event%20Store%20Implementation%20%28LLD%29.md)
+- [Day 42 — Object/Blob Storage Internals (HLD)](../system-design-notes/Day%2042%20-%20Object%20Storage%20Internals%20%28HLD%29.md)
+- [Day 43 — Multipart/Resumable Upload, Implemented (LLD)](../system-design-notes/Day%2043%20-%20Multipart%20Upload%20Implementation%20%28LLD%29.md)
+- [Day 45 — Geohash Proximity Search, Implemented (LLD)](../system-design-notes/Day%2045%20-%20Geohash%20Proximity%20Search%20Implementation%20%28LLD%29.md)
+- [Day 47 — Connection & Session Management at Scale (LLD)](../system-design-notes/Day%2047%20-%20Connection%20Session%20Management%20%28LLD%29.md)
+- [Day 48 — Video Streaming Fundamentals (HLD)](../system-design-notes/Day%2048%20-%20Video%20Streaming%20Fundamentals%20%28HLD%29.md)
+- [Day 49 — Transcoding Pipeline, Sketched (LLD)](../system-design-notes/Day%2049%20-%20Transcoding%20Pipeline%20Implementation%20%28LLD%29.md)
+- [Design a Chat System (WhatsApp / Messenger-style)](07-design-chat-system.md)
+- [Design a News Feed (Instagram/Facebook-style, Ranked)](09-design-news-feed.md)
+- [Design Search Autocomplete (Typeahead Suggestions)](10-design-search-autocomplete.md)

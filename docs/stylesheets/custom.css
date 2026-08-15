@@ -160,3 +160,107 @@ body.reading-focus .md-content__inner {
     display: none;
   }
 }
+
+/* Sepia — Material ships only default/slate, so the paper scheme is defined here. */
+[data-md-color-scheme="sepia"] {
+  --md-default-bg-color: #f4ecd8;
+  --md-default-bg-color--light: #efe6d0;
+  --md-default-fg-color: #3b3228;
+  --md-default-fg-color--light: #6b5d4d;
+  --md-default-fg-color--lighter: #a2947f;
+  --md-default-fg-color--lightest: #d9cdb4;
+  --md-primary-fg-color: #3b3228;
+  --md-primary-bg-color: #f4ecd8;
+  --md-accent-fg-color: #a8600f;
+  --md-typeset-color: #3b3228;
+  --md-typeset-a-color: #a8600f;
+  --md-code-bg-color: #ebe1c9;
+  --md-code-fg-color: #3b3228;
+  --md-footer-bg-color: #3b3228;
+  color-scheme: light;
+}
+
+/* Reader-adjustable spacing and body face. */
+:root {
+  --reading-spacing: 1.7;
+}
+
+.md-typeset {
+  line-height: var(--reading-spacing);
+}
+
+.md-typeset p,
+.md-typeset li {
+  line-height: var(--reading-spacing);
+}
+
+body.reading-serif .md-typeset p,
+body.reading-serif .md-typeset li,
+body.reading-serif .md-typeset blockquote {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: calc(0.78rem * var(--reading-scale));
+}
+
+/* Time remaining, riding just under the progress bar. */
+.reading-remaining {
+  position: fixed;
+  top: 0.45rem;
+  right: 0.6rem;
+  z-index: 19;
+  font-size: 0.55rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+  background: var(--md-default-bg-color);
+  padding: 0.05rem 0.3rem;
+  border-radius: 0.2rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.reading-remaining.is-visible {
+  opacity: 0.75;
+}
+
+body.reading-focus .reading-remaining {
+  top: 0.5rem;
+}
+
+/* "Continue reading" list on the home page. */
+.reading-continue {
+  margin: 1.5em 0;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.4rem;
+}
+
+.reading-continue h2 {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+}
+
+.reading-continue ol {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.reading-continue li {
+  margin: 0.25rem 0;
+}
+
+.reading-continue .pct {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.62rem;
+}
+
+.reading-continue .clear {
+  margin-top: 0.6rem;
+  font-size: 0.62rem;
+  color: var(--md-default-fg-color--light);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}

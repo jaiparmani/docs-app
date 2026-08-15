@@ -100,3 +100,9 @@ A. The vector store hardware is degrading with age B. Retrieval drift — the co
 
 ## Closes the full lesson set
 All 19 official tasks across all 5 domains now have a lesson. Next: update the folder README with the full lesson index, then start layering in additional scenario-heavy practice per lesson.
+
+
+## Linked from
+
+- [AIP-C01 Exam Prep — Everything Needed to Pass](../index.md)
+- [Model Evaluation Systems for GenAI](18%20-%20Model%20Evaluation%20Systems.md)

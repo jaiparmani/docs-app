@@ -35,3 +35,8 @@ So the useful question is never "is our architecture AP or CP". It is: *what sho
 ## When a Slogan Costs More Than It Teaches
 
 There is a case to be made that CAP's fame has, on balance, made distributed systems reasoning worse rather than better. Not because the theorem is wrong — it is a correct and genuinely valuable impossibility result, and knowing that the dilemma is provable rather than merely difficult saves you from trying to engineer your way around it. The harm is in what the slogan enables. "Pick two" is short, memorable, and feels like understanding, and it lets an engineer terminate a conversation about failure modes with a two-letter label instead of starting one. The theorem's real gift is a question — what does this data do when the network splits — and the slogan's real cost is that it sounds enough like an answer to stop people asking.
+
+
+## Linked from
+
+- [1_Tech & Engineering](index.md)

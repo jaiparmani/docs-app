@@ -73,3 +73,8 @@ The realistic response to all of this isn't to distrust research. It's to hold b
 A single striking study should move you a little. A finding replicated across independent labs, with large samples and pre-registered analysis, should move you a lot. Most of what you encounter is the former, presented with the confidence of the latter.
 
 The phrase "studies show" is doing a great deal of concealed work. It flattens the distance between a preliminary result from forty undergraduates and something the field has hammered on for twenty years. Learning to ask **which kind of study, and has anyone checked?** is a small habit that quietly upgrades every claim you'll ever read.
+
+
+## Linked from
+
+- [6_Foundations](index.md)

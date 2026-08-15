@@ -95,3 +95,16 @@ Write your own answer first — then expand.
 
 ## Related
 [README - Syllabus](README - Syllabus.md) · [01 - Bedrock Model Catalog and Integration Patterns](01 - Bedrock Model Catalog and Integration Patterns.md) · [05 - Agentic AI and Tool Use](05 - Agentic AI and Tool Use.md) · [10 - Cost Optimization](10 - Cost Optimization.md) · [11 - Performance and Latency Optimization](11 - Performance and Latency Optimization.md) · [14 - Troubleshooting GenAI Applications](14 - Troubleshooting GenAI Applications.md)
+
+
+## Linked from
+
+- [Agentic AI: Agents, Tool Use, MCP, and Multi-Agent Orchestration](05%20-%20Agentic%20AI%20and%20Tool%20Use.md)
+- [AWS Certified Generative AI Developer - Professional (AIP-C01)](index.md)
+- [AWS Certified Generative AI Developer – Professional (AIP-C01) — Syllabus](README%20-%20Syllabus.md)
+- [Bedrock Model Catalog, Selection & Integration Patterns](01%20-%20Bedrock%20Model%20Catalog%20and%20Integration%20Patterns.md)
+- [Cost Optimization for GenAI Workloads](10%20-%20Cost%20Optimization.md)
+- [FM API Integration Patterns](../aip-c01-exam-prep/Lessons/09%20-%20FM%20API%20Integration%20Patterns.md)
+- [FM Deployment Strategies](../aip-c01-exam-prep/Lessons/07%20-%20FM%20Deployment%20Strategies.md)
+- [Performance and Latency Optimization for FM Applications](11%20-%20Performance%20and%20Latency%20Optimization.md)
+- [Troubleshooting GenAI Applications](14%20-%20Troubleshooting%20GenAI%20Applications.md)

@@ -90,3 +90,14 @@ Write your own answer first — then expand.
 
 ## Related
 [README - Syllabus](README - Syllabus.md) · [02 - Vector Stores and Embeddings](02 - Vector Stores and Embeddings.md) · [06 - FM Deployment and API Integration](06 - FM Deployment and API Integration.md) · [10 - Cost Optimization](10 - Cost Optimization.md) · [13 - Model Evaluation Systems](13 - Model Evaluation Systems.md)
+
+
+## Linked from
+
+- [AWS Certified Generative AI Developer - Professional (AIP-C01)](index.md)
+- [AWS Certified Generative AI Developer – Professional (AIP-C01) — Syllabus](README%20-%20Syllabus.md)
+- [Bedrock Model Selection & Solution Design](../aip-c01-exam-prep/Lessons/01%20-%20Bedrock%20Model%20Selection%20and%20Solution%20Design.md)
+- [Cost Optimization for GenAI Workloads](10%20-%20Cost%20Optimization.md)
+- [FM Deployment Strategies and API Integration Patterns](06%20-%20FM%20Deployment%20and%20API%20Integration.md)
+- [Model Evaluation Systems for GenAI](13%20-%20Model%20Evaluation%20Systems.md)
+- [Vector Stores and Embeddings for FM Augmentation](02%20-%20Vector%20Stores%20and%20Embeddings.md)

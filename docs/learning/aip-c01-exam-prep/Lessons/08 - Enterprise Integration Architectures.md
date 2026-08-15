@@ -90,3 +90,9 @@ A. Force all six teams to rewrite their features using identical code B. Introdu
 
 ## Next
 [09 - FM API Integration Patterns](09 - FM API Integration Patterns.md)
+
+
+## Linked from
+
+- [AIP-C01 Exam Prep — Everything Needed to Pass](../index.md)
+- [FM Deployment Strategies](07%20-%20FM%20Deployment%20Strategies.md)

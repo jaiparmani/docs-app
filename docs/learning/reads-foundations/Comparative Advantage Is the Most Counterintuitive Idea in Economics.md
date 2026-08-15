@@ -69,3 +69,8 @@ Strip away the trade politics and what remains is a thinking tool that applies w
 It explains why organisations that hoard tasks with their most capable people underperform organisations that route work by opportunity cost. It explains why the answer to "should I do this myself?" is so often no even when you'd do it best. It explains why specialisation keeps deepening across every field as economies grow — not because individuals get less capable, but because the alternative uses of their time keep getting more valuable.
 
 And it explains why two parties who look wildly unequal in capability can still have a great deal to gain from each other — which is not a sentimental claim, just arithmetic that most people's intuition gets exactly backwards.
+
+
+## Linked from
+
+- [6_Foundations](index.md)

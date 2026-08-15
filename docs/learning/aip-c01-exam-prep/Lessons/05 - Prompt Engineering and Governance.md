@@ -91,3 +91,9 @@ A. The Python script approach is fine as-is B. Bedrock Prompt Flows, since its v
 
 ## Next
 [06 - Agentic AI and Tool Use](06 - Agentic AI and Tool Use.md) — closes Domain 1, moves into Domain 2.
+
+
+## Linked from
+
+- [AIP-C01 Exam Prep — Everything Needed to Pass](../index.md)
+- [RAG Retrieval Mechanisms](04%20-%20RAG%20Retrieval%20Mechanisms.md)

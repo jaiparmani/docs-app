@@ -33,3 +33,8 @@ That distinction is the difference between a batch job and a trading system, bet
 None of this means Big-O is a bad tool. It is an excellent tool for the question it answers: if my input gets ten times bigger, does my program get ten times slower, a hundred times slower, or fall over entirely? That question is the difference between a system that survives growth and one that quietly dies at scale, and no amount of micro-optimization substitutes for getting it right. But it is a question about a limit, and you do not live at the limit. You live at n equals forty, or n equals ten million with a working set that does or does not fit in L2, on a machine with branch predictors and prefetchers and a memory hierarchy that the notation was explicitly constructed to ignore.
 
 Which suggests the actual skill is not knowing complexity classes but knowing which regime you are standing in. Small n with a hot loop is a constant-factor and locality problem, and asymptotics are noise. Large n with unbounded growth is an asymptotics problem, and constant factors are noise. Tail-latency-sensitive work is a worst-case problem, and averages are a trap. Big-O does not tell you which of these you are in — that is the one thing it cannot do, and it is the thing the job actually requires.
+
+
+## Linked from
+
+- [2_Problem Solving](index.md)

@@ -49,3 +49,8 @@ We are *extraordinarily* good at handling stress — one particular kind. Give a
 The mismatch is not a deficiency in us. It's that we became so successful at eliminating the threats we're built for that we replaced them almost entirely with threats we're not. Modern life is, by historical standards, spectacularly safe from the acute and spectacularly dense with the chronic. We removed the lions and installed inboxes.
 
 So the tight jaw in traffic is not a malfunction, and it isn't weakness. It is a superbly tuned instrument responding correctly to a signal it was never designed to receive — sounding an alarm built for a threat that ends, about a threat that doesn't.
+
+
+## Linked from
+
+- [5_General Reads](index.md)

@@ -91,3 +91,14 @@ Write your own answer first — then expand.
 
 ## Related
 [README - Syllabus](README - Syllabus.md) · [03 - RAG Architecture](03 - RAG Architecture.md) · [06 - FM Deployment and API Integration](06 - FM Deployment and API Integration.md) · [10 - Cost Optimization](10 - Cost Optimization.md) · [12 - Observability and Monitoring](12 - Observability and Monitoring.md)
+
+
+## Linked from
+
+- [AWS Certified Generative AI Developer - Professional (AIP-C01)](index.md)
+- [AWS Certified Generative AI Developer – Professional (AIP-C01) — Syllabus](README%20-%20Syllabus.md)
+- [Cost Optimization for GenAI Workloads](10%20-%20Cost%20Optimization.md)
+- [FM Deployment Strategies and API Integration Patterns](06%20-%20FM%20Deployment%20and%20API%20Integration.md)
+- [Model Evaluation Systems for GenAI](13%20-%20Model%20Evaluation%20Systems.md)
+- [Performance and Latency Optimization for FM Applications](../aip-c01-exam-prep/Lessons/16%20-%20Performance%20Optimization.md)
+- [Vector Stores and Embeddings for FM Augmentation](02%20-%20Vector%20Stores%20and%20Embeddings.md)

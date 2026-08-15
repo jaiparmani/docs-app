@@ -43,3 +43,8 @@ Follow the chain of trust down and you eventually hit bedrock, and the bedrock i
 Any CA in that store can issue a valid certificate for any domain — not just for its own customers, for any of them. That has failed in practice: a Dutch CA called DigiNotar was compromised in 2011, fraudulent certificates for major domains were issued and used against real users, and the CA was removed from the trust stores and did not survive it. The response over the following decade was structural. Certificate Transparency requires certificates to be logged to public append-only logs, so a domain owner can watch for certificates they never requested; CAA DNS records let a domain declare which CAs may issue for it; browser vendors distrust misbehaving CAs publicly; and certificate lifetimes have been steadily shortened, limiting the blast radius of any single mistake.
 
 So the padlock is not a proof, it is a delegation. You are trusting that the root store on your device is intact, that its curators are doing their job, and that the transparency layer built on top would catch abuse quickly. That is a genuinely strong system — but its strength is institutional and procedural, not purely mathematical. The cryptography is the easy part. The hard part has always been deciding whose signature means anything, and that question has no cryptographic answer at all.
+
+
+## Linked from
+
+- [1_Tech & Engineering](index.md)

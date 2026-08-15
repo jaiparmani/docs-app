@@ -31,3 +31,8 @@ It is worth sitting with why this is such a striking design. Clock skew, in the 
 ## Which Walls Are Load-Bearing
 
 The lesson people usually take from Spanner is the technical one about commit wait. The more useful lesson is about the shape of the decision. Everyone else treated imprecise clocks as a law of nature and designed elaborate workarounds. Google looked at the same constraint and asked what it would cost to move it — and the answer, in GPS antennas and rubidium oscillators and the operational burden of running a time infrastructure, turned out to be affordable when amortised over a fleet that size. That is the uncomfortable part. This option was not available to Google because its engineers were cleverer. It was available because the fixed cost of narrowing a physical constraint divided by an enormous denominator. Most of the architectural choices we admire from hyperscalers are like this: not insights the rest of us failed to have, but purchases the rest of us could not have justified. Knowing which of your constraints are genuinely physical and which are merely expensive is worth more than any particular technique, because it tells you which walls are worth pushing on — and, more often, which ones are load-bearing for you no matter how much cleverness you throw at them.
+
+
+## Linked from
+
+- [1_Tech & Engineering](index.md)

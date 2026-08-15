@@ -12,6 +12,13 @@ theme:
       accent: amber
       toggle:
         icon: material/weather-night
+        name: Switch to sepia
+    - media: "(prefers-color-scheme: light)"
+      scheme: sepia
+      primary: black
+      accent: amber
+      toggle:
+        icon: material/book-open-page-variant
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -51,6 +58,10 @@ extra_javascript:
   - javascripts/reading.js
 
 markdown_extensions:
+  - abbr
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
   - attr_list
   - md_in_html
   - pymdownx.emoji:

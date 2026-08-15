@@ -146,3 +146,14 @@ State vs. Strategy is the single most common point of confusion interviewers pro
 
 ## Next
 Machine Coding Problems/01 - Design a Parking Lot — the first applied problem, combining Strategy (pricing) and Factory ([02 - Creational Design Patterns](02 - Creational Design Patterns.md)) in one design.
+
+
+## Linked from
+
+- [Design a Parking Lot](Machine%20Coding%20Problems/01%20-%20Design%20a%20Parking%20Lot.md)
+- [Design a Vending Machine](Machine%20Coding%20Problems/03%20-%20Design%20a%20Vending%20Machine.md)
+- [Design an Elevator System](Machine%20Coding%20Problems/02%20-%20Design%20an%20Elevator%20System.md)
+- [Design Splitwise (Expense Sharing)](Machine%20Coding%20Problems/04%20-%20Design%20Splitwise%20%28Expense%20Sharing%29.md)
+- [LLD / Object-Oriented Design — Roadmap](README%20-%20Roadmap.md)
+- [SOLID Principles](01%20-%20SOLID%20Principles.md)
+- [Structural Design Patterns: Adapter, Decorator, Facade, Composite](03%20-%20Structural%20Design%20Patterns.md)

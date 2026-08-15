@@ -108,3 +108,10 @@ Write your own answer first — then expand.
 
 ## Next
 [10-design-search-autocomplete](10-design-search-autocomplete.md) — closes the applied-design set with a problem that's small in scope but forces a precise choice between prefix-optimized structures (trie) and the inverted-index/B-Tree structures used everywhere else in this set.
+
+
+## Linked from
+
+- [Day 45 — Geohash Proximity Search, Implemented (LLD)](../system-design-notes/Day%2045%20-%20Geohash%20Proximity%20Search%20Implementation%20%28LLD%29.md)
+- [Design Uber (Ride-Hailing: Driver-Rider Matching)](06-design-uber.md)
+- [Design YouTube (Video Upload + Streaming)](08-design-youtube.md)

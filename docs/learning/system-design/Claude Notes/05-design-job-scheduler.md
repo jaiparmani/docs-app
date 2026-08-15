@@ -132,3 +132,16 @@ Write your own answer first — then expand.
 
 ## Next
 [06-design-uber](06-design-uber.md) — a different kind of coordination problem: instead of "run this job exactly once," it's "assign this driver to exactly one rider," under high-frequency location updates instead of scheduled triggers.
+
+
+## Linked from
+
+- [Day 29 — Distributed Locks (HLD)](../system-design-notes/Day%2029%20-%20Distributed%20Locks%20%28HLD%29.md)
+- [Day 34 — Delivery Semantics (HLD)](../system-design-notes/Day%2034%20-%20Delivery%20Semantics%20%28HLD%29.md)
+- [Day 35 — Bloom Filters (LLD)](../system-design-notes/Day%2035%20-%20Bloom%20Filters%20%28LLD%29.md)
+- [Day 36 — Leader Election & Consensus (HLD)](../system-design-notes/Day%2036%20-%20Leader%20Election%20and%20Consensus%20%28HLD%29.md)
+- [Day 38 — Distributed Transactions: 2PC vs Saga (HLD)](../system-design-notes/Day%2038%20-%20Distributed%20Transactions%202PC%20vs%20Saga%20%28HLD%29.md)
+- [Day 41 — Event Store & Replay, Implemented (LLD)](../system-design-notes/Day%2041%20-%20Event%20Store%20Implementation%20%28LLD%29.md)
+- [Day 47 — Connection & Session Management at Scale (LLD)](../system-design-notes/Day%2047%20-%20Connection%20Session%20Management%20%28LLD%29.md)
+- [Design a Notification System (Push + Email + SMS)](04-design-notification-system.md)
+- [Design Uber (Ride-Hailing: Driver-Rider Matching)](06-design-uber.md)

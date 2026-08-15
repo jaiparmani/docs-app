@@ -104,3 +104,11 @@ Write your own answer first — then expand.
 
 ## Next
 This closes the current applied-design set (04 through 10). Combined with [03-design-twitter](03-design-twitter.md), you now have 7 full designs spanning fan-out, coordination, geospatial, real-time connections, media pipelines, ranking, and specialized indexing — the [Day-by-Day Roadmap (Day 32 Onward)](../Day-by-Day Roadmap (Day 32 Onward).md) concept days (32–51) fill in the remaining primitives these designs occasionally referenced ahead of time (delivery semantics, leader election, object storage internals, WebSocket connection scaling in more depth).
+
+
+## Linked from
+
+- [Day 44 — Geospatial Indexing (HLD)](../system-design-notes/Day%2044%20-%20Geospatial%20Indexing%20%28HLD%29.md)
+- [Day 48 — Video Streaming Fundamentals (HLD)](../system-design-notes/Day%2048%20-%20Video%20Streaming%20Fundamentals%20%28HLD%29.md)
+- [Day 51 — Multi-Region & Disaster Recovery (HLD)](../system-design-notes/Day%2051%20-%20Multi-Region%20and%20Disaster%20Recovery%20%28HLD%29.md)
+- [Design a News Feed (Instagram/Facebook-style, Ranked)](09-design-news-feed.md)

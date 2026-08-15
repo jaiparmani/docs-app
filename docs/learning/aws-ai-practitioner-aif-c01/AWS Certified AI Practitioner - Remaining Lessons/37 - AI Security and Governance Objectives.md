@@ -82,3 +82,9 @@ Treat any retrieved document, tool result, or user prompt as potentially untrust
 ## Related notes
 
 [31 - AI Security, Privacy, and Governance in Practice](31 - AI Security, Privacy, and Governance in Practice.md) · [18 - Bedrock Building Blocks](18 - Bedrock Building Blocks.md) · [35 - Agentic AI, MCP, Memory, and Orchestration](35 - Agentic AI, MCP, Memory, and Orchestration.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)

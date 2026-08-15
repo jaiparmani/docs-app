@@ -91,3 +91,17 @@ Write your own answer first — then expand.
 
 ## Related
 [README - Syllabus](README - Syllabus.md) · [02 - Vector Stores and Embeddings](02 - Vector Stores and Embeddings.md) · [04 - Prompt Engineering and Governance](04 - Prompt Engineering and Governance.md) · [05 - Agentic AI and Tool Use](05 - Agentic AI and Tool Use.md) · [13 - Model Evaluation Systems](13 - Model Evaluation Systems.md)
+
+
+## Linked from
+
+- [Agentic AI: Agents, Tool Use, MCP, and Multi-Agent Orchestration](05%20-%20Agentic%20AI%20and%20Tool%20Use.md)
+- [AWS Certified Generative AI Developer - Professional (AIP-C01)](index.md)
+- [AWS Certified Generative AI Developer – Professional (AIP-C01) — Syllabus](README%20-%20Syllabus.md)
+- [Model Evaluation Systems for GenAI](13%20-%20Model%20Evaluation%20Systems.md)
+- [Observability and Monitoring for GenAI Applications](12%20-%20Observability%20and%20Monitoring.md)
+- [Performance and Latency Optimization for FM Applications](11%20-%20Performance%20and%20Latency%20Optimization.md)
+- [Prompt Engineering, Management, and Governance](04%20-%20Prompt%20Engineering%20and%20Governance.md)
+- [RAG Retrieval Mechanisms](../aip-c01-exam-prep/Lessons/04%20-%20RAG%20Retrieval%20Mechanisms.md)
+- [Troubleshooting GenAI Applications](14%20-%20Troubleshooting%20GenAI%20Applications.md)
+- [Vector Stores and Embeddings for FM Augmentation](02%20-%20Vector%20Stores%20and%20Embeddings.md)

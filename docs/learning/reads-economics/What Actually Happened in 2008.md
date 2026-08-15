@@ -47,3 +47,8 @@ The response was extraordinary in scale and largely improvised: emergency centra
 Honest accounts disagree about the weighting. Some economists emphasize monetary policy and global capital flows; others regulatory failure, housing policy, ratings conflicts, or compensation structures that rewarded volume. These are live disputes among serious people, and anyone offering a clean single cause is selling something.
 
 But three features generalize past finance entirely. Complexity that outruns comprehension does not eliminate risk, it hides it, and hidden risk is priced as though it were absent. Any structure that separates the person making a decision from the person who bears its consequence will eventually produce decisions that nobody would have made while holding both ends. And the most dangerous assumption in any system is not the one that is wrong, but the one that is wrong and universally shared — because shared assumptions produce correlated failures, and correlated failure is precisely what all the diversification was supposed to protect against.
+
+
+## Linked from
+
+- [4_Finance](index.md)

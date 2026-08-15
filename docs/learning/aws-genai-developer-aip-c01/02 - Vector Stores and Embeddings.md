@@ -87,3 +87,15 @@ Write your own answer first — then expand.
 
 ## Related
 [README - Syllabus](README - Syllabus.md) · [01 - Bedrock Model Catalog and Integration Patterns](01 - Bedrock Model Catalog and Integration Patterns.md) · [03 - RAG Architecture](03 - RAG Architecture.md) · [11 - Performance and Latency Optimization](11 - Performance and Latency Optimization.md)
+
+
+## Linked from
+
+- [AWS Certified Generative AI Developer - Professional (AIP-C01)](index.md)
+- [AWS Certified Generative AI Developer – Professional (AIP-C01) — Syllabus](README%20-%20Syllabus.md)
+- [Bedrock Model Catalog, Selection & Integration Patterns](01%20-%20Bedrock%20Model%20Catalog%20and%20Integration%20Patterns.md)
+- [Observability and Monitoring for GenAI Applications](12%20-%20Observability%20and%20Monitoring.md)
+- [Performance and Latency Optimization for FM Applications](11%20-%20Performance%20and%20Latency%20Optimization.md)
+- [RAG Architecture: Chunking, Retrieval, and Query Handling](03%20-%20RAG%20Architecture.md)
+- [Troubleshooting GenAI Applications](14%20-%20Troubleshooting%20GenAI%20Applications.md)
+- [Vector Stores and Embeddings](../aip-c01-exam-prep/Lessons/03%20-%20Vector%20Stores%20and%20Embeddings.md)

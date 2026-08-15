@@ -139,3 +139,11 @@ D. A longer response limit
 ## Next lesson
 
 [AI Agents](16 - AI Agents.md) — how models reason through a task, select tools, and take multi-step actions.
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)
+- [Bedrock Inference and Model Selection](23%20-%20Bedrock%20Inference%20and%20Model%20Selection.md)
+- [FM Customization and Evaluation](36%20-%20FM%20Customization%20and%20Evaluation.md)

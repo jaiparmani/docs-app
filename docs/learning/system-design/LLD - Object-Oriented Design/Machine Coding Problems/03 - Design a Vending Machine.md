@@ -117,3 +117,8 @@ Write your own answer first — then expand.
 
 ## Next
 [04 - Design Splitwise (Expense Sharing)](04 - Design Splitwise (Expense Sharing).md) — the last applied problem in this set, and the one with genuine algorithmic content (debt-graph simplification) alongside the OOD structure.
+
+
+## Linked from
+
+- [Design an Elevator System](02%20-%20Design%20an%20Elevator%20System.md)

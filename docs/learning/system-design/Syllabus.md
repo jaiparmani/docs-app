@@ -474,3 +474,10 @@ You should combine this with:
     
 
 That stack becomes powerful fast.
+
+## Linked from
+
+- [Day-by-Day Roadmap — Day 32 Onward](Day-by-Day%20Roadmap%20%28Day%2032%20Onward%29.md)
+- [Learning System Design](index.md)
+- [LLD / Object-Oriented Design — Roadmap](LLD%20-%20Object-Oriented%20Design/README%20-%20Roadmap.md)
+- [LLD — Day-by-Day Roadmap](../lld/Day-by-Day%20Roadmap.md)

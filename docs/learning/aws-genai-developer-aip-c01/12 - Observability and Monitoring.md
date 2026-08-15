@@ -92,3 +92,15 @@ Write your own answer first — then expand.
 
 ## Related
 [README - Syllabus](README - Syllabus.md) · [09 - Governance and Responsible AI](09 - Governance and Responsible AI.md) · [10 - Cost Optimization](10 - Cost Optimization.md) · [13 - Model Evaluation Systems](13 - Model Evaluation Systems.md) · [14 - Troubleshooting GenAI Applications](14 - Troubleshooting GenAI Applications.md)
+
+
+## Linked from
+
+- [AI Governance, Compliance, and Responsible AI Principles](09%20-%20Governance%20and%20Responsible%20AI.md)
+- [AWS Certified Generative AI Developer - Professional (AIP-C01)](index.md)
+- [AWS Certified Generative AI Developer – Professional (AIP-C01) — Syllabus](README%20-%20Syllabus.md)
+- [Cost Optimization for GenAI Workloads](10%20-%20Cost%20Optimization.md)
+- [Model Evaluation Systems for GenAI](13%20-%20Model%20Evaluation%20Systems.md)
+- [Observability and Monitoring for GenAI Applications](../aip-c01-exam-prep/Lessons/17%20-%20Monitoring%20for%20GenAI%20Applications.md)
+- [Performance and Latency Optimization for FM Applications](11%20-%20Performance%20and%20Latency%20Optimization.md)
+- [Troubleshooting GenAI Applications](14%20-%20Troubleshooting%20GenAI%20Applications.md)

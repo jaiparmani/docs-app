@@ -41,3 +41,8 @@ Combining characters also break the naive `s[::-1]` reversal you learned as an i
 The phrase "it's just plain text" is doing a lot of concealing. A byte sequence carries no information about its own encoding; the encoding is metadata you have to know from a header, a declaration, a convention, or a guess. Once decoded, the code points do not map one-to-one onto anything a user would call a character. Once you have characters, comparison requires normalization, ordering requires locale-specific collation rules, and case requires knowing the language.
 
 None of this is over-engineering. It is what it costs to represent Devanagari conjuncts, Arabic contextual forms, Korean Hangul composition, and right-to-left text in the same system as English — while an old ASCII file still opens correctly. The remarkable thing is not that string handling is complicated. It is that a standard exists at all which lets a message typed in Mumbai render correctly on a phone in Helsinki, and that most days you write `str` and never think about any of it. The abstraction is extraordinarily good. It is worth knowing where its seams are, because you will eventually be standing on one.
+
+
+## Linked from
+
+- [1_Tech & Engineering](index.md)

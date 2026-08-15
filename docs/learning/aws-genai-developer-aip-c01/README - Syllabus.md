@@ -55,3 +55,23 @@ Each note follows: **Core concept + why it matters in production** → **Service
 
 ## Related
 [01 - Bedrock Model Catalog and Integration Patterns](01 - Bedrock Model Catalog and Integration Patterns.md) · [02 - Vector Stores and Embeddings](02 - Vector Stores and Embeddings.md) · [03 - RAG Architecture](03 - RAG Architecture.md) · [04 - Prompt Engineering and Governance](04 - Prompt Engineering and Governance.md) · [05 - Agentic AI and Tool Use](05 - Agentic AI and Tool Use.md) · [06 - FM Deployment and API Integration](06 - FM Deployment and API Integration.md) · [07 - AI Safety and Guardrails](07 - AI Safety and Guardrails.md) · [08 - Data Security and Privacy](08 - Data Security and Privacy.md) · [09 - Governance and Responsible AI](09 - Governance and Responsible AI.md) · [10 - Cost Optimization](10 - Cost Optimization.md) · [11 - Performance and Latency Optimization](11 - Performance and Latency Optimization.md) · [12 - Observability and Monitoring](12 - Observability and Monitoring.md) · [13 - Model Evaluation Systems](13 - Model Evaluation Systems.md) · [14 - Troubleshooting GenAI Applications](14 - Troubleshooting GenAI Applications.md)
+
+
+## Linked from
+
+- [Agentic AI: Agents, Tool Use, MCP, and Multi-Agent Orchestration](05%20-%20Agentic%20AI%20and%20Tool%20Use.md)
+- [AI Governance, Compliance, and Responsible AI Principles](09%20-%20Governance%20and%20Responsible%20AI.md)
+- [AI Safety and Guardrails: Content Moderation and Hallucination Mitigation](07%20-%20AI%20Safety%20and%20Guardrails.md)
+- [AIP-C01 Exam Prep — Everything Needed to Pass](../aip-c01-exam-prep/index.md)
+- [AWS Certified Generative AI Developer - Professional (AIP-C01)](index.md)
+- [Bedrock Model Catalog, Selection & Integration Patterns](01%20-%20Bedrock%20Model%20Catalog%20and%20Integration%20Patterns.md)
+- [Cost Optimization for GenAI Workloads](10%20-%20Cost%20Optimization.md)
+- [Data Security and Privacy for GenAI](08%20-%20Data%20Security%20and%20Privacy.md)
+- [FM Deployment Strategies and API Integration Patterns](06%20-%20FM%20Deployment%20and%20API%20Integration.md)
+- [Model Evaluation Systems for GenAI](13%20-%20Model%20Evaluation%20Systems.md)
+- [Observability and Monitoring for GenAI Applications](12%20-%20Observability%20and%20Monitoring.md)
+- [Performance and Latency Optimization for FM Applications](11%20-%20Performance%20and%20Latency%20Optimization.md)
+- [Prompt Engineering, Management, and Governance](04%20-%20Prompt%20Engineering%20and%20Governance.md)
+- [RAG Architecture: Chunking, Retrieval, and Query Handling](03%20-%20RAG%20Architecture.md)
+- [Troubleshooting GenAI Applications](14%20-%20Troubleshooting%20GenAI%20Applications.md)
+- [Vector Stores and Embeddings for FM Augmentation](02%20-%20Vector%20Stores%20and%20Embeddings.md)

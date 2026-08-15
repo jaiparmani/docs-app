@@ -39,3 +39,9 @@ The two tracks share almost nothing except vocabulary overlap ("LLD"). Distribut
 
 ## Related
 [Syllabus](../Syllabus.md) · system-design-notes · Claude Notes
+
+
+## Linked from
+
+- [Design Splitwise (Expense Sharing)](Machine%20Coding%20Problems/04%20-%20Design%20Splitwise%20%28Expense%20Sharing%29.md)
+- [LLD — Day-by-Day Roadmap](../../lld/Day-by-Day%20Roadmap.md)

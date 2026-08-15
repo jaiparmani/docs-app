@@ -88,3 +88,10 @@ Improving retrieved context and instructions often improves an application more 
 ## Related notes
 
 RAG · [18 - Bedrock Building Blocks](18 - Bedrock Building Blocks.md) · [23 - Bedrock Inference and Model Selection](23 - Bedrock Inference and Model Selection.md)
+
+
+## Linked from
+
+- [15-Day Exam Countdown](15-Day%20Exam%20Countdown.md)
+- [AWS Certified AI Practitioner — Remaining Lessons](index.md)
+- [FM Customization and Evaluation](36%20-%20FM%20Customization%20and%20Evaluation.md)

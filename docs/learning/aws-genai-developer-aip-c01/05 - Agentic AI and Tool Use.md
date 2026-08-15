@@ -92,3 +92,17 @@ Write your own answer first — then expand.
 
 ## Related
 [README - Syllabus](README - Syllabus.md) · [03 - RAG Architecture](03 - RAG Architecture.md) · [06 - FM Deployment and API Integration](06 - FM Deployment and API Integration.md) · [07 - AI Safety and Guardrails](07 - AI Safety and Guardrails.md) · [08 - Data Security and Privacy](08 - Data Security and Privacy.md) · [13 - Model Evaluation Systems](13 - Model Evaluation Systems.md)
+
+
+## Linked from
+
+- [Agentic AI: Agents, Tool Use, MCP, Multi-Agent Orchestration](../aip-c01-exam-prep/Lessons/06%20-%20Agentic%20AI%20and%20Tool%20Use.md)
+- [AWS Certified Generative AI Developer - Professional (AIP-C01)](index.md)
+- [AWS Certified Generative AI Developer – Professional (AIP-C01) — Syllabus](README%20-%20Syllabus.md)
+- [Cost Optimization for GenAI Workloads](10%20-%20Cost%20Optimization.md)
+- [Data Security and Privacy for GenAI](08%20-%20Data%20Security%20and%20Privacy.md)
+- [FM Deployment Strategies and API Integration Patterns](06%20-%20FM%20Deployment%20and%20API%20Integration.md)
+- [Model Evaluation Systems for GenAI](13%20-%20Model%20Evaluation%20Systems.md)
+- [Observability and Monitoring for GenAI Applications](12%20-%20Observability%20and%20Monitoring.md)
+- [Prompt Engineering, Management, and Governance](04%20-%20Prompt%20Engineering%20and%20Governance.md)
+- [RAG Architecture: Chunking, Retrieval, and Query Handling](03%20-%20RAG%20Architecture.md)
