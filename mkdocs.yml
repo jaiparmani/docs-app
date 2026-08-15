@@ -47,6 +47,9 @@ theme:
 extra_css:
   - stylesheets/custom.css
 
+extra_javascript:
+  - javascripts/reading.js
+
 markdown_extensions:
   - attr_list
   - md_in_html

@@ -18,9 +18,14 @@
   font-weight: 700;
 }
 
-/* Comfortable reading measure and rhythm. */
+/* Comfortable reading measure and rhythm.
+   --reading-scale is driven by the A-/A+ control in javascripts/reading.js. */
+:root {
+  --reading-scale: 1;
+}
+
 .md-typeset {
-  font-size: 0.72rem;
+  font-size: calc(0.72rem * var(--reading-scale));
   line-height: 1.7;
 }
 
@@ -65,4 +70,93 @@
 
 .md-typeset details > summary {
   font-weight: 600;
+}
+
+/* ============================================================
+   Reading aids  (see docs/javascripts/reading.js)
+   ============================================================ */
+
+/* Scroll progress — a thin fill across the very top of the viewport. */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--md-accent-fg-color);
+  z-index: 20;
+  pointer-events: none;
+  transition: width 0.08s linear;
+}
+
+/* Reader controls, bottom-right and out of the way. */
+.reading-toolbar {
+  position: fixed;
+  right: 0.9rem;
+  bottom: 0.9rem;
+  display: flex;
+  gap: 0.2rem;
+  z-index: 15;
+  opacity: 0.45;
+  transition: opacity 0.15s;
+}
+
+.reading-toolbar:hover,
+.reading-toolbar:focus-within {
+  opacity: 1;
+}
+
+.reading-toolbar button {
+  font-size: 0.65rem;
+  line-height: 1;
+  min-width: 1.9rem;
+  height: 1.9rem;
+  padding: 0 0.35rem;
+  cursor: pointer;
+  color: var(--md-default-fg-color--light);
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.reading-toolbar button:hover,
+.reading-toolbar button[aria-pressed="true"] {
+  color: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+}
+
+/* Focus mode — drop the surrounding chrome and leave the prose.
+   The toolbar deliberately stays visible so there is always a way back out. */
+body.reading-focus .md-sidebar,
+body.reading-focus .md-header,
+body.reading-focus .md-tabs,
+body.reading-focus .md-footer__inner {
+  display: none;
+}
+
+body.reading-focus .md-main__inner {
+  margin-top: 1.5rem;
+}
+
+body.reading-focus .md-content__inner {
+  max-width: 42rem;
+}
+
+/* Reading-time stamp injected by sync_docs.py */
+.md-typeset h1 + p > small:first-child,
+.md-typeset small.reading-time {
+  display: inline-block;
+  margin-top: -0.4em;
+  color: var(--md-default-fg-color--light);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.58rem;
+}
+
+@media print {
+  .reading-progress,
+  .reading-toolbar {
+    display: none;
+  }
 }
