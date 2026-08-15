@@ -14,11 +14,14 @@
     spacing: "reading:spacing",
     serif: "reading:serif",
     focus: "reading:focus",
-    pos: "reading:pos:"
+    pos: "reading:pos:",
+    marks: "reading:bookmarks",
+    measure: "reading:measure"
   };
 
   var SCALE = { min: 0.85, max: 1.5, step: 0.1, base: 1 };
   var SPACING = { min: 1.4, max: 2.3, step: 0.15, base: 1.7 };
+var MEASURE = { min: 34, max: 62, step: 4, base: 46 };   // rem, content width
   var RESUME_MIN_PX = 400;
   var POS_MAX_AGE_MS = 1000 * 60 * 60 * 24 * 30;
   var CONTINUE_MAX = 5;
@@ -45,6 +48,11 @@
   function applySpacing(v) {
     document.documentElement.style.setProperty("--reading-spacing", v);
     store(K.spacing, v);
+  }
+
+  function applyMeasure(v) {
+    document.documentElement.style.setProperty("--reading-measure", v + "rem");
+    store(K.measure, v);
   }
 
   function applySerif(on) {
@@ -160,7 +168,9 @@
   }
 
   function renderContinue() {
-    var existing = document.querySelector(".reading-continue");
+    // The bookmarks box shares .reading-continue for styling, so exclude it here
+    // or this cleanup deletes it.
+    var existing = document.querySelector(".reading-continue:not(.reading-marks)");
     if (existing) existing.remove();
     if (!isHome()) return;
 
@@ -205,6 +215,154 @@
     if (h1 && h1.parentNode) h1.parentNode.insertBefore(box, h1.nextSibling);
   }
 
+  /* ---- bookmarks ----
+     Deliberately page-level rather than text-range. Notes regenerate from the
+     vault on every sync, so anything anchored to text offsets would silently
+     orphan itself; a path never does. */
+
+  function bookmarks() {
+    try { return JSON.parse(read(K.marks) || "[]"); } catch (e) { return []; }
+  }
+
+  function isBookmarked() {
+    return bookmarks().some(function (b) { return b.path === location.pathname; });
+  }
+
+  function toggleBookmark() {
+    var list = bookmarks();
+    var i = list.findIndex(function (b) { return b.path === location.pathname; });
+    if (i >= 0) list.splice(i, 1);
+    else list.unshift({ path: location.pathname, title: pageTitle(), at: Date.now() });
+    store(K.marks, JSON.stringify(list.slice(0, 50)));
+    reflectBookmark();
+    renderBookmarks();
+  }
+
+  function reflectBookmark() {
+    var on = isBookmarked();
+    var b = document.querySelector("[data-reading='mark']");
+    if (b) {
+      b.textContent = on ? "★" : "☆";
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+      b.title = on ? "Remove bookmark" : "Bookmark this page";
+    }
+  }
+
+  function renderBookmarks() {
+    var old = document.querySelector(".reading-marks");
+    if (old) old.remove();
+    if (!isHome()) return;
+
+    var list = bookmarks();
+    if (!list.length) return;
+
+    var box = document.createElement("div");
+    box.className = "reading-continue reading-marks";
+    var h = document.createElement("h2");
+    h.textContent = "Bookmarks";
+    box.appendChild(h);
+
+    var ul = document.createElement("ul");
+    list.forEach(function (b) {
+      var li = document.createElement("li");
+      var a = document.createElement("a");
+      a.href = b.path;
+      a.textContent = b.title;
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    box.appendChild(ul);
+
+    var h1 = document.querySelector(".md-content__inner h1");
+    if (h1 && h1.parentNode) h1.parentNode.insertBefore(box, h1.nextSibling);
+  }
+
+  /* ---- selection tools: define / copy with citation / find across notes ---- */
+
+  function siteBase() {
+    var logo = document.querySelector(".md-header__button.md-logo");
+    if (logo && logo.getAttribute("href")) {
+      return new URL(logo.getAttribute("href"), location.href).href;
+    }
+    return location.origin + "/";
+  }
+
+  function glossaryFor(term) {
+    var t = term.trim();
+    if (!t || t.length > 40) return null;
+    var abbrs = document.querySelectorAll("abbr[title]");
+    for (var i = 0; i < abbrs.length; i++) {
+      if (abbrs[i].textContent.trim().toLowerCase() === t.toLowerCase()) {
+        return abbrs[i].getAttribute("title");
+      }
+    }
+    return null;
+  }
+
+  function buildSelectionTools() {
+    if (document.querySelector(".reading-selection")) return;
+
+    var pop = document.createElement("div");
+    pop.className = "reading-selection";
+    pop.innerHTML =
+      '<button type="button" data-sel="find">Find in notes</button>' +
+      '<button type="button" data-sel="copy">Copy quote</button>' +
+      '<span class="def"></span>';
+    document.body.appendChild(pop);
+
+    pop.addEventListener("mousedown", function (e) { e.preventDefault(); });
+
+    pop.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button[data-sel]");
+      if (!b) return;
+      var text = (window.getSelection() || "").toString().trim();
+      if (!text) return;
+      if (b.dataset.sel === "find") {
+        window.open(siteBase() + "?q=" + encodeURIComponent(text), "_blank", "noopener");
+      } else {
+        var quote = '"' + text + '" — ' + pageTitle() + ", " + location.href;
+        if (navigator.clipboard) navigator.clipboard.writeText(quote);
+        b.textContent = "Copied";
+        setTimeout(function () { b.textContent = "Copy quote"; }, 1200);
+      }
+    });
+
+    document.addEventListener("selectionchange", function () {
+      var sel = window.getSelection();
+      var text = sel ? sel.toString().trim() : "";
+      if (!text || text.length < 2 || !sel.rangeCount) {
+        pop.classList.remove("is-visible");
+        return;
+      }
+      // Only inside the article body — not the nav or search box.
+      var node = sel.anchorNode;
+      var host = node && (node.nodeType === 1 ? node : node.parentElement);
+      if (!host || !host.closest(".md-content__inner")) {
+        pop.classList.remove("is-visible");
+        return;
+      }
+      var rect = sel.getRangeAt(0).getBoundingClientRect();
+      if (!rect || (!rect.width && !rect.height)) return;
+      pop.style.top = (window.scrollY + rect.top - pop.offsetHeight - 8) + "px";
+      pop.style.left = (window.scrollX + rect.left) + "px";
+      var def = glossaryFor(text);
+      pop.querySelector(".def").textContent = def ? def : "";
+      pop.classList.add("is-visible");
+    });
+  }
+
+  /* ---- offline ---- */
+
+  function registerSW() {
+    if (!("serviceWorker" in navigator)) return;
+    if (location.protocol !== "https:" && location.hostname !== "localhost") return;
+    if (registerSW.done) return;
+    registerSW.done = true;
+    navigator.serviceWorker.register(siteBase() + "sw.js").catch(function () {
+      /* offline support is a bonus; never break the page over it */
+    });
+  }
+
   /* ---- chrome ---- */
 
   function ensure(cls, tag) {
@@ -228,6 +386,8 @@
       ["smaller", "A−", "Smaller text"],
       ["larger", "A+", "Larger text"],
       ["spacing", "↕", "More line spacing (cycles back round)"],
+      ["width", "↔", "Wider text column (cycles back round)"],
+      ["mark", "☆", "Bookmark this page"],
       ["serif", "Aa", "Serif body text"],
       ["focus", "▣", "Focus mode — hide navigation (f)"]
     ].forEach(function (s) {
@@ -250,6 +410,11 @@
         var next = round(num(K.spacing, SPACING) + SPACING.step);
         applySpacing(next > SPACING.max ? SPACING.min : next);
       }
+      else if (a === "width") {
+        var w = num(K.measure, MEASURE) + MEASURE.step;
+        applyMeasure(w > MEASURE.max ? MEASURE.min : w);
+      }
+      else if (a === "mark") toggleBookmark();
       else if (a === "serif") applySerif(!document.body.classList.contains("reading-serif"));
       else if (a === "focus") applyFocus(!document.body.classList.contains("reading-focus"));
       cachedTotal = totalMinutes();
@@ -280,10 +445,15 @@
     buildToolbar();
     applyScale(num(K.scale, SCALE));
     applySpacing(num(K.spacing, SPACING));
+    applyMeasure(num(K.measure, MEASURE));
     applySerif(read(K.serif) === "1");
     applyFocus(read(K.focus) === "1");
     cachedTotal = totalMinutes();
+    reflectBookmark();
+    renderBookmarks();
     renderContinue();
+    buildSelectionTools();
+    registerSW();
     restorePosition();
     paint();
   }
