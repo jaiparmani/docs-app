@@ -33,6 +33,7 @@ INCLUDE = [
     ("03_Knowledge Assets (Resources)/1_Tech & Engineering", "reads-tech"),
     ("03_Knowledge Assets (Resources)/5_General Reads", "reads-general"),
     ("02_Life Systems (Areas)/4_Finance", "reads-economics"),
+    ("03_Knowledge Assets (Resources)/7_Books", "reads-books"),
 ]
 
 # Glob patterns (relative to each source folder) to skip even inside an included folder.

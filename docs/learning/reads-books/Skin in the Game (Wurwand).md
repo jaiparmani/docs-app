@@ -1,0 +1,23 @@
+---
+tags: [reads, books, memoir, entrepreneurship, beauty-industry]
+---
+
+# Skin in the Game
+
+<small>4 min read</small>
+
+*Jane Wurwand*
+
+Worth naming up front, because the title invites the wrong reference: this is not Nassim Taleb's *Skin in the Game* and shares nothing with it beyond the phrase. Jane Wurwand's book is a founder memoir — she co-founded Dermalogica, the professional skincare and skincare-education company, after emigrating from Jersey (the Channel Island) to Los Angeles with a background as a trained esthetician rather than a business degree or venture backing. The subtitle, "Everything You Need Is Already Inside You," signals the book's register: it's positioned less as a tactical business text and more as a personal-development narrative that uses her own founding story as its evidence.
+
+That places it squarely in the founder-memoir genre alongside something like *Shoe Dog*, though it's worth being precise about what that comparison does and doesn't mean. The category is similar — an entrepreneur narrating how an unlikely company got built, from the inside, with the benefit of decades of hindsight. The content is not comparable in any way that can be asserted with confidence without having read this specific book closely; Dermalogica's arc (building an education-first skincare company and professional training network from working-class origins, eventually selling a majority stake to Unilever in 2015) is a genuinely different kind of business story than an athletic-shoe import operation lurching through banking crises, and it deserves engagement on its own terms rather than as a lesser echo of a more famous book that happens to sit next to it on a shelf.
+
+## What this genre reliably offers, and what it doesn't
+
+Founder memoirs written by the founder, well after the company's success is established, share a predictable set of strengths and a predictable set of gaps, and it's more honest to name that pattern here than to invent specifics about a book with too little independently verifiable detail available to summarize its arguments from a distance. The strength is usually granular, industry-specific texture that outsiders don't otherwise get: what it actually took to build a professional skincare education business — training networks, salon relationships, product development, credentialing an industry that didn't have much formal infrastructure before companies like Dermalogica built it — is a genuinely underexplored corner of business writing relative to how much has been written about software startups and consumer retail. If the book delivers on anything distinctive, it's likely to be that: specific, textured knowledge of an industry (professional skincare and esthetics education) that rarely gets a serious business narrative at all.
+
+The gap is just as predictable. Founder memoirs are survivorship-biased by construction — the company succeeded, the founder is narrating from that vantage point, and the difficult or unflattering counterfactuals (the version of the story where the bet doesn't pay off) are structurally absent, because that founder never gets a book deal. Lessons framed as "what worked" are hard to distinguish from "what happened to precede an outcome that was also shaped by market timing, luck, and factors outside the founder's control" — the same problem that runs through nearly every book in this genre, *Shoe Dog* included, though *Shoe Dog* is unusually candid about naming its own luck rather than papering over it. Whether *Skin in the Game* shows that same candor, or leans more toward the "everything you need is inside you" framing its subtitle promises — which tends toward individual-empowerment narrative rather than an honest accounting of contingency — isn't something to claim confidently without having read the specific text closely.
+
+## Reading it for what it actually is
+
+The honest position on a book like this, absent close familiarity with its actual passages, is to treat it as a specimen of a genre rather than to pretend insider knowledge of arguments it may or may not make. What it's positioned to offer: a rare business narrative centered on an industry (professional beauty and skincare education) that most business writing ignores, told by someone who actually built the thing from an outsider's starting position. What to read skeptically, as with any founder memoir: the implicit claim that the traits and choices being narrated were the load-bearing cause of the outcome, rather than one thread in a rope that also included timing, luck, and a market that happened to be ready for what she was selling.

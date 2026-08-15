@@ -127,4 +127,13 @@ Essays rather than study notes — narrative, no quizzes, built for commutes.
 
     [:octicons-arrow-right-24: Browse](learning/reads-general/index.md)
 
+- :material-book-outline: **Books**
+
+    ---
+
+    Notes on non-fiction actually read — not summaries, but a real critical
+    take on what each book's argument gets right, overstates, or skips.
+
+    [:octicons-arrow-right-24: Browse](learning/reads-books/index.md)
+
 </div>

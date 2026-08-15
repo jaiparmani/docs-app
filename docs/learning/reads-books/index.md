@@ -1,0 +1,17 @@
+# 7_Books
+
+- [Atomic Habits](Atomic Habits.md)
+- [Building a Second Brain](Building a Second Brain.md)
+- [Bulls, Bears and Other Beasts](Bulls, Bears and Other Beasts.md)
+- [Glucose Revolution](Glucose Revolution.md)
+- [Life's Little Instruction Book](Life's Little Instruction Book.md)
+- [Man's Search for Meaning](Man's Search for Meaning.md)
+- [Originals](Originals.md)
+- [Rich Dad Poor Dad](Rich Dad Poor Dad.md)
+- [Same as Ever](Same as Ever.md)
+- [Shoe Dog](Shoe Dog.md)
+- [Skin in the Game (Wurwand)](Skin in the Game (Wurwand).md)
+- [The Almanack of Naval Ravikant](The Almanack of Naval Ravikant.md)
+- [The Man Who Couldn't Stop](The Man Who Couldn't Stop.md)
+- [The Psychology of Money](The Psychology of Money.md)
+- [We Should All Be Feminists](We Should All Be Feminists.md)
