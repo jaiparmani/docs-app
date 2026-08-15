@@ -18,19 +18,31 @@ VAULT_ROOT = Path(__file__).resolve().parents[2] / "second-brain"
 DOCS_DIR = Path(__file__).resolve().parents[1] / "docs" / "learning"
 
 # Each entry: (vault-relative source folder, destination slug under docs/learning/)
+# NOTE: the AI Practitioner notes live under 04_Cold Storage now, not 01_Active --
+# the old 01_Active paths were empty, which is why those sections were bare stubs.
 INCLUDE = [
-    ("01_Active (Projects + Current Focus)/AWS Certified AI Practitioner - AIF C01", "aws-ai-practitioner-aif-c01"),
-    ("01_Active (Projects + Current Focus)/AWS Certified AI Practitioner - Remaining Lessons", "aws-ai-practitioner-remaining-lessons"),
+    ("04_Cold Storage (Archive)/Notes/AWS/AWS Certified AI Practitioner - AIF C01", "aws-ai-practitioner-aif-c01"),
     ("01_Active (Projects + Current Focus)/AWS Certified Generative AI Developer - Professional (AIP-C01)", "aws-genai-developer-aip-c01"),
+    ("01_Active (Projects + Current Focus)/AIP-C01 Exam Prep", "aip-c01-exam-prep"),
     ("01_Active (Projects + Current Focus)/Learning System Design", "system-design"),
     ("01_Active (Projects + Current Focus)/LLD", "lld"),
     ("02_Life Systems (Areas)/1_Learning/STUDYING/2_Problem Solving", "problem-solving"),
+    # Essay-style reads -- narrative explainers rather than study notes
+    ("03_Knowledge Assets (Resources)/6_Foundations", "reads-foundations"),
+    ("03_Knowledge Assets (Resources)/1_Tech & Engineering", "reads-tech"),
+    ("03_Knowledge Assets (Resources)/5_General Reads", "reads-general"),
+    ("02_Life Systems (Areas)/4_Finance", "reads-economics"),
 ]
 
 # Glob patterns (relative to each source folder) to skip even inside an included folder.
+# The named entries below are personal and must never reach the published site --
+# 4_Finance is included for its general economics essays only.
 EXCLUDE_PATTERNS = [
     "*.DS_Store",
     ".obsidian*",
+    "1_ETFS System.md",
+    "Sort Payment*",
+    "*Lokhandwala*",
 ]
 
 WIKILINK_RE = re.compile(r"!?\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|([^\]]+))?\]\]")
@@ -79,6 +91,26 @@ def convert_wikilinks(dst: Path, docs_root: Path, name_to_relpath: dict):
             md_file.write_text(new_text, encoding="utf-8")
 
 
+def promote_readme_to_index(dst: Path):
+    """MkDocs maps README.md and index.md to the same URL, so having both drops one
+    and breaks every link to it. A hand-written README is a better landing page than
+    a generated stub, so rename it into place before ensure_section_index() runs."""
+    for readme in sorted(dst.rglob("README.md")):
+        index = readme.parent / "index.md"
+        if not index.exists():
+            readme.rename(index)
+
+
+def fix_readme_links(dst: Path):
+    """Repoint any link still aimed at README.md now that it has become index.md."""
+    pattern = re.compile(r"\]\(([^)]*?)README\.md\)")
+    for md_file in dst.rglob("*.md"):
+        text = md_file.read_text(encoding="utf-8", errors="ignore")
+        new_text = pattern.sub(r"](\1index.md)", text)
+        if new_text != text:
+            md_file.write_text(new_text, encoding="utf-8")
+
+
 def write_pages_title(dst: Path, title: str):
     """awesome-pages: give the nav section a readable title instead of the slugged folder name."""
     (dst / ".pages").write_text(f"title: {title}\n", encoding="utf-8")
@@ -94,7 +126,7 @@ def ensure_section_index(dst: Path, title: str):
             continue
         if item.is_dir():
             child_index = item / "index.md"
-            link = f"{item.name}/" if child_index.exists() else None
+            link = f"{item.name}/index.md" if child_index.exists() else None
             if link is None:
                 first_md = next(iter(sorted(item.rglob("*.md"))), None)
                 link = first_md.relative_to(dst).as_posix() if first_md else None
@@ -121,6 +153,7 @@ def main():
         print(f"Syncing '{src_rel}' -> docs/learning/{slug}/")
         copy_folder(src, dst)
         if dst.exists():
+            promote_readme_to_index(dst)
             write_pages_title(dst, Path(src_rel).name)
             ensure_section_index(dst, Path(src_rel).name)
             for md_file in dst.rglob("*.md"):
@@ -130,6 +163,7 @@ def main():
         dst = DOCS_DIR / slug
         if dst.exists():
             convert_wikilinks(dst, DOCS_DIR.parent, name_to_relpath)
+            fix_readme_links(dst)
 
     print("Done.")
 
