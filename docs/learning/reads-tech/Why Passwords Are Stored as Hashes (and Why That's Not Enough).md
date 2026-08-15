@@ -1,0 +1,35 @@
+---
+tags: [reads, tech, security, cryptography, authentication]
+---
+
+# Why Passwords Are Stored as Hashes (and Why That's Not Enough)
+
+<small>6 min read</small>
+
+Ask most people what happens to a password after they type it into a login form, and the honest answer is that they've never thought about it — the box accepted the password, so presumably it's stored somewhere, in some form, on some server. That vagueness is exactly the gap that has produced two decades of breach headlines. The interesting engineering question isn't "how do we keep the password database secret" — you should assume, as a matter of design discipline, that eventually it won't stay secret. The real question is: given that a database of every user's password will eventually leak, what can you store today that makes that future leak as harmless as possible?
+
+## The failure mode that needs no explanation
+
+Storing passwords as plaintext is the easy case to dismiss, but worth stating precisely, because the reasoning generalizes. If a database of usernames and plaintext passwords leaks — through a SQL injection, a misconfigured backup, an insider, any of the routes breaches actually happen — every one of those accounts is compromised instantly and completely, on every site where that user reused the password, which is most sites, for most users. There's no delay, no computation required, no partial credit. The entire value of the credential system evaporates the moment the storage layer is read by the wrong party. This is why "we store your password securely" became industry shorthand for "we don't store your password at all" — what gets stored instead is a hash.
+
+## What a hash actually guarantees
+
+A cryptographic hash function takes an input of any length and produces a fixed-length output, deterministically — the same input always produces the same output — with three properties that matter here. It is one-way: given the output, there is no practical way to recover the input other than trying inputs and checking. It exhibits the avalanche effect: changing a single character of the input produces a wildly different, unrelated-looking output, so similar passwords don't produce similar hashes that could leak information by comparison. And it's collision-resistant: finding two different inputs that hash to the same output is computationally infeasible for a well-designed function.
+
+Store the hash instead of the password, and a login check becomes: hash whatever the user just typed, and compare that hash to the one on file. The server never needs to know the actual password to verify it, which means that if the database leaks, an attacker gets a list of hashes — not a list of passwords. In principle, that should be enough.
+
+## Where naive hashing loses
+
+In practice, for decades, it wasn't enough, because of a shortcut called a rainbow table — and more simply, because fast general-purpose hash functions like MD5 and SHA-256 are, deliberately, extremely fast. An attacker doesn't need to invert the hash function mathematically. They can precompute the hash of every password in a dictionary of billions of common passwords, once, and store that mapping. From then on, cracking any leaked hash that happens to match a common password is a single table lookup — instantaneous, and reusable against every database that ever leaks. Worse, if two users on the same service happen to choose the same password, their hashes are identical, which is itself a signal an attacker can exploit and a tell that the passwords are "popular" ones worth trying first.
+
+Salting fixes exactly this shortcut. A salt is a random value generated uniquely per user, stored alongside the hash — not secret, just unique — and mixed into the input before hashing, so the stored value becomes hash(password + salt) rather than hash(password) alone. Two users with the identical password now get completely different hashes, because their salts differ, which kills the "identical hash means identical password" leak. More importantly, a precomputed rainbow table becomes useless: it was built for the unsalted case, and an attacker would need a separate table for every possible salt value, which for any reasonably sized salt space is computationally out of reach. Salting doesn't make an individual password harder to crack once targeted — it makes precomputation and cross-account reuse of an attacker's effort impossible.
+
+## The part that surprises people: speed is the enemy here
+
+Even salted, a fast hash function has a remaining weakness: raw computational speed. SHA-256 is engineered to be fast, because in most of its use cases — verifying a file download, checksumming a git commit, integrity-checking a message — speed is exactly the property you want. A GPU or a purpose-built ASIC can compute billions of SHA-256 hashes per second, which means that even with salting defeating precomputation, an attacker with a leaked hash and salt can still brute-force or dictionary-attack that one hash at billions of guesses per second, and typical human passwords do not have anywhere near the entropy to survive that.
+
+This is the counterintuitive core of the whole subject: for password storage specifically, speed is not a neutral property to optimize away — it is the vulnerability. What you actually want is a hash function that is deliberately, tunably slow, and ideally also memory-hungry, so that the very hardware that makes brute-forcing SHA-256 cheap — GPUs, ASICs, FPGAs designed to run millions of parallel hash computations — stops providing much of an advantage. This is what bcrypt, scrypt, and Argon2 are built to do. Argon2, the current recommended default and winner of the Password Hashing Competition, is memory-hard by design: it requires allocating a large, configurable block of memory per computation, which is expensive to parallelize on GPUs that have plentiful compute but comparatively limited memory per core. Increasing the cost parameter makes a single legitimate login check take a few extra milliseconds — imperceptible to a real user logging in once — while making an attacker's billions-of-guesses-per-second brute force collapse to a rate that turns a crackable database into one that would take centuries.
+
+## Speed as a property you choose, not one you default to
+
+The generalizable lesson sits in that asymmetry, and it applies well beyond passwords: the right computational cost for an operation depends entirely on who benefits from it being fast. A file checksum should be fast, because the only party computing it is you, verifying your own data, as often as needed, with nothing to gain from slowness. A password hash should be slow, because the party computing it billions of times a second isn't you logging in once — it's an attacker who obtained your database and is trying every guess they can afford. Any time a system reuses a general-purpose tool for a security-sensitive purpose it wasn't designed for, it's worth asking explicitly which side of that operation you're actually trying to protect, and whether the tool's designed-in properties help that side or the other one.
