@@ -1,6 +1,6 @@
 # Day 36 — Leader Election & Consensus (HLD)
 
-<small>5 min read</small>
+<small>7 min read</small>
 
 ## What we're learning today
 Starts Block B — "where seniority begins." Day 29's distributed lock assumed *something* coordinates who holds the lock. Today asks the question one level down: how do a group of equal nodes agree on a single coordinator (leader) with no single point of failure, when any node can crash at any time?
@@ -58,5 +58,24 @@ Most candidates can say "we use leader election so there's a single coordinator.
 ## 30-second challenge
 Why does a 4-node cluster not meaningfully improve fault tolerance over a 3-node cluster (majority of 4 is 3, same as majority of 3 tolerating 1 failure) — and what does this imply about choosing cluster sizes?
 
+## Scenario Practice
+
+**Scenario 1:** A 5-node cluster splits into a 3-node partition and a 2-node partition due to a network failure. Which side, if either, can elect a leader and keep accepting writes?
+
+> [!question]- Think it through, then expand
+> This day's key design principle says consensus guarantees at most one side can make progress — which side, and why that side specifically?
+
+> [!success]- Answer
+> Only the 3-node side can elect a leader and continue accepting writes, because leader election requires a majority (quorum) of the total cluster — 3 out of 5. The 2-node side can't reach a majority no matter what it does, so it correctly refuses to elect its own leader and stops accepting writes rather than risking two leaders operating simultaneously. This is exactly what prevents split-brain: it's not that partitions can't happen, it's that the majority requirement guarantees at most one partition is ever capable of making progress at a time, so the system degrades to reduced availability on the minority side rather than to silent, undetected inconsistency on both sides.
+
+**Scenario 2:** After a network partition heals, the node that was cut off (and briefly still believed itself to be leader) rejoins the cluster. What has to happen for it to safely resume participating, and what would go wrong if it didn't happen?
+
+> [!question]- Think it through, then expand
+> That node's view of "who is leader" and "what has been written" is now stale — can it just resume as if nothing happened?
+
+> [!success]- Answer
+> It has to recognize a newer term/epoch number from the current leader and step down from any stale belief that it's still leader, then catch up on whatever log entries it missed while partitioned — consensus protocols like Raft handle this via monotonically increasing term numbers specifically so a rejoining node can immediately tell its own view is stale and defer, rather than continuing to believe outdated state. If this reconciliation didn't happen, the rejoining node could try to act as leader again with stale data, reintroducing the exact split-brain risk the majority-quorum rule during the partition was designed to prevent — the protection isn't just during the partition, it has to extend through recovery too.
+
 ## Tomorrow
+
 Day 37 (LLD) — trace a toy Raft leader election end to end: term numbers, vote requests, and the heartbeat timeout that triggers a new election, made concrete instead of conceptual.

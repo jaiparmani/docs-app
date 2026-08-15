@@ -1,6 +1,6 @@
 # Day 23 — CAP Theorem & PACELC Revisited (HLD)
 
-<small>4 min read</small>
+<small>5 min read</small>
 
 ## What we're learning today
 You touched CAP briefly on Day 5 (Rate Limiter). Now, with replication, sharding, and consistent hashing under your belt, we go deeper — and add PACELC, the extension interviewers increasingly expect.
@@ -58,5 +58,24 @@ By SDE-2/Senior level, interviewers assume you know the CAP acronym — the diff
 ## 30-second challenge
 For a chat app (upcoming topic), is "message delivery" CP or AP? Is "read receipts / typing indicators" the same answer? Why might they differ?
 
+## Scenario Practice
+
+**Scenario 1:** In a ride-hailing app, is "a driver's current location" a CP or AP entity? Is "the fare charged for a completed ride" the same answer?
+
+> [!question]- Think it through, then expand
+> This day's key design principle says: name the entity before naming the choice. Do these two entities actually need the same answer?
+
+> [!success]- Answer
+> No — and that's the point. Driver location is naturally AP: a slightly stale position shown on the map (a few seconds old) is a completely acceptable trade-off in exchange for the map always being responsive, and refusing to show a position because of a brief network partition would make the app unusable for something low-stakes. Fare charged is naturally CP-leaning: charging the wrong amount, or charging twice, is a real financial and trust problem, so this entity should prefer refusing to complete an inconsistent charge over completing one that might be wrong. Same app, same theorem, two different correct answers — because CAP is a per-entity question, not a per-system one.
+
+**Scenario 2:** A teammate says "we chose MongoDB, so our system is AP." Is that a valid conclusion?
+
+> [!question]- Think it through, then expand
+> Does a database's default configuration determine your system's CAP behavior, or does something else?
+
+> [!success]- Answer
+> Not on its own — most modern databases, including MongoDB, expose *configurable* consistency behavior (write concern, read concern, replica acknowledgment settings), so "we chose database X" doesn't by itself fix a CAP answer the way it might have for an older, single-mode system. The actual CAP behavior is determined by how that database is configured for each specific entity's writes and reads — you could run the same database with strongly consistent settings for one collection and eventually-consistent settings for another. The teammate's statement conflates "which product we picked" with "which consistency mode we configured," and the framework's practice habit of naming the entity explicitly is exactly what catches this kind of imprecision before it becomes a real production assumption baked into the wrong place.
+
 ## Tomorrow
+
 Day 24 (LLD) — Idempotency keys: making retried requests safe, a direct consequence of the AP/eventual-consistency trade-offs you just learned.

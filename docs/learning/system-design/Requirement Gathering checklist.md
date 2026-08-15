@@ -26,3 +26,4 @@ If you consistently cover those five areas in the first 2–3 minutes, you’ll 
 
 - [Day-by-Day Roadmap — Day 32 Onward](Day-by-Day%20Roadmap%20%28Day%2032%20Onward%29.md)
 - [Learning System Design](index.md)
+- [Requirement Gathering](Interview%20Framework/01%20-%20Requirement%20Gathering.md)

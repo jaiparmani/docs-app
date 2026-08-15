@@ -1,6 +1,6 @@
 # Day 13 — Redis Internals (HLD)
 
-<small>3 min read</small>
+<small>5 min read</small>
 
 ## What we're learning today
 You've used Redis four times without asking *how* it delivers sub-millisecond latency and what happens if it crashes. Today we open the box.
@@ -62,5 +62,24 @@ Interviewers ask "what happens if your cache node dies" to see if you understand
 ## 30-second challenge
 For your Feed cache (Day 9), which eviction policy fits — `allkeys-lru` or `volatile-ttl` — and why does the difference matter when feed entries have natural expiry (24hr relevance window)?
 
+## Scenario Practice
+
+**Scenario 1:** Your Redis instance is configured with `maxmemory-policy allkeys-lru` and is at capacity. A background job suddenly writes 2 million new session keys in a burst. What happens to your existing hot keys, and is this the right eviction policy for a session store?
+
+> [!question]- Think it through, then expand
+> What does LRU evict, and is "least recently used" the same thing as "least important"?
+
+> [!success]- Answer
+> LRU evicts whatever hasn't been touched most recently — it has no concept of *importance*, only recency. A burst of 2 million freshly-written session keys are, by definition, the most recently touched keys in the store, so LRU will start evicting your actual hot, frequently-accessed sessions to make room for them, which is exactly backwards for what you want. For a session store, `volatile-lru` (evict only keys with a TTL set, i.e. actual sessions, and skip anything without one) combined with sane per-session TTLs is usually the safer choice — it bounds what can be evicted to the same category of data you're intentionally storing, rather than letting an unrelated write burst crowd out unrelated hot data.
+
+**Scenario 2:** You're told Redis is "in-memory" and therefore data loss on restart is expected and acceptable — but this instance backs a shopping cart that must survive a routine deploy-triggered restart. What do you tell the team?
+
+> [!question]- Think it through, then expand
+> "In-memory" describes where reads and writes happen — does it have to describe what survives a restart?
+
+> [!success]- Answer
+> In-memory speed doesn't mean data has to be ephemeral — Redis's persistence options (RDB snapshotting, AOF append-only logging, or both together) exist precisely to decouple "fast because in-memory" from "lost on restart." For a shopping cart, AOF with a reasonable fsync policy (or RDB snapshots frequent enough that the acceptable data-loss window is small) is the fix — the trade-off to name explicitly is that persistence costs write throughput and disk I/O, so it's not free, but "in-memory means always ephemeral" is a false equivalence worth correcting before it becomes a production incident.
+
 ## Tomorrow
+
 Day 14 (LLD) — implementing an **LRU cache from scratch** (HashMap + Doubly Linked List), the exact mechanism Redis's `allkeys-lru` approximates.

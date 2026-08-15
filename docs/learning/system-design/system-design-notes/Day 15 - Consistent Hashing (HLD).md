@@ -1,6 +1,6 @@
 # Day 15 — Consistent Hashing (HLD)
 
-<small>3 min read</small>
+<small>5 min read</small>
 
 ## What we're learning today
 Every sharded system you'll design from here on — databases, caches, Kafka partitions — depends on this. It's the answer to: "how do you distribute keys across N servers without a full reshuffle every time N changes?"
@@ -62,5 +62,24 @@ This question tests whether you understand *why* naive modulo sharding fails at 
 ## 30-second challenge
 With only 3 physical servers and no virtual nodes, why might Server A end up owning 70% of the ring purely by hash-position luck — and how many virtual nodes per server would you propose to fix it (roughly)?
 
+## Scenario Practice
+
+**Scenario 1:** You add a 4th node to a 3-node consistent-hashing ring with no virtual nodes. Two of the four nodes end up with roughly triple the load of the other two. Why, and what's the fix?
+
+> [!question]- Think it through, then expand
+> What determines how much of the ring's circumference each physical node "owns" without virtual nodes?
+
+> [!success]- Answer
+> Without virtual nodes, each physical node owns exactly one arc of the ring, and the size of that arc depends entirely on where its single hash landed relative to its neighbors — pure luck of the hash function, not a designed guarantee of evenness. With only 4 points on a ring, uneven spacing is the norm, not the exception. The fix is virtual nodes: give each physical node dozens or hundreds of positions on the ring instead of one, so the law of large numbers averages out the unevenness — this is the standard mitigation and should be treated as close to mandatory in a real implementation, not an optional refinement.
+
+**Scenario 2:** A node is being decommissioned for maintenance. With consistent hashing, roughly what fraction of keys need to move, and which specific keys are they?
+
+> [!question]- Think it through, then expand
+> This is the property consistent hashing was specifically built to guarantee — contrast it with what plain modulo hashing (`hash(key) % N`) would do in the same situation.
+
+> [!success]- Answer
+> Only the keys that were owned by that node move — they redistribute to its immediate neighbor(s) on the ring, and every other node's key ownership is untouched. Roughly 1/N of all keys move for an N-node ring, not close to all of them. This is the entire point of consistent hashing versus `hash(key) % N`: with modulo hashing, changing N changes the divisor for *every* key's placement calculation, so removing or adding one node reshuffles nearly the whole keyspace — exactly the "why does resharding need consistent hashing" question this day's core concept is built around.
+
 ## Tomorrow
+
 Day 16 (LLD) — implementing a **consistent hashing ring with virtual nodes** in Java.

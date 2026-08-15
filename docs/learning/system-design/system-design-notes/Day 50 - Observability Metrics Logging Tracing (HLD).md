@@ -1,6 +1,6 @@
 # Day 50 — Observability: Metrics, Logging, Distributed Tracing (HLD)
 
-<small>5 min read</small>
+<small>7 min read</small>
 
 ## What we're learning today
 Starts Block E. Every design in this roadmap answered "how do I build this." Today starts answering the question you'll actually live with in production: "how do I know what's happening inside it, and where's the bottleneck when something's slow or broken." This applies across every prior design at once, not as a new component in any single one.
@@ -57,5 +57,24 @@ System design interviews rarely ask "design an observability system" directly, b
 ## Key design principle
 **Metrics tell you something is wrong and roughly when; traces tell you where in a multi-service call chain; logs tell you exactly what happened at that specific point — real incident investigation moves through all three, in that narrowing order, not any one in isolation.**
 
+## Scenario Practice
+
+**Scenario 1:** An on-call engineer gets paged for "checkout latency p99 above threshold." The metric confirms something is wrong, but gives no clue *where* in the multi-service checkout flow the slowness is coming from. What's the next tool to reach for, and why not logs first?
+
+> [!question]- Think it through, then expand
+> This day's key design principle describes a specific narrowing order across the three pillars — which one comes right after "something is wrong, roughly when"?
+
+> [!success]- Answer
+> Distributed tracing comes next, not logs — the metric has already told you *that* something's wrong and roughly *when*; the next question is *where* in the call chain (which of the several services checkout touches is actually the slow one), and a trace across the request's full path through every service is built exactly for answering that. Jumping straight to logs first means guessing which service's logs to even look at, since logs alone don't show you the causal chain across services — the framework's narrowing order (metrics → traces → logs) exists precisely so you spend your investigation time narrowing the search space at each step instead of searching broadly and randomly.
+
+**Scenario 2:** A team adds a unique label to every metric for `user_id`, hoping to slice latency by individual user. Within a day, the metrics backend is falling over and costs have spiked dramatically. What happened?
+
+> [!question]- Think it through, then expand
+> A metrics system stores a separate time series for every unique combination of label values — what happens to that count when one label has millions of possible values?
+
+> [!success]- Answer
+> This is a cardinality explosion: a metrics backend allocates a distinct time series for every unique combination of label values, and `user_id` — with potentially millions of distinct values — multiplies the number of stored time series by that same factor, which most metrics systems are simply not built to handle at that scale, leading to the exact backend collapse and cost spike described. High-cardinality dimensions like user ID belong in logs or traces (which are built to handle arbitrary, high-cardinality fields per-event) rather than as a metric label — this is a concrete instance of this day's key design principle about each pillar being suited to a specific kind of question, and "which specific user was affected" was always a logs/traces question, not a metrics one.
+
 ## Tomorrow
+
 Day 51 (HLD) — Multi-Region & Disaster Recovery: closes the roadmap by extending "what happens when a node fails" (asked repeatedly since Day 19) up to "what happens when an entire region fails."

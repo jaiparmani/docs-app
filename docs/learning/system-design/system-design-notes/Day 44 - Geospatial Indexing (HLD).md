@@ -1,6 +1,6 @@
 # Day 44 — Geospatial Indexing (HLD)
 
-<small>5 min read</small>
+<small>7 min read</small>
 
 ## What we're learning today
 [06-design-uber](../Claude Notes/06-design-uber.md) leaned on geohash and quadtrees without deriving them. Today builds that prerequisite properly — a genuinely new access pattern ("find things near this point") that none of Days 11–31's indexing structures (B-Tree, inverted index) are shaped for.
@@ -60,5 +60,24 @@ Naming "geohash" or "quadtree" alone is table stakes. The signal is explaining *
 ## 30-second challenge
 Why would Uber (real-world H3 users) prefer hexagonal cells over square geohash cells specifically for a driver-matching use case — what does uniform neighbor distance actually buy you at query time?
 
+## Scenario Practice
+
+**Scenario 1:** Two riders are standing 10 meters apart, right on either side of a geohash cell boundary. A "find nearby riders" query for one of them, searching only its own geohash cell, misses the other rider entirely. What's going wrong, and what's the standard fix?
+
+> [!question]- Think it through, then expand
+> Does geographic nearness always mean the two points share the same geohash prefix?
+
+> [!success]- Answer
+> This is the classic geohash boundary problem — two points can be physically adjacent yet fall into different cells (and therefore have completely different hash prefixes) simply because they're on opposite sides of a cell edge, since geohash cells are a rigid grid overlaid on continuous space with no awareness of "nearness across a boundary." The standard fix is to search the target cell *and* its neighboring cells (typically the 8 surrounding cells) rather than the target cell alone, then filter the combined candidate set by actual distance — trading a slightly larger initial candidate set for not missing legitimately nearby points that happen to sit just across a boundary.
+
+**Scenario 2:** You need to support a "find everything within a 50km radius" query. A coworker suggests just storing raw `(latitude, longitude)` pairs and scanning for points within range using a standard database range query on each column separately. What's wrong with that approach, and why doesn't a normal B+Tree index help here?
+
+> [!question]- Think it through, then expand
+> A B+Tree index is built for ordering along one dimension — what does "within 50km" actually require across two dimensions simultaneously?
+
+> [!success]- Answer
+> A B+Tree index on latitude and a separate one on longitude can each narrow down candidates along their own single dimension, but the database still has to intersect two large, mostly-unrelated candidate sets to find points that are close in *both* dimensions simultaneously — for a radius query this ends up scanning far more rows than necessary, since a point can pass the latitude range filter and the longitude range filter separately while still being nowhere near the actual center in true 2D distance. This is precisely this day's key design principle: proximity is a genuinely two-dimensional property, and structures like geohashing or a quadtree encode 2D nearness into something a single index can query efficiently — a pair of independent 1D indexes doesn't capture that, no matter how well each one is tuned.
+
 ## Tomorrow
+
 Day 45 (LLD) — implement geohash proximity search concretely: encoding, neighbor-cell lookup, and the expanding-radius search loop, as actual logic instead of a diagram.

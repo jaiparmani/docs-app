@@ -1,6 +1,6 @@
 # Day 19 — Database Replication (HLD)
 
-<small>3 min read</small>
+<small>5 min read</small>
 
 ## What we're learning today
 Indexing (Day 18) made single-node reads fast. Replication is the next lever: scaling reads across multiple machines, and surviving a node failure.
@@ -59,5 +59,24 @@ This is where interviewers test if you can connect replication choice to CAP the
 ## 30-second challenge
 For your Feed Ranking Engine (Day 9-10), is async replication acceptable for the underlying post store? What about for the "user just deleted an offensive post" case — does your answer change?
 
+## Scenario Practice
+
+**Scenario 1:** A user updates their profile picture, and on the very next page load (hitting a read replica) they still see the old picture. Support calls this a bug. Is it?
+
+> [!question]- Think it through, then expand
+> What does asynchronous replication guarantee about *when* a replica reflects a write, versus *whether* it eventually will?
+
+> [!success]- Answer
+> Not necessarily a bug — this is expected behavior under asynchronous replication, which guarantees the replica *eventually* reflects the write, not immediately. This is replication lag, and whether it's acceptable is a product decision, not a database bug: for a profile picture, a brief staleness window is usually fine. If it genuinely isn't acceptable for this specific read (e.g., "read your own write" right after an edit), the fix is routing that specific read to the primary instead of a replica for some short window after the user's own write — not eliminating replication lag everywhere, which would sacrifice the whole point of having read replicas.
+
+**Scenario 2:** The primary database fails. A replica is promoted, but two write requests that had reached the old primary right before the crash are missing from the new primary entirely. What happened, and does synchronous replication prevent it?
+
+> [!question]- Think it through, then expand
+> When exactly does an async-replicated write become "safe" from being lost on primary failure?
+
+> [!success]- Answer
+> Under asynchronous replication, a write is acknowledged to the client as soon as the primary commits it locally — it hasn't necessarily reached any replica yet. If the primary crashes in that window, those writes are gone the moment a replica (which never received them) gets promoted. Synchronous replication does prevent this specific loss, because the primary doesn't acknowledge the write until at least one replica has confirmed it too — but that's the trade-off named in this day's core concept: synchronous replication trades write latency and availability (every write now waits on a replica, and a slow/down replica can block writes) for this durability guarantee. Which one is correct depends entirely on whether this data can tolerate losing a few seconds of the most recent writes during a failover.
+
 ## Tomorrow
+
 Day 20 (LLD) — implementing a simplified **Write-Ahead Log (WAL)**, the mechanism that actually makes replication and crash recovery possible.

@@ -1,6 +1,6 @@
 # Day 40 — Event Sourcing & CQRS (HLD)
 
-<small>6 min read</small>
+<small>8 min read</small>
 
 ## What we're learning today
 Every system so far stored **current state** (a row gets updated in place). Today introduces a different model: store the **sequence of events** that led to the current state, and derive state by replaying them. This reframes several things you already know (Day 20's WAL, Day 39's Saga log) as instances of a more general pattern.
@@ -65,5 +65,24 @@ The signal is recognizing event sourcing as **the same append-only-log idea you'
 ## 30-second challenge
 If an event's *schema* changes (e.g. a `Withdrew` event gains a new required `reason` field), what has to be true about how old events (recorded before the schema change) are still replayed correctly?
 
+## Scenario Practice
+
+**Scenario 1:** An event-sourced account has accumulated 500,000 events over several years. Every time the system needs the current balance, it replays all 500,000 events from the beginning. What's the practical problem, and what's the standard fix?
+
+> [!question]- Think it through, then expand
+> Does "storing the sequence of changes" mean every read has to recompute from the very first event, forever?
+
+> [!success]- Answer
+> Replaying the full history on every read gets slower as the event log grows without bound, which eventually makes normal reads impractically slow — this is a real operational cost of event sourcing, not a hypothetical one. The standard fix is **snapshotting**: periodically persist the computed current state (e.g., every 1,000 events) alongside the log, so a read only needs to load the most recent snapshot and replay events *since* that snapshot, not from the beginning of time. This doesn't compromise the core value of event sourcing (the full history remains available for audit or replay from any point) — it just avoids paying the full replay cost on every single read.
+
+**Scenario 2:** With CQRS, a write updates the event log, and a separate read model (optimized for queries) is updated asynchronously afterward. A user submits a change and immediately queries the read model, but sees their old data. Is this a bug?
+
+> [!question]- Think it through, then expand
+> Is the read model kept in sync with the write side synchronously or asynchronously — and where have you seen this exact shape before in this roadmap?
+
+> [!success]- Answer
+> Expected behavior, not a bug, under the standard CQRS pattern — the read model is a derived projection updated asynchronously after the write lands in the event log, so there's an inherent lag, structurally identical to [replication lag](Day 19 - Database Replication (HLD).md) between a primary and a read replica. If "read your own write" is a hard requirement for this specific interaction, the fix is the same as in the replication case: route that particular read to a source that's guaranteed current (query the event log or write model directly) for a short window after the user's own write, rather than eliminating the async read-model pattern everywhere, which would give up the query-optimization benefit CQRS exists to provide.
+
 ## Tomorrow
+
 Day 41 (LLD) — build the actual append-only event store and replay logic underlying today's concept: how events are appended, read back in order, and folded into a projection.

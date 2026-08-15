@@ -1,6 +1,6 @@
 # Day 48 — Video Streaming Fundamentals (HLD)
 
-<small>5 min read</small>
+<small>7 min read</small>
 
 ## What we're learning today
 [08-design-youtube](../Claude Notes/08-design-youtube.md) used adaptive bitrate streaming and CDN delivery without deriving either. Today opens up the actual mechanism — how a video becomes many small, independently-requestable segments, and why that's what makes smooth playback under changing network conditions possible at all.
@@ -61,5 +61,24 @@ The signal is explaining *why* segmenting (not just "we transcode to multiple re
 ## 30-second challenge
 Live streaming can't pre-transcode segments before they're created (there's no "upfront" the way VOD has). What does this imply about the acceptable latency between "content is captured" and "a segment is available to request" — and how might that trade off against transcoding quality/efficiency?
 
+## Scenario Practice
+
+**Scenario 1:** A user's bandwidth drops mid-playback, and the player wants to switch from 1080p to 480p. Why doesn't this require re-downloading the video from the beginning, and what specifically makes a clean mid-stream switch possible?
+
+> [!question]- Think it through, then expand
+> This day's key design principle is about segmenting every resolution along the *same* time boundaries — why does that specific detail matter for a live quality switch?
+
+> [!success]- Answer
+> Because every resolution variant is cut into segments aligned to the same time boundaries (e.g., segment 47 covers seconds 470–480 in *every* resolution), the player can finish playing segment 46 in 1080p and simply request segment 47 in 480p instead — no re-download of anything already played, and no gap, because the next segment slots in seamlessly regardless of which resolution it came from. If the segment boundaries weren't aligned across resolutions, switching quality mid-stream would require re-fetching overlapping or misaligned content to find a clean cut point, which is exactly the structural problem this day's principle is naming as the real enabler of adaptive streaming — not the mere existence of multiple resolution files.
+
+**Scenario 2:** A video is uploaded once at high resolution. Why does the platform transcode it into multiple resolutions and formats immediately at upload time, rather than converting on the fly whenever a specific resolution is first requested?
+
+> [!question]- Think it through, then expand
+> Transcoding is computationally expensive — where would that cost land if it happened at request time instead of upload time, and what would that do to the very first viewer's experience?
+
+> [!success]- Answer
+> Transcoding on the fly at request time would put a computationally expensive operation directly in the critical path of a user's playback request, adding significant latency (and repeating that cost every time a *first* request for a given resolution arrives) — completely at odds with the low-latency expectation of a streaming product. Doing it once at upload time (per Day 49's pipeline) moves the expensive work off the read path entirely and pays it exactly once per video, regardless of how many millions of times it's later streamed — the classic pattern of precomputing at write time to make every subsequent read cheap, the same underlying trade-off as fan-out-on-write in [03-design-twitter](../Claude Notes/03-design-twitter.md), applied to compute cost instead of storage.
+
 ## Tomorrow
+
 Day 49 (LLD) — sketch the actual transcoding pipeline: how an uploaded raw file becomes the multi-resolution, segmented output this note assumed already existed.

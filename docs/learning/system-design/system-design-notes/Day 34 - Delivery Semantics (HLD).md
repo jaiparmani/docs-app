@@ -1,6 +1,6 @@
 # Day 34 — Delivery Semantics (HLD)
 
-<small>5 min read</small>
+<small>6 min read</small>
 
 ## What we're learning today
 Day 24 (idempotency) and Day 28 (Kafka) both quietly relied on "at-least-once" delivery without naming it as a formal category. Today makes the three delivery semantics explicit — this is vocabulary you've needed since Day 24 and will keep needing through every applied design ([04-design-notification-system](../Claude Notes/04-design-notification-system.md), [05-design-job-scheduler](../Claude Notes/05-design-job-scheduler.md)) that promises "effectively-once" behavior.
@@ -55,5 +55,24 @@ Weak candidates say "we guarantee exactly-once delivery" as if it's a solved inf
 ## 30-second challenge
 [04-design-notification-system](../Claude Notes/04-design-notification-system.md) chose at-least-once + idempotency for push notifications. Why would at-most-once be a worse choice there, even though it's simpler?
 
+## Scenario Practice
+
+**Scenario 1:** A payment service uses at-least-once delivery with an idempotency key derived from `(user_id, timestamp)`. Two legitimate, separate payments from the same user happen to land in the same millisecond. What breaks?
+
+> [!question]- Think it through, then expand
+> What makes an idempotency key safe — is it enough that it's *usually* unique?
+
+> [!success]- Answer
+> The second legitimate payment gets silently treated as a duplicate of the first and dropped, because the idempotency key collided on two genuinely different events — this is a correctness bug hiding inside a mechanism meant to prevent a different bug. The key needs to be derived from something that's guaranteed unique per logical event, not something that merely happens to usually be unique — a client-generated UUID per payment attempt, or a request ID the client controls and can safely retry with, is the correct choice (per [Day 24 - Idempotency Keys (LLD)](Day 24 - Idempotency Keys (LLD).md)) precisely because it doesn't depend on timing coincidences never colliding.
+
+**Scenario 2:** A junior engineer proposes: "let's just make our message broker guarantee exactly-once delivery so we don't have to think about idempotency at the consumer." Why is this not actually achievable in the general case?
+
+> [!question]- Think it through, then expand
+> Exactly-once requires the broker to know, with certainty, whether the consumer's side effect already happened. Can it know that?
+
+> [!success]- Answer
+> The broker can guarantee a message is delivered exactly once *to the consumer's process* under specific conditions, but it fundamentally cannot know whether the consumer's downstream side effect (writing to a database, calling a third-party API, charging a card) actually completed before a crash — that information lives outside the broker's visibility entirely. A message could be delivered once, the consumer could crash mid-processing after the side effect already happened but before acknowledging, and the broker has no way to distinguish that from "the side effect never happened." This is exactly this day's key design principle: the honest promise is at-least-once delivery plus an idempotent handler, with the "exactly-once outcome" achieved at the application layer — not something the transport layer can deliver on its own, no matter how it's engineered.
+
 ## Tomorrow
+
 Day 35 (LLD) — Bloom Filters: a concrete data structure often used *inside* the dedup/idempotency-check step discussed today, to cheaply answer "have I possibly seen this key before?" without storing every key seen.

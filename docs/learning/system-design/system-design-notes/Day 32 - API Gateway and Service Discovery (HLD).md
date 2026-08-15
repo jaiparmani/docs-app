@@ -1,6 +1,6 @@
 # Day 32 — API Gateway & Service Discovery (HLD)
 
-<small>4 min read</small>
+<small>6 min read</small>
 
 ## What we're learning today
 Everything from Day 11–31 assumed "the client talks to the app server" as a given. Once you have more than a handful of services, two new questions appear: what does the client actually talk to, and how does one service find another? This day answers both, and sets up the vocabulary the rest of Block A/B leans on.
@@ -58,5 +58,24 @@ Weak answers treat "API Gateway" as a magic box that "handles routing." The sign
 ## 30-second challenge
 Service discovery assumes the registry itself is highly available. What happens to routing if the registry goes down — and which of Day 23's CAP categories does a service registry usually fall into?
 
+## Scenario Practice
+
+**Scenario 1:** A newly deployed service instance registers itself with the service registry immediately on startup, before it's finished loading its configuration and warming its cache. What happens to the first few requests routed to it, and how should registration actually be sequenced?
+
+> [!question]- Think it through, then expand
+> This day's key design principle distinguishes liveness from intent — is "the process has started" the same thing as "the process is ready to serve traffic"?
+
+> [!success]- Answer
+> The first requests routed to it will likely fail or be slow, because the registry only knows the process exists, not that it's actually ready — registration should happen only after a readiness check passes (config loaded, cache warmed, dependencies reachable), not the instant the process boots. This is the gap between "started" and "healthy" the key design principle is pointing at: a naive registry that trusts self-reported liveness the moment a process comes up will route real traffic into a not-yet-ready instance, which is a self-inflicted version of exactly the failure this day's architecture exists to prevent.
+
+**Scenario 2:** The API gateway itself goes down. What happens to the entire system, and what does this tell you about how the gateway should be deployed?
+
+> [!question]- Think it through, then expand
+> Everything in this day's design routes through the gateway — what does that make it, architecturally?
+
+> [!success]- Answer
+> If there's only one gateway instance, its failure takes down every service behind it — it's a single point of failure for the whole system, exactly the shape called out in the interview framework's deep-dive chapter. The fix is the same as for any other stateless-ish component in this roadmap: run multiple gateway instances behind a load balancer ([Day 25 - Load Balancing and Reverse Proxy (HLD)](Day 25 - Load Balancing and Reverse Proxy (HLD).md)), so no single instance failing takes the front door down with it. The gateway centralizing auth and routing (this day's core concept) is valuable specifically because it simplifies every service behind it — but that centralization only pays off if the gateway layer itself is built to survive losing any one instance.
+
 ## Tomorrow
+
 Day 33 (LLD) — Retry, Backoff, and Bulkhead patterns: what a gateway/caller actually does when a downstream instance (found via today's discovery mechanism) starts failing.

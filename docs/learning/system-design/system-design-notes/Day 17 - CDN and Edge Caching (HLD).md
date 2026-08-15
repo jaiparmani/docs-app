@@ -1,6 +1,6 @@
 # Day 17 — CDNs & Edge Caching (HLD)
 
-<small>3 min read</small>
+<small>5 min read</small>
 
 ## What we're learning today
 Redis solved "close to your app server." CDNs solve "close to the user, anywhere in the world" — the last piece of the latency puzzle before a response reaches a browser.
@@ -58,5 +58,24 @@ A user updates their profile picture. It's cached at 50 global edge nodes with a
 
 *(Hint: cache-busting via versioned URL vs. active purge API — compare cost and speed.)*
 
+## Scenario Practice
+
+**Scenario 1:** A news site pushes a breaking-news headline update, but users report seeing the old headline for up to an hour afterward even after a hard refresh. The CDN TTL is set to 3600 seconds. What's actually happening, and what are the two ways to fix it?
+
+> [!question]- Think it through, then expand
+> A hard refresh forces the *browser* to skip its own cache — does it do anything to a CDN edge node sitting between the browser and the origin?
+
+> [!success]- Answer
+> A browser hard refresh only bypasses the browser's local cache; it has no effect on the CDN edge node, which will keep serving the cached response until its TTL expires regardless of what the client does. Two real fixes: **lower the TTL** for genuinely volatile content (a blunt tool — it trades cache efficiency for freshness across *all* content uniformly), or **active invalidation/purge** — explicitly telling the CDN to evict a specific cached object the moment the underlying content changes, which keeps a long TTL for everything else while still getting instant freshness for the one thing that changed. Production news sites use purge-on-publish for exactly this reason.
+
+**Scenario 2:** Your origin server gets hit with a large spike in requests every time a popular asset's cache entry expires simultaneously across many edge locations. What's this called, and how does it connect to something you've already learned?
+
+> [!question]- Think it through, then expand
+> Many caches, all holding the same key, all expiring at once, all falling back to the same origin at once.
+
+> [!success]- Answer
+> This is a thundering herd against the origin — the same failure shape covered generally in the interview framework's deep-dive chapter, here specific to cache expiry rather than a service recovering from an outage. The fix is the same family of techniques: jitter the TTLs slightly across edge nodes so they don't all expire in the same instant, or use request coalescing/"stale-while-revalidate" so only one request per edge location actually reaches the origin to refresh the value while the rest are served the (briefly) stale cached copy instead of all hitting the origin simultaneously.
+
 ## Tomorrow
+
 Day 18 (LLD) — Database indexing internals: B-Trees and B+Trees, and why almost every DB index uses the latter.

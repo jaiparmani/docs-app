@@ -1,6 +1,6 @@
 # Day 21 — Database Sharding & Partitioning (HLD)
 
-<small>4 min read</small>
+<small>5 min read</small>
 
 ## What we're learning today
 Replication (Day 19) scaled reads. It doesn't help when your *write* volume or total data size exceeds what one machine can hold. That's what sharding solves.
@@ -55,5 +55,24 @@ This is one of the highest-signal HLD topics because it forces trade-off reasoni
 ## 30-second challenge
 For Feed Ranking Engine's post store, would you shard by `post_id` or `author_id`? Which query gets fast, and which gets expensive, under each choice?
 
+## Scenario Practice
+
+**Scenario 1:** You shard a multi-tenant SaaS database by `tenant_id`. One enterprise customer is 200x larger than every other tenant combined. What breaks, and what's the fix?
+
+> [!question]- Think it through, then expand
+> What does sharding by `tenant_id` assume about the *distribution* of tenant sizes, and what happens when that assumption is wrong?
+
+> [!success]- Answer
+> This is a hot-partition problem: every one of that tenant's queries lands on a single shard no matter how many shards exist in total, so that shard's load is entirely decoupled from how many shards you've provisioned — adding more shards doesn't help this one tenant's load at all, it only spreads the *other* tenants out further. The standard fix is giving oversized tenants their own dedicated shard (or shards) explicitly, rather than letting the generic hashing scheme place them wherever it lands them — effectively treating "is this tenant abnormally large" as its own routing decision layered on top of the normal shard key.
+
+**Scenario 2:** A query that used to be a simple `SELECT * FROM orders WHERE user_id = ?` now needs to also answer "what are this company's total orders across all its users" — but you sharded by `user_id`, and a company's users are scattered across many shards. What's the actual cost of this, and is there a way to avoid it?
+
+> [!question]- Think it through, then expand
+> This is the "name what you're sacrificing" half of this day's key design principle — what did choosing `user_id` as the shard key optimize for, and what did it deliberately give up?
+
+> [!success]- Answer
+> Choosing `user_id` as the shard key optimized for the dominant pattern (a user's own data lives on one shard, so per-user queries are fast and single-shard). The cost is that any cross-shard aggregation — like "all orders for company X" — now requires a scatter-gather query across every shard and merging results in application code, which is slower and more complex than a single-shard query. This isn't really avoidable by tweaking the shard key without giving up the original optimization; the more common real answer is to maintain a separate, purpose-built read path for that aggregation (a materialized view, a data warehouse fed by CDC, or a search index) rather than forcing the primary sharded store to serve a query shape it wasn't designed for.
+
 ## Tomorrow
+
 Day 22 (LLD) — implementing a **Shard Router** interface in Java, tying together consistent hashing + partition key resolution.

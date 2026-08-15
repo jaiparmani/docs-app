@@ -1,6 +1,6 @@
 # Day 51 — Multi-Region & Disaster Recovery (HLD)
 
-<small>7 min read</small>
+<small>9 min read</small>
 
 ## What we're learning today
 Closes the roadmap. Every failure scenario since Day 19 asked "what if this node dies." Today asks the same question at the largest reasonable blast radius: what if an entire AWS region — power, network, everything — goes away. This is where every idea in the roadmap (replication, consensus, CAP, sharding) gets applied at one more level of scale.
@@ -59,6 +59,24 @@ The signal is treating this as a direct extension of Day 23's reasoning rather t
 
 ## Key design principle
 **Multi-region is the same "name the entity, then choose consistency or availability for it" reasoning from Day 23, applied to a system's geographic footprint — there is no single correct multi-region strategy for a whole system, only correct strategies for each piece of state within it.**
+
+## Scenario Practice
+
+**Scenario 1:** A company sets an RPO of 5 minutes and an RTO of 1 hour for their primary database, then configures nightly backups as their only disaster recovery mechanism. Does this meet their stated objectives?
+
+> [!question]- Think it through, then expand
+> RPO is about how much data you can afford to lose — does a nightly backup bound that at 5 minutes?
+
+> [!success]- Answer
+> No — nightly backups mean that in the worst case (a failure occurring right before the next backup), up to nearly 24 hours of data could be lost, wildly missing a stated 5-minute RPO. A 5-minute RPO requires something closer to continuous or near-continuous replication to a standby (synchronous or tightly-lagged asynchronous replication, per [Day 19 - Database Replication (HLD)](Day 19 - Database Replication (HLD).md)), not periodic backups — this is a common real-world mismatch worth catching explicitly: RPO and RTO are targets that dictate *which mechanism* is required to meet them, they're not just labels you attach after picking a mechanism you already had for other reasons.
+
+**Scenario 2:** A system replicates its primary database to a secondary region synchronously, guaranteeing zero data loss on regional failover. The team is proud of this but hasn't examined the cost. What's the trade-off they're likely not accounting for?
+
+> [!question]- Think it through, then expand
+> This day's key design principle borrows the "name the entity, then choose" reasoning from Day 23 — what did choosing zero data loss (synchronous cross-region replication) necessarily cost, applied to geography specifically?
+
+> [!success]- Answer
+> Synchronous replication across regions means every write has to wait for acknowledgment from a data center that could be tens or hundreds of milliseconds away purely due to physical distance — the write latency numbers from the estimation chapter's speed-of-light reasoning apply directly here. Every single write in the system now pays that cross-region round trip, all the time, in exchange for zero data loss in the rare event of a regional failure. Whether that's the right trade-off depends entirely on the entity: it might be correct for a financial ledger and clearly wrong for a comments feed, which is exactly why this day's principle insists there's no single correct multi-region strategy for a whole system — only a correct strategy for each piece of state within it, decided the same way CAP choices are decided per entity.
 
 ## Roadmap complete
 This closes Days 32–51 and, combined with [03-design-twitter](../Claude Notes/03-design-twitter.md) through [10-design-search-autocomplete](../Claude Notes/10-design-search-autocomplete.md), the full path from [Day 31 - Search Systems and Elasticsearch (HLD)](Day 31 - Search Systems and Elasticsearch (HLD).md) onward. Every applied design's forward-referenced prerequisite is now a real note, not a promissory link. A natural next step, now that the full toolkit exists: revisit [03-design-twitter](../Claude Notes/03-design-twitter.md) through [10-design-search-autocomplete](../Claude Notes/10-design-search-autocomplete.md) once more and add an explicit "observability" and "multi-region" consideration to each — the two production-reasoning lenses this block added that weren't available when those notes were first written.

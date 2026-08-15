@@ -1,6 +1,6 @@
 # Day 38 — Distributed Transactions: 2PC vs Saga (HLD)
 
-<small>5 min read</small>
+<small>7 min read</small>
 
 ## What we're learning today
 A single-database transaction gives you atomicity for free (ACID). Once "the order" and "the payment" and "the inventory" live in separate services with separate databases, atomicity has to be engineered explicitly. Today covers the two dominant approaches — and why the industry mostly moved away from the first one.
@@ -79,5 +79,24 @@ The signal isn't "do you know both names" — it's whether you can explain **why
 ## 30-second challenge
 Why is "orchestration" (a central Saga coordinator) generally easier to debug and reason about than "choreography" (services reacting to each other's events with no central coordinator) — and what does orchestration give up in exchange?
 
+## Scenario Practice
+
+**Scenario 1:** In a Saga-based checkout flow, the "cancel order" compensating action runs successfully, but the "refund payment" compensating action fails permanently after all retries. What's the actual end state of the system, and is it acceptable?
+
+> [!question]- Think it through, then expand
+> Does a Saga guarantee every compensation succeeds, or does it guarantee something weaker?
+
+> [!success]- Answer
+> The end state is genuinely inconsistent: the order is cancelled, but the customer was charged and never refunded — and this is a real limitation of Saga worth stating plainly rather than glossing over, not a solved problem. A Saga guarantees compensations are *attempted* with the same reliability discipline as forward steps (retries, backoff), not that they're guaranteed to eventually succeed — some operations can fail in ways no amount of retrying fixes (the payment provider itself is down, the account was closed). The realistic answer is a dead-letter/manual-intervention path (per [Day 27's](Day 27 - Message Queues Deep Dive (HLD).md) DLQ concept) for compensations that exhaust retries, surfaced for human handling — Saga reduces how often this happens, it doesn't eliminate the possibility.
+
+**Scenario 2:** A team considering 2PC for a new multi-service checkout flow argues "our transactions are usually fast, so the blocking window will be short — is 2PC actually fine here?"
+
+> [!question]- Think it through, then expand
+> Is "usually fast" the property that determines whether 2PC's blocking problem is dangerous?
+
+> [!success]- Answer
+> No — the danger of 2PC's blocking problem isn't about the *typical* transaction duration, it's about the *tail*: the coordinator crashing or a participant becoming slow at exactly the wrong moment, which by definition is rare but not impossible, and when it happens every participant is stuck holding locks with no way to safely proceed on their own. "Usually fast" describes the common case; the blocking problem is a worst-case failure mode that doesn't care how rare it is, only that it's possible — and at real production scale and duration, rare-but-possible failure modes eventually happen. This is precisely why the industry's answer, per this day's trade-off table, leans toward Saga for internet-scale systems even when individual transactions are typically fast.
+
 ## Tomorrow
+
 Day 39 (LLD) — build a Saga orchestrator: the explicit state machine tracking which steps completed, and the logic that decides which compensating actions to fire on a failure at any given step.

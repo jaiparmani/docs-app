@@ -106,3 +106,4 @@ Dotted lines = cache-miss path. This is the diagram to draw first in the intervi
 - [Design a Rate Limiter](01-rate-limiter.md)
 - [Design Twitter (Post + Follow + Home Timeline)](03-design-twitter.md)
 - [Design YouTube (Video Upload + Streaming)](08-design-youtube.md)
+- [High-Level Design and API Definition](../Interview%20Framework/03%20-%20High-Level%20Design%20and%20API%20Definition.md)

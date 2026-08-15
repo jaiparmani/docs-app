@@ -1,6 +1,6 @@
 # Day 46 — WebSockets, Long Polling & SSE: Connection Scaling (HLD)
 
-<small>5 min read</small>
+<small>7 min read</small>
 
 ## What we're learning today
 Starts Block D. Every design through Day 45 was request/response: client asks, server answers, connection closes. [07-design-chat-system](../Claude Notes/07-design-chat-system.md) needed something structurally different — the server pushing to a client without being asked first. Today derives that primitive properly.
@@ -63,5 +63,24 @@ The signal isn't "which protocol" (WebSockets is almost always the expected answ
 ## 30-second challenge
 If a WebSocket connection server needs to restart for a deploy, what would a "graceful drain" look like here, compared to how a stateless HTTP server drains connections before a rolling restart?
 
+## Scenario Practice
+
+**Scenario 1:** A chat service scales its WebSocket-handling tier from 1 instance to 10 behind a standard round-robin load balancer. Two users in the same chat room, connected to different instances, stop seeing each other's messages. Why?
+
+> [!question]- Think it through, then expand
+> This day's key design principle says a persistent connection makes the server stateful — what does that imply about a message that needs to reach a specific connection?
+
+> [!success]- Answer
+> Each WebSocket connection is pinned to the specific instance that accepted it — a message arriving at instance A has no way to reach a client connected to instance B unless something explicitly bridges them, which a plain round-robin load balancer doesn't do; it only routes *new* connections, it doesn't route *messages between* already-established connections on different instances. The fix is a pub/sub layer between instances (commonly Redis pub/sub, per [Day 13](Day 13 - Redis Internals (HLD).md)) so that when instance A receives a message for the room, it publishes it, and every instance (including B) subscribed to that room's channel picks it up and forwards it to its own locally-connected clients. This is exactly the "which specific instance, not just any healthy instance" problem this day's principle names.
+
+**Scenario 2:** A mobile client's WebSocket connection drops when it goes through a tunnel, then reconnects 30 seconds later. What messages, if any, has it missed, and whose job is it to make sure the client catches up?
+
+> [!question]- Think it through, then expand
+> Is a WebSocket connection itself responsible for remembering what was sent while a client was disconnected?
+
+> [!success]- Answer
+> The connection itself remembers nothing — once dropped, any messages published during that 30-second gap are simply gone from the WebSocket's perspective; a WebSocket is a live pipe, not a durable log. Catching the client up on missed messages is the application's responsibility, typically by having the client send its last-known message ID (or timestamp) on reconnect, and the server replaying anything newer from a durable store — which means the "real-time" delivery via WebSocket and the "durable" delivery guarantee are actually two separate mechanisms working together, not one mechanism doing both jobs, echoing the same durable-log-plus-live-transport split covered in [this day's](Day 46 - WebSockets Long Polling and SSE (HLD).md) own explanation of why messages are typically persisted separately from the live connection.
+
 ## Tomorrow
+
 Day 47 (LLD) — Connection/session management at scale: the presence-registry mechanics and reconnection handling that make today's statefulness actually workable across many servers.

@@ -1,6 +1,6 @@
 # Day 25 — Load Balancing & Reverse Proxy (HLD)
 
-<small>3 min read</small>
+<small>5 min read</small>
 
 ## What we're learning today
 You've referenced "Load Balancer" since Day 3 without unpacking it. Today: L4 vs L7, and the algorithms deciding which backend gets each request.
@@ -61,5 +61,24 @@ Interviewers check if you know *when* to reach for L7 vs L4 — "just put a load
 ## 30-second challenge
 Your Feed Ranking Engine (Day 9-10) needs sticky sessions for an A/B experiment cohort. Which LB algorithm enables that, and how does it connect to something you built on Day 16?
 
+## Scenario Practice
+
+**Scenario 1:** You need to route traffic to different backend services based on the URL path (`/api/users` → user service, `/api/orders` → order service). Can an L4 load balancer do this?
+
+> [!question]- Think it through, then expand
+> What information does an L4 load balancer actually have access to, versus what's needed to read a URL path?
+
+> [!success]- Answer
+> No — an L4 load balancer operates at the transport layer, working with IP addresses and ports, and never inspects the HTTP request itself, so it has no visibility into the URL path at all. Routing by path requires an L7 load balancer, which terminates and reads the actual HTTP request before deciding where to send it. This is precisely the trade-off in this day's key design principle: L4 is faster and simpler because it never has to parse the request, but that speed comes from *not looking inside it* — the moment you need routing intelligence based on request content, L7 is the only option, not a preference.
+
+**Scenario 2:** A load balancer uses sticky sessions (routing a given client to the same backend instance every time) to keep in-memory session state working without a shared session store. One backend instance becomes overloaded. Why might sticky sessions be making this worse, not better?
+
+> [!question]- Think it through, then expand
+> What does "sticky" trade away in exchange for keeping a client pinned to one instance?
+
+> [!success]- Answer
+> Sticky sessions trade away the load balancer's ability to freely redistribute load — if a disproportionate number of active, high-traffic users happen to be pinned to one instance, the load balancer can't move them elsewhere without breaking their session, so that instance stays overloaded even while others sit idle. This is the underlying reason externalizing session state (to Redis, per [Day 13 - Redis Internals (HLD)](Day 13 - Redis Internals (HLD).md)) is generally preferred over sticky sessions in a system designed for real scale: it lets any instance serve any request, which is what makes load balancing actually work as intended, rather than being undermined by a pinning requirement.
+
 ## Tomorrow
+
 Day 26 (LLD) — implementing a **Circuit Breaker** state machine, the resilience pattern that protects your load-balanced fleet from cascading failures.

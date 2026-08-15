@@ -1,6 +1,6 @@
 # Day 42 — Object/Blob Storage Internals (HLD)
 
-<small>5 min read</small>
+<small>7 min read</small>
 
 ## What we're learning today
 Starts Block C. Every applied design that touched large files ([08-design-youtube](../Claude Notes/08-design-youtube.md), [03-design-twitter](../Claude Notes/03-design-twitter.md)'s media, [04-design-notification-system](../Claude Notes/04-design-notification-system.md)'s attachments) waved at "object storage" without opening it up. Today does — and it's a direct bridge into your existing AWS S3 knowledge, same trade-offs, different vocabulary.
@@ -58,5 +58,24 @@ Most candidates can say "we'd use S3 for this." The differentiator is being able
 ## 30-second challenge
 A video platform stores raw uploads (rarely re-read after transcoding) and transcoded renditions (read constantly by viewers) in the same storage tier today. What's the concrete cost argument for splitting these into different storage tiers?
 
+## Scenario Practice
+
+**Scenario 1:** An application tries to append a few bytes to the end of an existing object in an object store, the way it would append to a line in a local log file. Why doesn't this operation exist, and what has to happen instead?
+
+> [!question]- Think it through, then expand
+> This day's key design principle says immutability isn't bolted on — it's what makes the scalability possible. What would partial in-place edits cost that immutability avoids?
+
+> [!success]- Answer
+> Object storage doesn't support partial in-place edits because objects are treated as whole, immutable units distributed and replicated across a system — supporting arbitrary byte-range mutation would require coordinating partial updates across every replica of that object consistently, which reintroduces exactly the kind of complex, coordinated-write problem ([replication](Day 19 - Database Replication (HLD).md) consistency, essentially) that treating objects as immutable wholes was designed to avoid. To "append," the application has to read the object, construct a new version with the appended content, and write it back as a brand-new object (or a new version, if versioning is enabled) — more work per logical append, in exchange for the storage layer never having to solve partial-mutation consistency at massive scale.
+
+**Scenario 2:** A client uploads a 50GB file as a single PUT request. The upload fails at 90% completion due to a flaky connection. What has to happen next, and how does multipart upload change this outcome?
+
+> [!question]- Think it through, then expand
+> With a single-request upload, what state is a 90%-complete transfer left in when it fails?
+
+> [!success]- Answer
+> With a single PUT, a failure at 90% means the entire 50GB has to be re-uploaded from scratch — the object store has no partial object to resume from, since (per the immutability point above) an object typically only exists once it's been fully and successfully written. Multipart upload avoids this by splitting the file into independently-uploaded parts (each with its own ID), so a failure only requires re-uploading the specific part that failed, and the parts already successfully uploaded stay intact until the client explicitly completes the multipart upload by assembling them — turning a single large, fragile transfer into many small, independently-retryable ones, which is exactly why it's the standard approach for large-object uploads over unreliable networks.
+
 ## Tomorrow
+
 Day 43 (LLD) — Multipart Upload: the client-side mechanism (already previewed conceptually in [08-design-youtube](../Claude Notes/08-design-youtube.md)) for getting a large file into object storage reliably, chunk by chunk, resumable after a network failure.

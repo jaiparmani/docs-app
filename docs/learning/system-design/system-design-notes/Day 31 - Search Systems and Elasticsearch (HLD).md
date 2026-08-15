@@ -1,6 +1,6 @@
 # Day 31 — Search Systems & Elasticsearch (HLD)
 
-<small>4 min read</small>
+<small>6 min read</small>
 
 ## What we're learning today
 Closing this arc by tying B+Tree indexing (Day 18), sharding (Day 21), and consistent hashing (Day 15) together into how full-text search actually works at scale.
@@ -57,5 +57,24 @@ This tests whether you recognize search as a **separate system with separate inf
 ## 30-second challenge
 Why does searching for "system design" needing to intersect *two* posting lists (Day 31's diagram) get significantly slower as more search terms are added — and how does that connect to why search engines often limit or optimize multi-term queries?
 
+## Scenario Practice
+
+**Scenario 1:** A teammate suggests adding a `LIKE '%keyword%'` query on your primary relational database instead of standing up a separate search system, to "keep things simple." What's the actual cost of this shortcut at scale?
+
+> [!question]- Think it through, then expand
+> Can a B+Tree index (what a relational database uses) accelerate a search for a substring anywhere inside a text field?
+
+> [!success]- Answer
+> A leading-wildcard `LIKE '%keyword%'` can't use a standard B+Tree index at all, because a B+Tree is ordered for prefix matching, not substring matching — the database has to fall back to scanning every row and checking each one, which gets linearly slower as the table grows and will eventually degrade badly under real load. This is exactly this day's key design principle: search is a fundamentally different query shape (relevance-ranked, tokenized, substring/fuzzy) than what a relational index is built for, and "keep things simple" here actually means "defer a real cost to whenever the table gets big enough to notice," not avoid it.
+
+**Scenario 2:** Your search index and your primary database can disagree — a product gets deleted from the primary DB but still shows up in search results for a few minutes. Is this acceptable, and why does it happen at all given they're supposedly the same data?
+
+> [!question]- Think it through, then expand
+> A search index is a separate store, kept in sync with the primary — what does "kept in sync" imply about timing?
+
+> [!success]- Answer
+> This is generally acceptable and expected: a search index is a derived, separately-maintained copy of the data, updated via some sync mechanism (batch reindexing, or event-driven updates similar to [Day 27's](Day 27 - Message Queues Deep Dive (HLD).md) queue-driven patterns) rather than being written to atomically alongside the primary database in the same transaction. That gap is the price of having a specialized, fast search structure at all — an AP-leaning trade-off in the same spirit as [Day 23](Day 23 - CAP Theorem and PACELC (HLD).md), applied to search freshness specifically. If a few minutes of staleness is genuinely unacceptable for a given field, that's a signal the sync mechanism's latency needs tightening, not that the whole approach is wrong.
+
 ## Tomorrow
+
 This closes the Caching → Sharding → Resilience → Messaging → Search arc. Next block moves into applied system design: full architectures for Chat (WhatsApp), Ride-hailing (Uber), and Video (YouTube) — pulling together everything from Days 1–31 into complete designs.

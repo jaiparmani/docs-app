@@ -1,6 +1,6 @@
 # Day 29 — Distributed Locks (HLD)
 
-<small>4 min read</small>
+<small>6 min read</small>
 
 ## What we're learning today
 Day 24's idempotency lock and Day 22's shard-router assumed "a lock" existed. Today we examine what that actually means across machines — a much harder problem than `synchronized` in Java.
@@ -61,5 +61,24 @@ Interviewers use this to test whether you know distributed locks are **probabili
 ## 30-second challenge
 Why is a **unique token** in the lock value (not just existence of the key) necessary for safe lock release — walk through the exact race condition it prevents.
 
+## Scenario Practice
+
+**Scenario 1:** A process acquires a distributed lock, then pauses for an unusually long garbage-collection cycle. The lock's TTL expires while it's paused, another process acquires the same lock and starts working, and then the first process resumes — still believing it holds the lock. What goes wrong, and what's the standard mitigation?
+
+> [!question]- Think it through, then expand
+> The first process was never told it lost the lock — is there a way for it to find out before doing damage?
+
+> [!success]- Answer
+> Both processes now believe they hold the lock simultaneously, which is exactly the safety violation a lock exists to prevent — this is the GC-pause / clock-drift failure mode this day's key design principle calls out directly. The standard mitigation is a **fencing token**: a monotonically increasing number issued with the lock, which the protected resource itself checks and rejects any write carrying a token lower than the highest one it's already seen. The first process's resumed writes carry a stale (lower) token and get rejected by the resource, even though the process itself doesn't know it lost the lock — the safety is enforced by the resource, not by trusting the lock holder to notice.
+
+**Scenario 2:** You're using a single Redis instance as a lock manager. It fails over to a replica that hadn't yet received the most recent lock acquisition (async replication lag). What's the risk, and does this change your confidence in the lock's guarantee?
+
+> [!question]- Think it through, then expand
+> If the replica doesn't know a lock was held, what happens when a second process asks it for that same lock?
+
+> [!success]- Answer
+> Yes — this is a real gap. The replica, unaware the lock was ever acquired (the replication of that write hadn't landed yet when the primary failed), will happily grant the same lock to a second process, producing exactly the two-holders violation the lock was supposed to prevent. This is why single-instance distributed locking has a real, named weakness under failover, and why algorithms like Redlock (acquiring the lock across a majority of independent Redis instances) exist — trading implementation complexity for a guarantee that survives a single node's failure, rather than assuming one instance's view of the lock state is authoritative.
+
 ## Tomorrow
+
 Day 30 (LLD) — implementing a **Redis-based distributed lock** with the compare-and-delete release pattern, end to end.
