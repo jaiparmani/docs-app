@@ -7,7 +7,7 @@
 - [Life's Little Instruction Book](Life's Little Instruction Book.md)
 - [Man's Search for Meaning](Man's Search for Meaning.md)
 - [Originals](Originals.md)
-- [Recommendations](Recommendations/Deep Work.md)
+- [Recommendations](Recommendations/Deep Work/01 - The Deep Work Hypothesis.md)
 - [Rich Dad Poor Dad](Rich Dad Poor Dad/index.md)
 - [Same as Ever](Same as Ever.md)
 - [Shoe Dog](Shoe Dog.md)
