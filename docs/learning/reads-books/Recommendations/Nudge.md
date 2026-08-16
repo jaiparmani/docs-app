@@ -1,0 +1,19 @@
+---
+tags: [reads, books, recommendation, behavioral-economics, policy, choice-architecture]
+---
+
+# Nudge: Improving Decisions About Health, Wealth, and Happiness
+
+<small>3 min read</small>
+
+*Richard Thaler and Cass Sunstein*
+
+Thaler and Sunstein's claim starts from the same premise Kahneman's research established: people are not the fully rational optimizers classical economics assumes, so the way a choice is presented — its default option, its framing, its ordering — measurably changes what people pick, even though nothing about the actual choice has changed. Their term for this is "choice architecture," and their prescription is "libertarian paternalism": design the default toward the outcome most people would choose for themselves if they thought hard about it, while leaving the opt-out fully available to anyone who wants something else. The canonical example, and the one with real-world data behind it, is retirement savings — switching 401(k) enrollment from opt-in to opt-out (you're automatically enrolled unless you actively decline) dramatically raises participation rates, even though the actual financial decision available to the employee is identical either way. The book extends the same logic to organ donation registries, cafeteria layout (put fruit at eye level, not candy), and loan disclosure design, arguing that since some default always has to be chosen — there's no neutral, architecture-free way to present a 401(k) enrollment form — you might as well choose the one that helps rather than the one that happens to be administratively convenient.
+
+## Why it belongs next to what's already on the shelf
+
+This pairs directly with Housel's books, but it's the same behavioral psychology aimed at a different target: Housel applies it to how an individual should think about their own money, while Thaler and Sunstein apply it to how institutions should design the systems individuals operate inside. Where *The Psychology of Money* argues you should structure your own financial life around your actual psychology rather than a spreadsheet-optimal one, *Nudge* argues policymakers and product designers should structure other people's defaults around the same psychological reality — accepting that people are predictably imperfect optimizers isn't a personal failing to correct, it's a design constraint to build around. Thaler is also one of the direct inheritors of the Kahneman-Tversky research program (Thaler and Kahneman were close collaborators for decades), so it slots naturally alongside a Kahneman read as the applied, policy-facing branch of the same tradition rather than a separate track entirely.
+
+## The known weak point
+
+The "libertarian" half of "libertarian paternalism" draws real skepticism. Critics point out that once you accept that defaults are powerful enough to change large-scale behavior, the person or institution setting the default has substantial influence over outcomes regardless of how easy the opt-out technically is — most people don't opt out of defaults, which is precisely the mechanism the book is relying on to work. That makes the "it's still your free choice" framing somewhat in tension with the book's own evidence that defaults are sticky specifically because most people won't exercise the choice. There's also a narrower empirical problem: some of the flagship nudge interventions from the 2010s, when re-tested at larger scale or by independent teams, produced smaller effects than the original studies suggested, mirroring the broader replication concerns that hit behavioral psychology more generally. The book is best read as a genuinely useful design heuristic — defaults matter, so choose them deliberately — rather than as a settled case that any specific nudge program will reliably work at the scale its advocates hope for.
