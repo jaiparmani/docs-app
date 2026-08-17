@@ -187,9 +187,14 @@ def add_backlinks(docs_root: Path):
             fh.write(block)
 
 
+NUMERIC_PREFIX_RE = re.compile(r"^\d+[_.]\s*")
+
+
 def write_pages_title(dst: Path, title: str):
-    """awesome-pages: give the nav section a readable title instead of the slugged folder name."""
-    (dst / ".pages").write_text(f"title: {title}\n", encoding="utf-8")
+    """awesome-pages: give the nav section a readable title instead of the slugged folder name.
+    Vault folders are prefixed for manual sort order (e.g. "7_Books") -- strip that for display."""
+    clean_title = NUMERIC_PREFIX_RE.sub("", title)
+    (dst / ".pages").write_text(f"title: {clean_title}\n", encoding="utf-8")
 
 
 def ensure_section_index(dst: Path, title: str):

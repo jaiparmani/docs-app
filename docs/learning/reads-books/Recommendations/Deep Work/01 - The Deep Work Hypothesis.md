@@ -24,5 +24,4 @@ Before adopting any specific tactic from later chapters, do the diagnostic work 
 
 ## Linked from
 
-- [7_Books](../../index.md)
 - [Deep Work](index.md)

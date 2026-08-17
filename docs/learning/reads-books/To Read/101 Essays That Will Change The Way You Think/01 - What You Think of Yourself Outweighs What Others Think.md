@@ -26,4 +26,3 @@ The next time you notice yourself hesitating before a decision because of how it
 ## Linked from
 
 - [101 Essays That Will Change The Way You Think](index.md)
-- [7_Books](../../index.md)
