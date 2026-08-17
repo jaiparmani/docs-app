@@ -15,5 +15,5 @@
 - [The Almanack of Naval Ravikant](The Almanack of Naval Ravikant.md)
 - [The Man Who Couldn't Stop](The Man Who Couldn't Stop.md)
 - [The Psychology of Money](The Psychology of Money/index.md)
-- [To Read](To Read/101 Essays That Will Change The Way You Think.md)
+- [To Read](To Read/101 Essays That Will Change The Way You Think/01 - What You Think of Yourself Outweighs What Others Think.md)
 - [We Should All Be Feminists](We Should All Be Feminists.md)
