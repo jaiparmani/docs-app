@@ -35,7 +35,6 @@ theme:
       success: material/check-decagram
   features:
     - navigation.tabs
-    - navigation.sections
     - navigation.top
     - navigation.indexes
     - navigation.footer
