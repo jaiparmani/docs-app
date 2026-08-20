@@ -1,11 +1,16 @@
 # 2_Problem Solving
 
 - [1_Bit Manipulation](1_Bit Manipulation/1_Checking if Number is Divisible by 2.md)
+- [Binary Search on the Answer](Binary Search on the Answer.md)
 - [Dynamic Programming Is One Idea Wearing Many Costumes](Dynamic Programming Is One Idea Wearing Many Costumes.md)
+- [Finding Your Own Failing Test](Finding Your Own Failing Test.md)
 - [LEETCODE](LEETCODE/1680. Concatenation of Consecutive Binary Numbers.md)
 - [Practice Set - Problems by Pattern](Practice Set - Problems by Pattern.md)
+- [Subarray, Subsequence, Subset](Subarray, Subsequence, Subset.md)
 - [The Data Structure Everything Else Is Built On](The Data Structure Everything Else Is Built On.md)
 - [The Invariant Is the Actual Solution](The Invariant Is the Actual Solution.md)
 - [The Words That Give Away the Technique](The Words That Give Away the Technique.md)
 - [What the Constraints Are Actually Telling You](What the Constraints Are Actually Telling You.md)
+- [When Greedy Is Actually Correct](When Greedy Is Actually Correct.md)
 - [Why Big-O Lies to You](Why Big-O Lies to You.md)
+- [Write the Brute Force First](Write the Brute Force First.md)
