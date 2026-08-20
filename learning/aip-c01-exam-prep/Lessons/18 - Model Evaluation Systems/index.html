@@ -1,0 +1,2773 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jaiparmani.github.io/docs-app/learning/aip-c01-exam-prep/Lessons/18%20-%20Model%20Evaluation%20Systems/">
+      
+      
+        <link rel="prev" href="../17%20-%20Monitoring%20for%20GenAI%20Applications/">
+      
+      
+        <link rel="next" href="../19%20-%20Troubleshooting%20GenAI%20Applications/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Model Evaluation Systems for GenAI - Jai's Learning Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m23%2012-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12%203%208.6%201.54%206.71%204.72l-3.61.81.34%203.68L1%2012l2.44%202.78-.34%203.69%203.61.82%201.89%203.18L12%2021l3.4%201.46%201.89-3.18%203.61-.82-.34-3.68zm-13%205-4-4%201.41-1.41L10%2014.17l6.59-6.59L18%209z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#model-evaluation-systems-for-genai" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Jai&#39;s Learning Notes" class="md-header__button md-logo" aria-label="Jai's Learning Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jai's Learning Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Model Evaluation Systems for GenAI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="amber"  aria-label="Switch to sepia"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to sepia" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="sepia" data-md-color-primary="black" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Notes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../offline/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Offline
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../tags/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Browse by tag
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Learning
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Jai&#39;s Learning Notes" class="md-nav__button md-logo" aria-label="Jai's Learning Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Jai's Learning Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../offline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Offline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browse by tag
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Learning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIP-C01 Exam Prep
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AIP-C01 Exam Prep
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Missed%20Questions%20Log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Missed Questions Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mock%20Exam%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mock Exam 1 (65 Questions)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Rapid%20Recall%20Cram%20Sheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rapid Recall Cram Sheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Service%20Selection%20Drill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Service Selection Drill
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_6" id="__nav_4_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lessons
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lessons
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01%20-%20Bedrock%20Model%20Selection%20and%20Solution%20Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bedrock Model Selection &amp; Solution Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02%20-%20Data%20Validation%20and%20Processing%20Pipelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Validation and Processing Pipelines for FM Consumption
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03%20-%20Vector%20Stores%20and%20Embeddings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vector Stores and Embeddings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04%20-%20RAG%20Retrieval%20Mechanisms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RAG Retrieval Mechanisms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05%20-%20Prompt%20Engineering%20and%20Governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt Engineering, Management, and Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06%20-%20Agentic%20AI%20and%20Tool%20Use/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentic AI: Agents, Tool Use, MCP, Multi-Agent Orchestration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07%20-%20FM%20Deployment%20Strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FM Deployment Strategies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08%20-%20Enterprise%20Integration%20Architectures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enterprise Integration Architectures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09%20-%20FM%20API%20Integration%20Patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FM API Integration Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10%20-%20App%20Integration%20Patterns%20and%20Dev%20Tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application Integration Patterns and Development Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11%20-%20AI%20Safety%20and%20Content%20Controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Safety and Content Controls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12%20-%20Data%20Security%20and%20Privacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Security and Privacy for GenAI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13%20-%20AI%20Governance%20and%20Compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Governance and Compliance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14%20-%20Responsible%20AI%20Principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Responsible AI Principles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15%20-%20Cost%20Optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cost Optimization for GenAI Workloads
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16%20-%20Performance%20Optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance and Latency Optimization for FM Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17%20-%20Monitoring%20for%20GenAI%20Applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Observability and Monitoring for GenAI Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Evaluation Systems for GenAI
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Evaluation Systems for GenAI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-concept-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The concept, explained
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-this-plays-out-in-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How this plays out in practice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-exam-is-actually-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the exam is actually testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scenario-drill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario drill
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-deeper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Go deeper
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linked from
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19%20-%20Troubleshooting%20GenAI%20Applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting GenAI Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../aws-ai-practitioner-aif-c01/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Certified AI Practitioner - AIF C01
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../aws-genai-developer-aip-c01/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Certified Generative AI Developer - Professional (AIP-C01)
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../lld/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLD
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../problem-solving/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Solving
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../reads-books/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Books
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../reads-economics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../reads-foundations/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Foundations
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../reads-general/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General Reads
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../reads-tech/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech & Engineering
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../system-design/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning System Design
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-concept-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The concept, explained
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-this-plays-out-in-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How this plays out in practice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-exam-is-actually-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the exam is actually testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scenario-drill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario drill
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-deeper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Go deeper
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linked from
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Learning Notes
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Learning
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    AIP-C01 Exam Prep
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../01%20-%20Bedrock%20Model%20Selection%20and%20Solution%20Design/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Lessons
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <a href="../../../../tags/#tag:aws" class="md-tag">aws</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../../tags/#tag:certification" class="md-tag">certification</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../../tags/#tag:exam-prep" class="md-tag">exam-prep</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../../tags/#tag:genai-developer-professional" class="md-tag">genai-developer-professional</a>
+      
+    
+  </nav>
+
+
+
+<h1 id="model-evaluation-systems-for-genai">Model Evaluation Systems for GenAI<a class="headerlink" href="#model-evaluation-systems-for-genai" title="Permanent link">&para;</a></h1>
+<p><small>11 min read</small></p>
+<blockquote>
+<p><strong>Core idea:</strong> "Is this a good response" doesn't have a clean objective metric the way traditional ML accuracy does. This task is about building systematic, repeatable evaluation despite that — the opposite of someone eyeballing a few outputs and declaring it looks fine.</p>
+</blockquote>
+<h2 id="the-concept-explained">The concept, explained<a class="headerlink" href="#the-concept-explained" title="Permanent link">&para;</a></h2>
+<p>Traditional ML evaluation is comparatively easy: you usually have a clear correct answer, and metrics like accuracy or F1 score capture how close you got. GenAI evaluation doesn't have that luxury — "is this response relevant, factually accurate, consistent, and well-written" is inherently more subjective and multi-dimensional. This task is about the discipline of evaluating anyway, systematically, rather than giving up on rigor because the target is fuzzier.</p>
+<p><strong>Bedrock Model Evaluations</strong> is the AWS-native starting point — a service purpose-built for running automatic and/or human evaluation jobs comparing <abbr title="Foundation Model">FM</abbr> outputs, whether you're comparing two candidate models or checking a single model's outputs against a reference. Layered on top of that, <strong>A/B testing and canary testing</strong> apply the same deployment-safety discipline you'd use for any software change: expose a new model or prompt version to a subset of real traffic before committing to it fully, rather than betting everything on offline evaluation alone.</p>
+<p>Here's the idea worth understanding precisely: <strong><abbr title="Large Language Model">LLM</abbr>-as-a-Judge is genuinely useful, and it's also genuinely limited, and the exam wants you to hold both of those at once.</strong> Using an <abbr title="Foundation Model">FM</abbr> to evaluate another <abbr title="Foundation Model">FM</abbr>'s outputs is fast, scalable, and far cheaper than human review at scale — but the judge model can share systematic blind spots or biases with the model it's evaluating, since it's ultimately the same kind of system doing the judging. The mature answer isn't "avoid <abbr title="Large Language Model">LLM</abbr>-as-a-Judge" — it's "treat it as one signal among several," pairing it with human feedback (especially for anything high-stakes) rather than trusting it as a sole source of truth. A scenario where a team relies solely on <abbr title="Large Language Model">LLM</abbr>-as-a-Judge scoring to make a full production rollout decision, and then discovers real users are unhappy despite the good automated scores, is testing exactly this gap.</p>
+<p>The next idea is one you've now seen in several different forms across this exam, applied here specifically to evaluation: <strong>a <abbr title="Retrieval Augmented Generation — grounding a model's answers in retrieved documents">RAG</abbr> system's evaluation needs to separate retrieval quality from generation quality.</strong> If you only measure the final answer's quality, a mediocre score can't tell you whether the fix is a better generation model or better retrieved context — and upgrading an expensive generation model when the actual problem is retrieval wastes money and doesn't fix anything. Retrieval-specific evaluation — relevance scoring, context matching verification — needs to happen as its own step, before you commit to a model upgrade based on a blended score.</p>
+<p><strong>Agent evaluation needs its own distinct dimension: did the task actually get done.</strong> This is worth understanding as a genuinely different question from "did each individual response look good." An agent can produce fluent, plausible-sounding text at every single step of a multi-step task while still failing to actually accomplish the task — calling the wrong sequence of tools, stopping prematurely, looping without converging. Standard per-response quality metrics (fluency, relevance) are blind to this failure mode entirely, because each individual output can look fine in isolation. Task completion rate and tool usage effectiveness are the metrics that actually catch it.</p>
+<p>Finally, tying back to the deployment lessons: <strong>model comparison needs to weigh cost and latency alongside quality, not quality alone.</strong> When two candidate models score nearly identically on a quality benchmark, the model with meaningfully lower cost or latency is very often the better real-world choice — evaluating purely on the quality axis and ignoring the operational dimensions can lead you to the wrong decision even when the quality comparison itself was done correctly.</p>
+<p>And the umbrella principle across all of this: <strong>evaluation is a continuous process, not a one-time pre-launch gate.</strong> Every subsequent prompt edit, model version update, or retrieval pipeline change is a fresh opportunity for a silent regression — continuous evaluation workflows with automated regression testing and quality gates in the deployment pipeline are what actually catch that, not a single evaluation done once at launch and never revisited.</p>
+<h2 id="quick-check">Quick check<a class="headerlink" href="#quick-check" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary>A team evaluates a new model version using only <abbr title="Large Language Model">LLM</abbr>-as-a-Judge scoring against their previous model, sees a clear quality improvement, and ships it. Two weeks later, user satisfaction scores decline. What evaluation gap likely explains this?</summary>
+<p>Consider what <abbr title="Large Language Model">LLM</abbr>-as-a-Judge can and can't be trusted to catch on its own.</p>
+</details>
+<details class="success">
+<summary>Answer</summary>
+<p>Relying solely on <abbr title="Large Language Model">LLM</abbr>-as-a-Judge without complementary human feedback. The judge model may share systematic biases or blind spots with the model being evaluated, or simply fail to capture what real users actually value in a response. A more robust evaluation would have paired the automated scoring with human feedback collection — and ideally an A/B or canary test against real traffic — before committing to a full rollout.</p>
+</details>
+<h2 id="how-this-plays-out-in-practice">How this plays out in practice<a class="headerlink" href="#how-this-plays-out-in-practice" title="Permanent link">&para;</a></h2>
+<p>Picture a <abbr title="Retrieval Augmented Generation — grounding a model's answers in retrieved documents">RAG</abbr> application with a mediocre final-answer quality score, and a team assuming the generation model needs an expensive upgrade. Before making that costly decision, evaluating retrieval quality specifically — relevance scoring, context matching — could reveal that retrieval is actually the weak link, and no generation model upgrade would fix that; the answer would be improving retrieval instead.</p>
+<p>Picture an agent-based workflow where every individual step's output scores well on standard fluency and relevance metrics, but the agent frequently fails to actually complete the multi-step tasks it's assigned. Task completion rate and tool usage effectiveness are the metrics that would have caught this — standard response-quality scoring simply can't see it, because each step looked fine on its own.</p>
+<p>Picture two candidate models scoring nearly identically on a quality benchmark, with the team defaulting to whichever scored marginally higher without considering anything else. If the marginally-lower-scoring model has meaningfully better cost and latency characteristics, it may well be the better overall choice — a decision that requires bringing cost-performance analysis into the evaluation, not quality score alone.</p>
+<h2 id="what-the-exam-is-actually-testing">What the exam is actually testing<a class="headerlink" href="#what-the-exam-is-actually-testing" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong><abbr title="Large Language Model">LLM</abbr>-as-a-Judge presented as sufficient on its own for a high-stakes decision is a repeated trap.</strong> Pair it with human feedback for anything that matters.</li>
+<li><strong>Evaluating a <abbr title="Retrieval Augmented Generation — grounding a model's answers in retrieved documents">RAG</abbr> system only on final answer quality is an incomplete evaluation.</strong> Retrieval quality needs to be assessed separately, especially before committing to an expensive generation-model upgrade.</li>
+<li><strong>Evaluating an agent the same way you'd evaluate a simple <abbr title="Foundation Model">FM</abbr> response</strong> — with standard quality metrics only — misses task-completion failures entirely. Agent evaluation needs its own dimension.</li>
+<li><strong>Treating evaluation as a one-time, pre-launch activity is a recurring wrong answer</strong> for scenarios describing an actively-evolving production system. Continuous evaluation with regression testing is the expected answer there.</li>
+</ul>
+<h2 id="practice-questions">Practice questions<a class="headerlink" href="#practice-questions" title="Permanent link">&para;</a></h2>
+<p>Write your own answer first — then expand.</p>
+<p><strong>1.</strong> A team evaluates a new model version using only <abbr title="Large Language Model">LLM</abbr>-as-a-Judge scoring, sees a quality improvement, and ships it — then user satisfaction declines two weeks later. What evaluation gap explains this?</p>
+<details class="success">
+<summary>Answer</summary>
+<p>Relying solely on <abbr title="Large Language Model">LLM</abbr>-as-a-Judge without human feedback — the judge model can share biases or blind spots with the model it's evaluating, and can miss what real users actually value. Pairing automated scoring with human feedback and real-traffic testing before a full rollout closes this gap.</p>
+</details>
+<p><strong>2.</strong> A <abbr title="Retrieval Augmented Generation — grounding a model's answers in retrieved documents">RAG</abbr> application's final-answer quality score is mediocre. The team assumes the generation model needs upgrading. What should be evaluated first, before that potentially costly decision?</p>
+<details class="success">
+<summary>Answer</summary>
+<p>Retrieval quality specifically — relevance scoring and context matching verification — to determine whether retrieval or generation is actually the bottleneck. If retrieval is returning poor context, no generation model upgrade will fix the underlying problem.</p>
+</details>
+<p><strong>3.</strong> An agent's individual outputs score well on fluency and relevance at every step, but it frequently fails to complete the multi-step tasks it's assigned. What evaluation dimension was missing?</p>
+<details class="success">
+<summary>Answer</summary>
+<p>Task completion rate and tool usage effectiveness — metrics measuring whether the overall task was actually accomplished, which standard per-response quality metrics can't detect since each individual step's output can look fine in isolation.</p>
+</details>
+<p><strong>4.</strong> Two candidate models score nearly identically on quality, and the team picks the marginally higher-scoring one without further analysis. What might they be missing?</p>
+<details class="success">
+<summary>Answer</summary>
+<p>Cost-performance analysis — token efficiency, latency, and overall cost. When quality scores are nearly tied, the model with meaningfully better cost or latency characteristics is often the better real-world choice, and ignoring that dimension can lead to a worse net decision.</p>
+</details>
+<p><strong>5.</strong> A prompt template is edited to fix a specific issue and deployed directly to production with no automated pre-deployment check, inadvertently degrading a different, previously-working use case of the same template. What process would have caught this?</p>
+<details class="success">
+<summary>Answer</summary>
+<p>An automated regression testing / quality gate step in the deployment pipeline — running the updated template against a continuous evaluation suite covering all known use cases before promoting it to production, catching the regression before it reached users.</p>
+</details>
+<h2 id="scenario-drill">Scenario drill<a class="headerlink" href="#scenario-drill" title="Permanent link">&para;</a></h2>
+<p>Longer, exam-realistic scenarios. Work through each fully before revealing the answer.</p>
+<p><strong>Scenario 1.</strong> A startup builds a new customer-service model version and evaluates it purely by having an <abbr title="Large Language Model">LLM</abbr>-as-a-judge system score 500 sample responses against the previous version, across dimensions like helpfulness and tone. The new version scores meaningfully higher on every dimension, so the team ships it to 100% of production traffic immediately. Within days, real customer satisfaction ratings for the new version are noticeably lower than the old version's had been. What evaluation step, if it had been included, most likely would have caught this before full rollout?
+A. A larger sample size for the <abbr title="Large Language Model">LLM</abbr>-as-a-judge evaluation B. A canary or A/B test exposing the new version to a subset of real production traffic first, combined with human feedback collection, rather than trusting the <abbr title="Large Language Model">LLM</abbr>-as-a-judge score alone as sufficient grounds for a full rollout C. Running the same <abbr title="Large Language Model">LLM</abbr>-as-a-judge evaluation twice for confirmation D. Switching to a bigger <abbr title="Large Language Model">LLM</abbr> as the judge</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B.</strong> This is the <abbr title="Large Language Model">LLM</abbr>-as-a-judge limitation played out concretely — offline automated scoring looked great, but real user preference diverged from it, which is exactly the gap that staged rollout (canary/A-B testing) against real traffic, plus human feedback, is meant to catch before committing fully. (A doesn't address the type of gap involved — more samples scored the same (flawed) way doesn't help. C repeats the same limited method rather than diversifying the evaluation approach. D doesn't fix the underlying blind-spot-sharing concern, since a bigger judge model can still share correlated biases.)</p>
+</details>
+<p><strong>Scenario 2.</strong> A travel-booking company's <abbr title="Retrieval Augmented Generation — grounding a model's answers in retrieved documents">RAG</abbr>-based FAQ assistant has a declining answer-quality score. Without further investigation, the team commits budget and two months of engineering time to fine-tune a more expensive, more capable generation model, expecting this to fix the decline. After the fine-tuned model ships, the quality score barely improves. What evaluation step, done before committing to the fine-tuning project, would likely have avoided this wasted effort?
+A. A bigger fine-tuning dataset would have fixed it B. Retrieval-specific evaluation (relevance scoring, context-matching verification) done first, to determine whether the actual bottleneck was retrieval quality rather than generation quality — if retrieval was the real issue, no amount of generation-model improvement would meaningfully help C. Running the evaluation with a lower temperature setting D. Asking the original (unmodified) model the same questions twice for consistency</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B.</strong> This is exactly the wasted-effort scenario the retrieval-vs-generation evaluation split is meant to prevent — committing two months of engineering to the wrong layer of the pipeline because the actual bottleneck (retrieval) was never isolated and checked first. (A assumes the fine-tuning approach itself was correct and just needed to be bigger, which doesn't address whether generation was even the right thing to fine-tune in the first place. C and D are unrelated diagnostic steps that wouldn't reveal a retrieval-vs-generation bottleneck.)</p>
+</details>
+<p><strong>Scenario 3.</strong> A logistics company's warehouse-routing agent is evaluated purely on whether each individual step's language output "sounds reasonable" to a human reviewer skimming transcripts — and by that measure, it scores well. Operationally, however, warehouse staff report the agent frequently fails to actually complete routing tasks, sometimes stopping partway through or looping between two options without ever finalizing a route. What evaluation dimension was never actually measured, and why does the existing "sounds reasonable" review miss it?
+A. Nothing was missed; sounding reasonable at each step is sufficient evidence of good performance B. Task completion rate and tool-usage effectiveness were never measured — an agent can produce individually plausible-sounding text at every step while still failing to actually accomplish the overall multi-step task, a failure mode that per-step "does this sound reasonable" review is structurally unable to detect C. The fix is simply increasing the agent's context window D. The fix is switching to a non-agentic, single-prompt approach entirely</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B.</strong> This is the agent-evaluation gap stated at its clearest — reviewing individual steps in isolation for plausibility says nothing about whether the sequence of steps actually converges on a completed task, which is precisely why task-completion-rate and tool-usage-effectiveness metrics exist as a distinct evaluation dimension for agents specifically. (A is the exact blind spot this scenario is built to expose. C doesn't address a completion/looping problem. D abandons the agentic approach entirely rather than adding the missing evaluation dimension that would let the team actually diagnose and fix the real issue.)</p>
+</details>
+<h2 id="go-deeper">Go deeper<a class="headerlink" href="#go-deeper" title="Permanent link">&para;</a></h2>
+<p><a href="../../../aws-genai-developer-aip-c01/13%20-%20Model%20Evaluation%20Systems/">13 - Model Evaluation Systems</a> — the full architecture-reasoning version.</p>
+<h2 id="next">Next<a class="headerlink" href="#next" title="Permanent link">&para;</a></h2>
+<p><a href="../19%20-%20Troubleshooting%20GenAI%20Applications/">19 - Troubleshooting GenAI Applications</a></p>
+<h2 id="linked-from">Linked from<a class="headerlink" href="#linked-from" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../">AIP-C01 Exam Prep — Everything Needed to Pass</a></li>
+<li><a href="../17%20-%20Monitoring%20for%20GenAI%20Applications/">Observability and Monitoring for GenAI Applications</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../17%20-%20Monitoring%20for%20GenAI%20Applications/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Observability and Monitoring for GenAI Applications">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Observability and Monitoring for GenAI Applications
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../19%20-%20Troubleshooting%20GenAI%20Applications/" class="md-footer__link md-footer__link--next" aria-label="Next: Troubleshooting GenAI Applications">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Troubleshooting GenAI Applications
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.prune", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../../javascripts/reading.js"></script>
+      
+    
+  </body>
+</html>

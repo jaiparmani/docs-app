@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap");
+
+/* Material hardcodes a fixed blue for prose links when primary=black; override with accent. */
+.md-typeset {
+  --md-typeset-a-color: var(--md-accent-fg-color);
+}
+
+/* Editorial heading voice: serif against the sans body, like a real notebook. */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+}
+
+/* Comfortable reading measure and rhythm.
+   --reading-scale is driven by the A-/A+ control in javascripts/reading.js. */
+:root {
+  --reading-scale: 1;
+}
+
+.md-typeset {
+  font-size: calc(0.72rem * var(--reading-scale));
+  line-height: 1.7;
+}
+
+.md-content__inner {
+  max-width: var(--reading-measure, 46rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.md-typeset table:not([class]) {
+  font-size: 0.68rem;
+}
+
+/* Grid cards on the landing page */
+.md-typeset .grid.cards > ul {
+  display: grid;
+  grid-gap: 0.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  margin: 1.2em 0;
+}
+
+.md-typeset .grid.cards > ul > li {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.4rem;
+  padding: 0.9rem 1.1rem;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--md-accent-fg-color);
+  transform: translateY(-2px);
+}
+
+.md-typeset .grid.cards hr {
+  margin: 0.5rem 0;
+}
+
+/* Collapsible callouts (practice-question answers) get a touch more presence */
+.md-typeset details {
+  border-radius: 0.3rem;
+}
+
+.md-typeset details > summary {
+  font-weight: 600;
+}
+
+/* ============================================================
+   Reading aids  (see docs/javascripts/reading.js)
+   ============================================================ */
+
+/* Scroll progress — a thin fill across the very top of the viewport. */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--md-accent-fg-color);
+  z-index: 20;
+  pointer-events: none;
+  transition: width 0.08s linear;
+}
+
+/* Reader controls, bottom-right and out of the way. */
+.reading-toolbar {
+  position: fixed;
+  right: 0.9rem;
+  bottom: 0.9rem;
+  display: flex;
+  gap: 0.2rem;
+  z-index: 15;
+  opacity: 0.45;
+  transition: opacity 0.15s;
+}
+
+.reading-toolbar:hover,
+.reading-toolbar:focus-within {
+  opacity: 1;
+}
+
+.reading-toolbar button {
+  font-size: 0.65rem;
+  line-height: 1;
+  min-width: 1.9rem;
+  height: 1.9rem;
+  padding: 0 0.35rem;
+  cursor: pointer;
+  color: var(--md-default-fg-color--light);
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.reading-toolbar button:hover,
+.reading-toolbar button[aria-pressed="true"] {
+  color: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+}
+
+/* Focus mode — drop the surrounding chrome and leave the prose.
+   The toolbar deliberately stays visible so there is always a way back out. */
+body.reading-focus .md-sidebar,
+body.reading-focus .md-header,
+body.reading-focus .md-tabs,
+body.reading-focus .md-footer__inner {
+  display: none;
+}
+
+body.reading-focus .md-main__inner {
+  margin-top: 1.5rem;
+}
+
+body.reading-focus .md-content__inner {
+  max-width: var(--reading-measure, 46rem);
+}
+
+/* Reading-time stamp injected by sync_docs.py */
+.md-typeset h1 + p > small:first-child,
+.md-typeset small.reading-time {
+  display: inline-block;
+  margin-top: -0.4em;
+  color: var(--md-default-fg-color--light);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.58rem;
+}
+
+@media print {
+  .reading-progress,
+  .reading-toolbar {
+    display: none;
+  }
+}
+
+/* Sepia — Material ships only default/slate, so the paper scheme is defined here. */
+[data-md-color-scheme="sepia"] {
+  --md-default-bg-color: #f4ecd8;
+  --md-default-bg-color--light: #efe6d0;
+  --md-default-fg-color: #3b3228;
+  --md-default-fg-color--light: #6b5d4d;
+  --md-default-fg-color--lighter: #a2947f;
+  --md-default-fg-color--lightest: #d9cdb4;
+  --md-primary-fg-color: #3b3228;
+  --md-primary-bg-color: #f4ecd8;
+  --md-accent-fg-color: #a8600f;
+  --md-typeset-color: #3b3228;
+  --md-typeset-a-color: #a8600f;
+  --md-code-bg-color: #ebe1c9;
+  --md-code-fg-color: #3b3228;
+  --md-footer-bg-color: #3b3228;
+  color-scheme: light;
+}
+
+/* Reader-adjustable spacing and body face. */
+:root {
+  --reading-spacing: 1.7;
+}
+
+.md-typeset {
+  line-height: var(--reading-spacing);
+}
+
+.md-typeset p,
+.md-typeset li {
+  line-height: var(--reading-spacing);
+}
+
+body.reading-serif .md-typeset p,
+body.reading-serif .md-typeset li,
+body.reading-serif .md-typeset blockquote {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: calc(0.78rem * var(--reading-scale));
+}
+
+/* Time remaining, riding just under the progress bar. */
+.reading-remaining {
+  position: fixed;
+  top: 0.45rem;
+  right: 0.6rem;
+  z-index: 19;
+  font-size: 0.55rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+  background: var(--md-default-bg-color);
+  padding: 0.05rem 0.3rem;
+  border-radius: 0.2rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.reading-remaining.is-visible {
+  opacity: 0.75;
+}
+
+body.reading-focus .reading-remaining {
+  top: 0.5rem;
+}
+
+/* "Continue reading" list on the home page. */
+.reading-continue {
+  margin: 1.5em 0;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.4rem;
+}
+
+.reading-continue h2 {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+}
+
+.reading-continue ol {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.reading-continue li {
+  margin: 0.25rem 0;
+}
+
+.reading-continue .pct {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.62rem;
+}
+
+.reading-continue .clear {
+  margin-top: 0.6rem;
+  font-size: 0.62rem;
+  color: var(--md-default-fg-color--light);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Selection toolbar */
+.reading-selection {
+  position: absolute;
+  z-index: 25;
+  display: none;
+  align-items: center;
+  gap: 0.3rem;
+  max-width: 22rem;
+  padding: 0.3rem 0.45rem;
+  font-size: 0.6rem;
+  color: var(--md-default-fg-color);
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.reading-selection.is-visible {
+  display: flex;
+}
+
+.reading-selection button {
+  font-size: 0.6rem;
+  padding: 0.1rem 0.35rem;
+  cursor: pointer;
+  color: var(--md-accent-fg-color);
+  background: none;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.2rem;
+  white-space: nowrap;
+}
+
+.reading-selection .def {
+  color: var(--md-default-fg-color--light);
+  font-style: italic;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 11rem;
+}
+
+.reading-selection .def:empty {
+  display: none;
+}
+
+.reading-marks ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+@media print {
+  .reading-selection { display: none !important; }
+}

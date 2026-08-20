@@ -1,0 +1,3149 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jaiparmani.github.io/docs-app/learning/problem-solving/Practice%20Set%20-%20Problems%20by%20Pattern/">
+      
+      
+        <link rel="prev" href="../Finding%20Your%20Own%20Failing%20Test/">
+      
+      
+        <link rel="next" href="../Subarray%2C%20Subsequence%2C%20Subset/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Practice Set — Problems by Pattern - Jai's Learning Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m23%2012-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12%203%208.6%201.54%206.71%204.72l-3.61.81.34%203.68L1%2012l2.44%202.78-.34%203.69%203.61.82%201.89%203.18L12%2021l3.4%201.46%201.89-3.18%203.61-.82-.34-3.68zm-13%205-4-4%201.41-1.41L10%2014.17l6.59-6.59L18%209z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practice-set-problems-by-pattern" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Jai&#39;s Learning Notes" class="md-header__button md-logo" aria-label="Jai's Learning Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jai's Learning Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practice Set — Problems by Pattern
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="amber"  aria-label="Switch to sepia"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to sepia" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="sepia" data-md-color-primary="black" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Notes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../offline/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Offline
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../tags/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Browse by tag
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../aip-c01-exam-prep/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Learning
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Jai&#39;s Learning Notes" class="md-nav__button md-logo" aria-label="Jai's Learning Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Jai's Learning Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../offline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Offline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browse by tag
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Learning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../aip-c01-exam-prep/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIP-C01 Exam Prep
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../aws-ai-practitioner-aif-c01/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Certified AI Practitioner - AIF C01
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../aws-genai-developer-aip-c01/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Certified Generative AI Developer - Professional (AIP-C01)
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../lld/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLD
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Solving
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Problem Solving
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Binary%20Search%20on%20the%20Answer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Binary Search on the Answer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Dynamic%20Programming%20Is%20One%20Idea%20Wearing%20Many%20Costumes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Programming Is One Idea Wearing Many Costumes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Finding%20Your%20Own%20Failing%20Test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finding Your Own Failing Test
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practice Set — Problems by Pattern
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practice Set — Problems by Pattern
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sliding-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sliding Window
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#two-pointers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two Pointers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-search-and-binary-search-on-the-answer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binary Search (and Binary Search on the Answer)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monotonic-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monotonic Stack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-top-k" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heap / Top-K
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prefix-sums-hash-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prefix Sums / Hash Map
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trees
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphs-bfs-dfs-topological-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graphs (BFS, DFS, Topological Sort)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backtracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backtracking
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic Programming
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-and-intervals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Greedy and Intervals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linked Lists
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#union-find-and-tries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Union-Find and Tries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit-manipulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bit Manipulation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Use This
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linked from
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Subarray%2C%20Subsequence%2C%20Subset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Subarray, Subsequence, Subset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../The%20Data%20Structure%20Everything%20Else%20Is%20Built%20On/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Data Structure Everything Else Is Built On
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../The%20Invariant%20Is%20the%20Actual%20Solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Invariant Is the Actual Solution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../The%20Words%20That%20Give%20Away%20the%20Technique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Words That Give Away the Technique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../What%20the%20Constraints%20Are%20Actually%20Telling%20You/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What the Constraints Are Actually Telling You
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../When%20Greedy%20Is%20Actually%20Correct/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    When Greedy Is Actually Correct
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Why%20Big-O%20Lies%20to%20You/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why Big-O Lies to You
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Write%20the%20Brute%20Force%20First/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Write the Brute Force First
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../1_Bit%20Manipulation/1_Checking%20if%20Number%20is%20Divisible%20by%202/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1 Bit Manipulation
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../LEETCODE/1680.%20Concatenation%20of%20Consecutive%20Binary%20Numbers/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LEETCODE
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../reads-books/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Books
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../reads-economics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../reads-foundations/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Foundations
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../reads-general/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General Reads
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../reads-tech/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech & Engineering
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../system-design/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning System Design
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sliding-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sliding Window
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#two-pointers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two Pointers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-search-and-binary-search-on-the-answer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binary Search (and Binary Search on the Answer)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monotonic-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monotonic Stack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heap-top-k" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heap / Top-K
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prefix-sums-hash-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prefix Sums / Hash Map
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trees
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphs-bfs-dfs-topological-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graphs (BFS, DFS, Topological Sort)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backtracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backtracking
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic Programming
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-and-intervals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Greedy and Intervals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linked Lists
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#union-find-and-tries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Union-Find and Tries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit-manipulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bit Manipulation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Use This
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linked from
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Learning Notes
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../aip-c01-exam-prep/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Learning
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Problem Solving
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <a href="../../../tags/#tag:algorithms" class="md-tag">algorithms</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../tags/#tag:interview-prep" class="md-tag">interview-prep</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../tags/#tag:leetcode" class="md-tag">leetcode</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../tags/#tag:practice" class="md-tag">practice</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../tags/#tag:problem-solving" class="md-tag">problem-solving</a>
+      
+    
+  </nav>
+
+
+
+<h1 id="practice-set-problems-by-pattern">Practice Set — Problems by Pattern<a class="headerlink" href="#practice-set-problems-by-pattern" title="Permanent link">&para;</a></h1>
+<p><small>7 min read</small></p>
+<p>A working set of problems grouped by technique rather than by difficulty, so that each block drills one recognition skill at a time. Every section names the phrasing signal that identifies the pattern and the invariant the loop maintains — the two things that turn "I've seen this before" into "I can derive this."</p>
+<p>Work a section top to bottom; the ordering within each is deliberate, easiest first, with the last one or two being the version that breaks a naive understanding of the pattern. If a problem takes more than about forty minutes, read the editorial — grinding past that point mostly teaches frustration, not technique.</p>
+<h2 id="sliding-window">Sliding Window<a class="headerlink" href="#sliding-window" title="Permanent link">&para;</a></h2>
+<p><strong>Signal:</strong> "contiguous subarray", "substring", "longest/shortest ... such that"
+<strong>Invariant:</strong> the window <code>[left, right]</code> always satisfies the constraint</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Problem</th>
+<th>Difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>643</td>
+<td>Maximum Average Subarray I</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Longest Substring Without Repeating Characters</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>209</td>
+<td>Minimum Size Subarray Sum</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>424</td>
+<td>Longest Repeating Character Replacement</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>438</td>
+<td>Find All Anagrams in a String</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>76</td>
+<td>Minimum Window Substring</td>
+<td>Hard</td>
+</tr>
+</tbody>
+</table>
+<p>Do 76 last and expect it to hurt. It is the problem that forces you to state the invariant precisely, because "valid window" now means a multiset condition rather than a simple one.</p>
+<h2 id="two-pointers">Two Pointers<a class="headerlink" href="#two-pointers" title="Permanent link">&para;</a></h2>
+<p><strong>Signal:</strong> sorted input, "pair", "triplet", "in-place"
+<strong>Invariant:</strong> the answer, if it exists, lies within <code>[left, right]</code></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Problem</th>
+<th>Difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>125</td>
+<td>Valid Palindrome</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>167</td>
+<td>Two Sum II — Input Array Is Sorted</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Container With Most Water</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>15</td>
+<td>3Sum</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Trapping Rain Water</td>
+<td>Hard</td>
+</tr>
+</tbody>
+</table>
+<p>11 is the one worth sitting with: the correctness argument for moving the shorter side is a genuine proof, not a heuristic, and being able to state it is the point of the exercise.</p>
+<h2 id="binary-search-and-binary-search-on-the-answer">Binary Search (and Binary Search on the Answer)<a class="headerlink" href="#binary-search-and-binary-search-on-the-answer" title="Permanent link">&para;</a></h2>
+<p><strong>Signal:</strong> sorted array — or, far more importantly, "minimize the maximum", "maximum of minimum", "smallest X such that"
+<strong>Invariant:</strong> the target, if present, lies in <code>[lo, hi]</code></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Problem</th>
+<th>Difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>704</td>
+<td>Binary Search</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>153</td>
+<td>Find Minimum in Rotated Sorted Array</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Search in Rotated Sorted Array</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>875</td>
+<td>Koko Eating Bananas</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>1011</td>
+<td>Capacity To Ship Packages Within D Days</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Split Array Largest Sum</td>
+<td>Hard</td>
+</tr>
+</tbody>
+</table>
+<p>The bottom three are the ones that matter most. There is no sorted array to search in any of them — you are searching the space of possible answers and asking a yes/no feasibility question at each step. Recognising that is the single highest-value pattern unlock on this page.</p>
+<h2 id="monotonic-stack">Monotonic Stack<a class="headerlink" href="#monotonic-stack" title="Permanent link">&para;</a></h2>
+<p><strong>Signal:</strong> "next greater", "previous smaller", "nearest element that is"
+<strong>Invariant:</strong> the stack is always increasing (or decreasing) bottom to top</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Problem</th>
+<th>Difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>496</td>
+<td>Next Greater Element I</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>739</td>
+<td>Daily Temperatures</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>907</td>
+<td>Sum of Subarray Minimums</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>84</td>
+<td>Largest Rectangle in Histogram</td>
+<td>Hard</td>
+</tr>
+<tr>
+<td>85</td>
+<td>Maximal Rectangle</td>
+<td>Hard</td>
+</tr>
+</tbody>
+</table>
+<p>85 is 84 wearing a costume — once you see that each row reduces to a histogram, the hard problem becomes the medium one you already solved.</p>
+<h2 id="heap-top-k">Heap / Top-K<a class="headerlink" href="#heap-top-k" title="Permanent link">&para;</a></h2>
+<p><strong>Signal:</strong> "kth largest", "top K", "k most frequent", "median from a stream"
+<strong>Invariant:</strong> the heap holds exactly the k best elements seen so far</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Problem</th>
+<th>Difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1046</td>
+<td>Last Stone Weight</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>215</td>
+<td>Kth Largest Element in an Array</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>347</td>
+<td>Top K Frequent Elements</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Merge k Sorted Lists</td>
+<td>Hard</td>
+</tr>
+<tr>
+<td>295</td>
+<td>Find Median from Data Stream</td>
+<td>Hard</td>
+</tr>
+</tbody>
+</table>
+<p>295 is the two-heap technique and is worth knowing cold — it comes up in system-design-flavoured rounds as much as algorithm rounds.</p>
+<h2 id="prefix-sums-hash-map">Prefix Sums / Hash Map<a class="headerlink" href="#prefix-sums-hash-map" title="Permanent link">&para;</a></h2>
+<p><strong>Signal:</strong> "subarray sum equals", "range query", "count of pairs that"
+<strong>Invariant:</strong> the map holds every prefix state seen so far, so any suffix can be resolved in O(1)</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Problem</th>
+<th>Difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Two Sum</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>242</td>
+<td>Valid Anagram</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>238</td>
+<td>Product of Array Except Self</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>560</td>
+<td>Subarray Sum Equals K</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>128</td>
+<td>Longest Consecutive Sequence</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>49</td>
+<td>Group Anagrams</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<p>560 is the answer to "why isn't this a sliding window" — negative numbers break the window invariant, so prefix sums plus a hash map take over.</p>
+<h2 id="trees">Trees<a class="headerlink" href="#trees" title="Permanent link">&para;</a></h2>
+<p><strong>Signal:</strong> anything with a root; "level order" means BFS, everything else usually means DFS
+<strong>Invariant:</strong> the recursion returns a fully-solved answer for the subtree it was given</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Problem</th>
+<th>Difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>104</td>
+<td>Maximum Depth of Binary Tree</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>226</td>
+<td>Invert Binary Tree</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Binary Tree Level Order Traversal</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>98</td>
+<td>Validate Binary Search Tree</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>236</td>
+<td>Lowest Common Ancestor of a Binary Tree</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>124</td>
+<td>Binary Tree Maximum Path Sum</td>
+<td>Hard</td>
+</tr>
+</tbody>
+</table>
+<p>98 is the classic trap: checking <code>left &lt; node &lt; right</code> locally is wrong, and the fix — passing down a valid range — is itself an invariant argument.</p>
+<h2 id="graphs-bfs-dfs-topological-sort">Graphs (BFS, DFS, Topological Sort)<a class="headerlink" href="#graphs-bfs-dfs-topological-sort" title="Permanent link">&para;</a></h2>
+<p><strong>Signal:</strong> "shortest path" in unweighted graph → BFS; "prerequisites", "ordering", "dependencies" → topological sort; "islands", "regions", "connected" → flood fill
+<strong>Invariant:</strong> for BFS, every node in the queue is at the current distance or one more</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Problem</th>
+<th>Difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>Number of Islands</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>994</td>
+<td>Rotting Oranges</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>133</td>
+<td>Clone Graph</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>207</td>
+<td>Course Schedule</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>210</td>
+<td>Course Schedule II</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>417</td>
+<td>Pacific Atlantic Water Flow</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<p>994 is multi-source BFS — starting the queue with every rotten orange at once, rather than looping — and that trick recurs constantly.</p>
+<h2 id="backtracking">Backtracking<a class="headerlink" href="#backtracking" title="Permanent link">&para;</a></h2>
+<p><strong>Signal:</strong> "all possible", "generate every", "return all combinations" — always paired with a tiny n in the constraints
+<strong>Invariant:</strong> the partial candidate is always valid; recursion extends it, the undo step restores it</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Problem</th>
+<th>Difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>78</td>
+<td>Subsets</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Permutations</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Combination Sum</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>79</td>
+<td>Word Search</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>51</td>
+<td>N-Queens</td>
+<td>Hard</td>
+</tr>
+</tbody>
+</table>
+<p>All five are one template with a different validity check. Writing them as five separate solutions is the mistake; writing the template once and swapping the predicate is the lesson.</p>
+<h2 id="dynamic-programming">Dynamic Programming<a class="headerlink" href="#dynamic-programming" title="Permanent link">&para;</a></h2>
+<p><strong>Signal:</strong> "number of ways", "minimum cost to", "longest subsequence" (note: <em>subsequence</em>, not subarray)
+<strong>Invariant:</strong> <code>dp[i]</code> is the fully-solved answer for the subproblem ending at <code>i</code></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Problem</th>
+<th>Difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>70</td>
+<td>Climbing Stairs</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>198</td>
+<td>House Robber</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>322</td>
+<td>Coin Change</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>300</td>
+<td>Longest Increasing Subsequence</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>139</td>
+<td>Word Break</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>1143</td>
+<td>Longest Common Subsequence</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>416</td>
+<td>Partition Equal Subset Sum</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>72</td>
+<td>Edit Distance</td>
+<td>Hard</td>
+</tr>
+</tbody>
+</table>
+<p>Write each one as brute-force recursion first, then memoise, then convert to a table. Doing it in that order is what makes the recurrence obvious instead of magic.</p>
+<h2 id="greedy-and-intervals">Greedy and Intervals<a class="headerlink" href="#greedy-and-intervals" title="Permanent link">&para;</a></h2>
+<p><strong>Signal:</strong> "minimum number of", "maximum you can attend", overlapping ranges
+<strong>Invariant:</strong> the locally optimal choice is never worse than any alternative — and this needs an argument, not a feeling</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Problem</th>
+<th>Difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>55</td>
+<td>Jump Game</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Jump Game II</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>134</td>
+<td>Gas Station</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>56</td>
+<td>Merge Intervals</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Insert Interval</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>435</td>
+<td>Non-overlapping Intervals</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<p>For every one of these, try to state why the greedy choice is safe. If you cannot, you have memorised a solution rather than learned one — and greedy is the pattern where that gap costs you the most, because a wrong greedy looks right on every small test case.</p>
+<h2 id="linked-lists">Linked Lists<a class="headerlink" href="#linked-lists" title="Permanent link">&para;</a></h2>
+<p><strong>Signal:</strong> the input is a list node; "in-place", "O(1) space", "cycle"
+<strong>Invariant:</strong> pointer relationships hold at every step (the reason to draw it before coding it)</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Problem</th>
+<th>Difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>206</td>
+<td>Reverse Linked List</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Merge Two Sorted Lists</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>141</td>
+<td>Linked List Cycle</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Remove Nth Node From End of List</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>143</td>
+<td>Reorder List</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<p>Fast/slow pointers solve 141, 19, and half of 143. It is one idea, not three.</p>
+<h2 id="union-find-and-tries">Union-Find and Tries<a class="headerlink" href="#union-find-and-tries" title="Permanent link">&para;</a></h2>
+<p>Two structures worth a short block each, mostly because they are instantly recognisable once known and nearly impossible to invent under time pressure.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Problem</th>
+<th>Difficulty</th>
+<th>Structure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>547</td>
+<td>Number of Provinces</td>
+<td>Medium</td>
+<td>Union-Find</td>
+</tr>
+<tr>
+<td>684</td>
+<td>Redundant Connection</td>
+<td>Medium</td>
+<td>Union-Find</td>
+</tr>
+<tr>
+<td>208</td>
+<td>Implement Trie (Prefix Tree)</td>
+<td>Medium</td>
+<td>Trie</td>
+</tr>
+<tr>
+<td>211</td>
+<td>Design Add and Search Words Data Structure</td>
+<td>Medium</td>
+<td>Trie</td>
+</tr>
+<tr>
+<td>212</td>
+<td>Word Search II</td>
+<td>Hard</td>
+<td>Trie + backtracking</td>
+</tr>
+</tbody>
+</table>
+<h2 id="bit-manipulation">Bit Manipulation<a class="headerlink" href="#bit-manipulation" title="Permanent link">&para;</a></h2>
+<p><strong>Signal:</strong> "without using arithmetic operators", "single number", "count bits", constraints hinting at XOR properties</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Problem</th>
+<th>Difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>191</td>
+<td>Number of 1 Bits</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>136</td>
+<td>Single Number</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>268</td>
+<td>Missing Number</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>338</td>
+<td>Counting Bits</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>371</td>
+<td>Sum of Two Integers</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-to-use-this">How to Use This<a class="headerlink" href="#how-to-use-this" title="Permanent link">&para;</a></h2>
+<p>Pick one pattern per session rather than working across sections. The point of grouping by technique is that consecutive problems reinforce the same recognition, and interleaving destroys that — at least until the pattern is solid, at which point mixing becomes the better practice precisely because it forces you to identify the pattern rather than being told it.</p>
+<p>Track the ones you needed the editorial for and return to them a week later without looking. Re-solving a problem you previously failed is worth more than a new problem of equivalent difficulty, since the failure marks the actual gap.</p>
+<h2 id="linked-from">Linked from<a class="headerlink" href="#linked-from" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../">2_Problem Solving</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../Finding%20Your%20Own%20Failing%20Test/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Finding Your Own Failing Test">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Finding Your Own Failing Test
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Subarray%2C%20Subsequence%2C%20Subset/" class="md-footer__link md-footer__link--next" aria-label="Next: Subarray, Subsequence, Subset">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Subarray, Subsequence, Subset
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.prune", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../javascripts/reading.js"></script>
+      
+    
+  </body>
+</html>

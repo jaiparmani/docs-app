@@ -1,0 +1,2509 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jaiparmani.github.io/docs-app/learning/aws-genai-developer-aip-c01/14%20-%20Troubleshooting%20GenAI%20Applications/">
+      
+      
+        <link rel="prev" href="../13%20-%20Model%20Evaluation%20Systems/">
+      
+      
+        <link rel="next" href="../README%20-%20Syllabus/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Troubleshooting GenAI Applications - Jai's Learning Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m23%2012-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12%203%208.6%201.54%206.71%204.72l-3.61.81.34%203.68L1%2012l2.44%202.78-.34%203.69%203.61.82%201.89%203.18L12%2021l3.4%201.46%201.89-3.18%203.61-.82-.34-3.68zm-13%205-4-4%201.41-1.41L10%2014.17l6.59-6.59L18%209z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#troubleshooting-genai-applications" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Jai&#39;s Learning Notes" class="md-header__button md-logo" aria-label="Jai's Learning Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jai's Learning Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Troubleshooting GenAI Applications
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="amber"  aria-label="Switch to sepia"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to sepia" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="sepia" data-md-color-primary="black" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Notes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../offline/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Offline
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../tags/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Browse by tag
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../aip-c01-exam-prep/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Learning
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Jai&#39;s Learning Notes" class="md-nav__button md-logo" aria-label="Jai's Learning Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Jai's Learning Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../offline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Offline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browse by tag
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Learning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../aip-c01-exam-prep/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIP-C01 Exam Prep
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../aws-ai-practitioner-aif-c01/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Certified AI Practitioner - AIF C01
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Certified Generative AI Developer - Professional (AIP-C01)
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AWS Certified Generative AI Developer - Professional (AIP-C01)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01%20-%20Bedrock%20Model%20Catalog%20and%20Integration%20Patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bedrock Model Catalog, Selection &amp; Integration Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02%20-%20Vector%20Stores%20and%20Embeddings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vector Stores and Embeddings for FM Augmentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03%20-%20RAG%20Architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RAG Architecture: Chunking, Retrieval, and Query Handling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04%20-%20Prompt%20Engineering%20and%20Governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt Engineering, Management, and Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05%20-%20Agentic%20AI%20and%20Tool%20Use/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentic AI: Agents, Tool Use, MCP, and Multi-Agent Orchestration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06%20-%20FM%20Deployment%20and%20API%20Integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FM Deployment Strategies and API Integration Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07%20-%20AI%20Safety%20and%20Guardrails/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Safety and Guardrails: Content Moderation and Hallucination Mitigation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08%20-%20Data%20Security%20and%20Privacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Security and Privacy for GenAI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09%20-%20Governance%20and%20Responsible%20AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Governance, Compliance, and Responsible AI Principles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10%20-%20Cost%20Optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cost Optimization for GenAI Workloads
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11%20-%20Performance%20and%20Latency%20Optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance and Latency Optimization for FM Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12%20-%20Observability%20and%20Monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Observability and Monitoring for GenAI Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13%20-%20Model%20Evaluation%20Systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Evaluation Systems for GenAI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting GenAI Applications
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting GenAI Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core concept
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service comparison
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trade-offs-failure-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trade-offs &amp; failure modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-cost-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security &amp; cost considerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting signals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exam-traps-decision-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exam traps &amp; decision rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rapid-recall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rapid recall
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linked from
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../README%20-%20Syllabus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Certified Generative AI Developer – Professional (AIP-C01) — Syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../lld/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLD
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../problem-solving/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Solving
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../reads-books/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Books
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../reads-economics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../reads-foundations/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Foundations
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../reads-general/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General Reads
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../reads-tech/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech & Engineering
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../system-design/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning System Design
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core concept
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service comparison
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trade-offs-failure-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trade-offs &amp; failure modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-cost-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security &amp; cost considerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting signals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exam-traps-decision-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exam traps &amp; decision rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rapid-recall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rapid recall
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linked from
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Learning Notes
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../aip-c01-exam-prep/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Learning
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    AWS Certified Generative AI Developer - Professional (AIP-C01)
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <a href="../../../tags/#tag:aws" class="md-tag">aws</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../tags/#tag:certification" class="md-tag">certification</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../tags/#tag:genai-developer-professional" class="md-tag">genai-developer-professional</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../tags/#tag:troubleshooting" class="md-tag">troubleshooting</a>
+      
+    
+  </nav>
+
+
+
+<h1 id="troubleshooting-genai-applications">Troubleshooting GenAI Applications<a class="headerlink" href="#troubleshooting-genai-applications" title="Permanent link">&para;</a></h1>
+<p><small>10 min read</small></p>
+<h2 id="core-concept">Core concept<a class="headerlink" href="#core-concept" title="Permanent link">&para;</a></h2>
+<p>This note is the applied counterpart to every other note in this folder — <a href="../12%20-%20Observability%20and%20Monitoring/">12 - Observability and Monitoring</a> tells you <em>that</em> something is wrong, <a href="../13%20-%20Model%20Evaluation%20Systems/">13 - Model Evaluation Systems</a> tells you <em>whether</em> quality is acceptable, this note is about <strong>diagnosing root cause once you know something's broken</strong>. Task 5.2 covers five distinct failure categories (content handling, integration, prompt engineering, retrieval, prompt maintenance) — the exam's implicit test is whether you can correctly classify a described symptom into the right category, because the fix differs meaningfully across them.</p>
+<p>The production framing: GenAI troubleshooting requires a different mental model than typical application debugging, because failures are often <em>soft</em> (a plausible-looking wrong answer) rather than <em>hard</em> (an exception, a crash) — the diagnostic tools (context-window diagnostics, embedding quality checks, drift monitoring) exist specifically because you can't just read a stack trace to find the bug.</p>
+<h2 id="service-comparison">Service comparison<a class="headerlink" href="#service-comparison" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Failure category</th>
+<th>Diagnostic approach</th>
+<th>Fix direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content handling / context overflow</td>
+<td>Context window overflow diagnostics, dynamic chunking strategies, truncation-related error analysis</td>
+<td>Restructure input (better chunking, summarization) so critical content isn't silently truncated</td>
+</tr>
+<tr>
+<td><abbr title="Foundation Model">FM</abbr> integration issues</td>
+<td>Error logging, request validation, response analysis</td>
+<td>Isolate whether the failure is in the request (malformed, wrong parameters) or response handling (parsing assumptions violated)</td>
+</tr>
+<tr>
+<td>Prompt engineering problems</td>
+<td>Prompt testing frameworks, version comparison, systematic refinement</td>
+<td>Move from ad hoc prompt tweaking to structured, comparable testing across prompt versions</td>
+</tr>
+<tr>
+<td>Retrieval system issues</td>
+<td>Model response relevance analysis, embedding quality diagnostics, drift monitoring, vectorization issue resolution, chunking/preprocessing remediation, vector search performance optimization</td>
+<td>A wide diagnostic surface because retrieval has many independent failure points (embedding, indexing, chunking, search) — isolate which one before fixing</td>
+</tr>
+<tr>
+<td>Prompt maintenance issues</td>
+<td>Template testing + CloudWatch Logs (diagnose prompt confusion), <strong>X-Ray</strong> (prompt observability pipelines), schema validation (format inconsistencies), systematic refinement workflows</td>
+<td>Ongoing prompt health over time, distinct from one-time prompt engineering — a template that worked well initially can develop problems as usage patterns shift</td>
+</tr>
+</tbody>
+</table>
+<h2 id="trade-offs-failure-modes">Trade-offs &amp; failure modes<a class="headerlink" href="#trade-offs-failure-modes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Context window overflow is a silent failure mode, not an obvious error in many implementations</strong> — content gets truncated to fit the window, and the model answers based on incomplete information without necessarily signaling that anything was cut. Diagnosing this requires deliberately checking whether truncation occurred, not waiting for an exception, since none may be raised.</li>
+<li><strong>Retrieval troubleshooting has the widest diagnostic surface of any category here because retrieval has the most independent failure points</strong>: bad embeddings (wrong model, poor domain fit), bad chunking (context loss, from <a href="../03%20-%20RAG%20Architecture/">03 - <abbr title="Retrieval Augmented Generation — grounding a model's answers in retrieved documents">RAG</abbr> Architecture</a>), bad indexing/search config (from <a href="../02%20-%20Vector%20Stores%20and%20Embeddings/">02 - Vector Stores and Embeddings</a>), or genuine drift (the corpus or query patterns have changed since the system was tuned). A systematic troubleshooting approach isolates <em>which</em> of these before attempting a fix — guessing and changing multiple things at once makes it impossible to know what actually helped.</li>
+<li><strong>"Prompt engineering problems" and "prompt maintenance issues" are related but distinct troubleshooting categories.</strong> Prompt engineering problems are about a prompt that was never quite right (needs systematic refinement from the start); prompt maintenance issues are about a prompt that used to work but has degraded — schema validation catching format drift, or CloudWatch Logs revealing the model is increasingly "confused" by a template as usage has evolved beyond what it was originally designed for.</li>
+<li><strong><abbr title="Foundation Model">FM</abbr> integration issues need to be isolated to request vs. response before fixing</strong> — a request-side problem (malformed parameters, wrong <abbr title="Application Programming Interface">API</abbr> usage) has a completely different fix than a response-side problem (the application's parsing logic making assumptions about response format that the model occasionally violates) — conflating the two wastes debugging effort on the wrong layer.</li>
+<li><strong>X-Ray-based prompt observability pipelines matter because a single user-facing failure can originate several layers upstream</strong> (a retrieval call, a prompt construction step, the <abbr title="Foundation Model">FM</abbr> call itself) — without cross-service tracing, root-causing which layer actually introduced the problem is guesswork, the same argument made in <a href="../06%20-%20FM%20Deployment%20and%20API%20Integration/">06 - <abbr title="Foundation Model">FM</abbr> Deployment and <abbr title="Application Programming Interface">API</abbr> Integration</a> and <a href="../12%20-%20Observability%20and%20Monitoring/">12 - Observability and Monitoring</a>.</li>
+</ul>
+<h2 id="security-cost-considerations">Security &amp; cost considerations<a class="headerlink" href="#security-cost-considerations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Prompt/response logging used for troubleshooting (template testing, CloudWatch Logs analysis) intersects with the same data-retention and privacy considerations from <a href="../08%20-%20Data%20Security%20and%20Privacy/">08 - Data Security and Privacy</a> — debugging data isn't exempt from <abbr title="Personally Identifiable Information">PII</abbr> handling requirements just because it's used internally for troubleshooting.</li>
+<li>Systematic prompt testing frameworks and version comparison have a real engineering-time cost upfront, but pay for themselves by preventing the much larger cost of shipping regressions repeatedly through ad hoc trial-and-error prompt editing.</li>
+<li>Retrieval troubleshooting across multiple potential failure points (embeddings, chunking, indexing) is time-intensive — worth triaging by likelihood/frequency of each cause given the specific symptom, rather than checking every possible cause exhaustively in an unstructured order.</li>
+</ul>
+<h2 id="troubleshooting-signals">Troubleshooting signals<a class="headerlink" href="#troubleshooting-signals" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Likely category</th>
+<th>Fix direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The model answers based on incomplete information, especially for longer documents/conversations</td>
+<td>Content handling / context overflow</td>
+<td>Context window overflow diagnostics; dynamic chunking or summarization to fit critical content within the window</td>
+</tr>
+<tr>
+<td><abbr title="Application Programming Interface">API</abbr> calls to Bedrock intermittently fail with unclear errors, or downstream parsing occasionally breaks</td>
+<td><abbr title="Foundation Model">FM</abbr> integration issue</td>
+<td>Isolate via error logging/request validation (request-side) vs. response analysis (response-side) before fixing</td>
+</tr>
+<tr>
+<td>A prompt produces inconsistent results across similar inputs, and ad hoc edits haven't reliably improved it</td>
+<td>Prompt engineering problem</td>
+<td>Introduce a prompt testing framework with systematic version comparison rather than continued ad hoc tweaking</td>
+</tr>
+<tr>
+<td>Retrieval quality has degraded gradually over months with no single obvious cause</td>
+<td>Retrieval system issue — likely drift</td>
+<td>Check embedding quality/drift monitoring first (has the corpus or query pattern shifted since last tuned), then chunking and index health</td>
+</tr>
+<tr>
+<td>A prompt template that worked well for months now frequently produces malformed or off-target output</td>
+<td>Prompt maintenance issue</td>
+<td>Schema validation to detect format drift, CloudWatch Logs review for signs of model "confusion," systematic refinement</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exam-traps-decision-rules">Exam traps &amp; decision rules<a class="headerlink" href="#exam-traps-decision-rules" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Trap: treating every "bad output" symptom as a prompt engineering problem.</strong> Decision rule: classify the symptom first — content overflow, integration, prompt design, retrieval, and prompt drift are distinct categories with different fixes; a retrieval-caused bad answer isn't fixed by prompt tweaking.</li>
+<li><strong>Trap: assuming context overflow always raises a visible error.</strong> Decision rule: silent truncation is the more common and more dangerous failure mode — the correct troubleshooting instinct is to check for truncation explicitly, not wait for an exception that may never come.</li>
+<li><strong>Trap: fixing retrieval issues by guessing (e.g. "just re-embed everything") without isolating the actual failure point first.</strong> Decision rule: systematically check embedding quality, chunking, indexing, and drift separately before applying a fix — a scenario describing a specific symptom (e.g. "results are semantically odd" vs. "results are stale") points to a specific one of these, not a blanket re-do.</li>
+<li><strong>Trap: conflating a one-time prompt design flaw with an ongoing prompt maintenance/drift issue.</strong> Decision rule: "it never worked well" points to prompt engineering (needs redesign); "it used to work and now doesn't" points to prompt maintenance (needs drift diagnosis — usage pattern shift, model version change, or schema mismatch).</li>
+</ul>
+<h2 id="rapid-recall">Rapid recall<a class="headerlink" href="#rapid-recall" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Five troubleshooting categories: content handling (overflow/truncation), <abbr title="Foundation Model">FM</abbr> integration (request vs. response), prompt engineering (never-quite-right, needs systematic testing), retrieval (widest diagnostic surface: embeddings/chunking/indexing/drift), prompt maintenance (used-to-work, now drifting).</li>
+<li>Context overflow is often silent — actively check for truncation, don't wait for an exception.</li>
+<li>Retrieval troubleshooting: isolate which specific failure point (embedding, chunking, indexing, drift) before fixing — don't guess-and-change-everything.</li>
+<li>"Never worked well" = prompt engineering problem. "Used to work, now doesn't" = prompt maintenance/drift problem. Different diagnosis, different fix.</li>
+<li>X-Ray cross-service tracing is often necessary to root-cause which layer (retrieval, prompt construction, <abbr title="Foundation Model">FM</abbr> call) actually introduced a user-facing failure.</li>
+</ul>
+<h2 id="practice-questions">Practice questions<a class="headerlink" href="#practice-questions" title="Permanent link">&para;</a></h2>
+<p>Write your own answer first — then expand.</p>
+<p><strong>1.</strong> A document-summarization feature occasionally produces summaries that clearly missed content from the later sections of long input documents, with no error raised. What's the likely root cause, and how would you confirm it?</p>
+<details class="success">
+<summary>Answer</summary>
+<p>Context window overflow with silent truncation — the input document exceeds the model's context window, and the excess (typically the later content) gets cut off before reaching the model, with no exception raised since this is often expected/handled behavior at the <abbr title="Application Programming Interface">API</abbr> level rather than an error. Confirm via context window overflow diagnostics (checking actual token counts of inputs against the model's context limit for the affected documents), then fix via dynamic chunking or hierarchical summarization to ensure all content is represented within the window rather than truncated.</p>
+</details>
+<p><strong>2.</strong> A team's Bedrock-integrated application intermittently throws parsing errors in the code that processes model responses. Before proposing a fix, what should be determined first?</p>
+<details class="success">
+<summary>Answer</summary>
+<p>Whether the failure is on the request side or the response side — request validation/error logging to check if malformed requests are causing unexpected responses, versus response analysis to check if the application's parsing logic makes assumptions about response format/structure that the model occasionally violates (e.g. expecting a specific JSON shape that isn't always produced). These have different fixes (correcting request construction vs. adding more robust/defensive response parsing or output schema enforcement), so isolating which side is failing should come before attempting a fix.</p>
+</details>
+<p><strong>3.</strong> A <abbr title="Retrieval Augmented Generation — grounding a model's answers in retrieved documents">RAG</abbr> system's retrieval quality was strong at launch but has noticeably degraded over the past six months, with no changes made to the chunking strategy or vector store configuration in that time. What's the most likely category of issue, and what should be checked first?</p>
+<details class="success">
+<summary>Answer</summary>
+<p>Retrieval drift — the underlying document corpus or user query patterns have likely shifted since the system was last tuned, even though the technical configuration (chunking, vector store) hasn't changed. Check embedding quality and drift monitoring first (has the corpus grown/changed in ways the original embedding/indexing approach no longer serves well, or have query patterns shifted toward content the corpus doesn't cover as well) before assuming a configuration problem, since the configuration itself hasn't changed.</p>
+</details>
+<p><strong>4.</strong> A prompt template performed reliably for months, then recently started producing inconsistent, sometimes off-target responses, even though no one edited the template itself. What kind of issue is this, and what's the first diagnostic step?</p>
+<details class="success">
+<summary>Answer</summary>
+<p>A prompt maintenance issue (drift), not a prompt engineering problem — the template itself hasn't changed, so this isn't "it was never quite right." The first diagnostic step is reviewing CloudWatch Logs for signs of model confusion correlated with a change in inputs (has the range of user inputs going through this template shifted over time, e.g. new use cases reusing an old template it wasn't designed for) or checking for an underlying model version change (a provider-side model update behind the same Bedrock model ID can shift behavior without any change on the application side).</p>
+</details>
+<p><strong>5.</strong> A newly built feature calling Bedrock synchronously fails under moderate load with timeout errors, and the team wants to determine whether the bottleneck is the <abbr title="Application Programming Interface">API</abbr> Gateway layer, the Lambda function, or the Bedrock call itself. What tool directly supports this diagnosis, and why is it necessary here?</p>
+<details class="success">
+<summary>Answer</summary>
+<p>AWS X-Ray, providing cross-service tracing across the full request chain (<abbr title="Application Programming Interface">API</abbr> Gateway → Lambda → Bedrock). It's necessary because the failure could originate at any of several layers, and without distributed tracing showing where time is actually being spent (or where the request actually fails) across that chain, diagnosing the bottleneck would require guessing or adding ad hoc logging at each layer separately — X-Ray gives a single, correlated view of the full request path instead.</p>
+</details>
+<h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
+<p><a href="../README%20-%20Syllabus/">README - Syllabus</a> · <a href="../03%20-%20RAG%20Architecture/">03 - <abbr title="Retrieval Augmented Generation — grounding a model's answers in retrieved documents">RAG</abbr> Architecture</a> · <a href="../04%20-%20Prompt%20Engineering%20and%20Governance/">04 - Prompt Engineering and Governance</a> · <a href="../06%20-%20FM%20Deployment%20and%20API%20Integration/">06 - <abbr title="Foundation Model">FM</abbr> Deployment and <abbr title="Application Programming Interface">API</abbr> Integration</a> · <a href="../12%20-%20Observability%20and%20Monitoring/">12 - Observability and Monitoring</a> · <a href="../13%20-%20Model%20Evaluation%20Systems/">13 - Model Evaluation Systems</a></p>
+<h2 id="linked-from">Linked from<a class="headerlink" href="#linked-from" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../07%20-%20AI%20Safety%20and%20Guardrails/">AI Safety and Guardrails: Content Moderation and Hallucination Mitigation</a></li>
+<li><a href="../">AWS Certified Generative AI Developer - Professional (AIP-C01)</a></li>
+<li><a href="../README%20-%20Syllabus/">AWS Certified Generative AI Developer – Professional (AIP-C01) — Syllabus</a></li>
+<li><a href="../06%20-%20FM%20Deployment%20and%20API%20Integration/"><abbr title="Foundation Model">FM</abbr> Deployment Strategies and <abbr title="Application Programming Interface">API</abbr> Integration Patterns</a></li>
+<li><a href="../13%20-%20Model%20Evaluation%20Systems/">Model Evaluation Systems for GenAI</a></li>
+<li><a href="../12%20-%20Observability%20and%20Monitoring/">Observability and Monitoring for GenAI Applications</a></li>
+<li><a href="../../aip-c01-exam-prep/Lessons/19%20-%20Troubleshooting%20GenAI%20Applications/">Troubleshooting GenAI Applications</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../13%20-%20Model%20Evaluation%20Systems/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Model Evaluation Systems for GenAI">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Model Evaluation Systems for GenAI
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../README%20-%20Syllabus/" class="md-footer__link md-footer__link--next" aria-label="Next: AWS Certified Generative AI Developer – Professional (AIP-C01) — Syllabus">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                AWS Certified Generative AI Developer – Professional (AIP-C01) — Syllabus
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.prune", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../javascripts/reading.js"></script>
+      
+    
+  </body>
+</html>

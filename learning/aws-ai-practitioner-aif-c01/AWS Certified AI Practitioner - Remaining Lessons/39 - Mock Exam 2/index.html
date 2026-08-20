@@ -1,0 +1,3195 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jaiparmani.github.io/docs-app/learning/aws-ai-practitioner-aif-c01/AWS%20Certified%20AI%20Practitioner%20-%20Remaining%20Lessons/39%20-%20Mock%20Exam%202/">
+      
+      
+        <link rel="prev" href="../38%20-%20Mock%20Exam%201/">
+      
+      
+        <link rel="next" href="../../../aws-genai-developer-aip-c01/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Mock Exam 2 (65 Questions) - Jai's Learning Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m23%2012-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12%203%208.6%201.54%206.71%204.72l-3.61.81.34%203.68L1%2012l2.44%202.78-.34%203.69%203.61.82%201.89%203.18L12%2021l3.4%201.46%201.89-3.18%203.61-.82-.34-3.68zm-13%205-4-4%201.41-1.41L10%2014.17l6.59-6.59L18%209z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mock-exam-2-65-questions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Jai&#39;s Learning Notes" class="md-header__button md-logo" aria-label="Jai's Learning Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jai's Learning Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Mock Exam 2 (65 Questions)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="amber"  aria-label="Switch to sepia"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to sepia" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="sepia" data-md-color-primary="black" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Notes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../offline/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Offline
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../tags/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Browse by tag
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../aip-c01-exam-prep/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Learning
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Jai&#39;s Learning Notes" class="md-nav__button md-logo" aria-label="Jai's Learning Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Jai's Learning Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../offline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Offline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Browse by tag
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Learning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../aip-c01-exam-prep/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIP-C01 Exam Prep
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Certified AI Practitioner - AIF C01
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AWS Certified AI Practitioner - AIF C01
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Syllabus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Certified AI Practitioner   Remaining Lessons
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2_3" id="__nav_4_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AWS Certified AI Practitioner   Remaining Lessons
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15%20-%20Fine-Tuning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fine-Tuning
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--pending-review"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-Day%20Exam%20Countdown/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15-Day Exam Countdown
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16%20-%20AI%20Agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Agents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17%20-%20Amazon%20Bedrock/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Amazon Bedrock
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18%20-%20Bedrock%20Building%20Blocks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bedrock Building Blocks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19%20-%20AWS%20AI%20Services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS AI Services: Use-Case Matching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20%20-%20Responsible%20AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Responsible AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21%20-%20Security%20Compliance%20and%20Governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security, Compliance, and Governance for AI Solutions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22%20-%20Final%20Revision%20Checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Final Revision Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23%20-%20Bedrock%20Inference%20and%20Model%20Selection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bedrock Inference and Model Selection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24%20-%20Bedrock%20Prompt%20Management%2C%20Evaluation%2C%20and%20Flows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bedrock Prompt Management, Evaluation, and Flows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../25%20-%20Amazon%20SageMaker%20AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Amazon SageMaker AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../26%20-%20Amazon%20Q/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Amazon Q
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../27%20-%20Computer%20Vision%20and%20Document%20Extraction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Computer Vision and Document Extraction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../28%20-%20Language%2C%20Speech%2C%20and%20Conversational%20AI%20Services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Language, Speech, and Conversational AI Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../29%20-%20Recommendations%20and%20Personalization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recommendations and Personalization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../30%20-%20Responsible%20AI%20in%20Practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Responsible AI in Practice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../31%20-%20AI%20Security%2C%20Privacy%2C%20and%20Governance%20in%20Practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Security, Privacy, and Governance in Practice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../32%20-%20Service%20Selection%20Drill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Service Selection Drill
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../33%20-%20ML%20Lifecycle%2C%20Inference%2C%20and%20Metrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ML Lifecycle, Inference, and Metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../34%20-%20GenAI%20Lifecycle%2C%20Context%20Engineering%2C%20and%20Multimodal%20Models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GenAI Lifecycle, Context Engineering, and Multimodal Models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../35%20-%20Agentic%20AI%2C%20MCP%2C%20Memory%2C%20and%20Orchestration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentic AI, MCP, Memory, and Orchestration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../36%20-%20FM%20Customization%20and%20Evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FM Customization and Evaluation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../37%20-%20AI%20Security%20and%20Governance%20Objectives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Security and Governance Objectives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../38%20-%20Mock%20Exam%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mock Exam 1 (65 Questions)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mock Exam 2 (65 Questions)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mock Exam 2 (65 Questions)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#domain-1-fundamentals-of-ai-and-ml-q113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Domain 1 – Fundamentals of AI and ML (Q1–13)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-2-fundamentals-of-generative-ai-q1429" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Domain 2 – Fundamentals of Generative AI (Q14–29)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-3-applications-of-foundation-models-q3047" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Domain 3 – Applications of Foundation Models (Q30–47)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-4-guidelines-for-responsible-ai-q4856" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Domain 4 – Guidelines for Responsible AI (Q48–56)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-5-security-compliance-and-governance-for-ai-solutions-q5765" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Domain 5 – Security, Compliance, and Governance for AI Solutions (Q57–65)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linked from
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../aws-genai-developer-aip-c01/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Certified Generative AI Developer - Professional (AIP-C01)
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../lld/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLD
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../problem-solving/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Solving
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../reads-books/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Books
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../reads-economics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../reads-foundations/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Foundations
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../reads-general/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General Reads
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../reads-tech/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech & Engineering
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../system-design/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning System Design
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#domain-1-fundamentals-of-ai-and-ml-q113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Domain 1 – Fundamentals of AI and ML (Q1–13)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-2-fundamentals-of-generative-ai-q1429" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Domain 2 – Fundamentals of Generative AI (Q14–29)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-3-applications-of-foundation-models-q3047" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Domain 3 – Applications of Foundation Models (Q30–47)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-4-guidelines-for-responsible-ai-q4856" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Domain 4 – Guidelines for Responsible AI (Q48–56)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-5-security-compliance-and-governance-for-ai-solutions-q5765" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Domain 5 – Security, Compliance, and Governance for AI Solutions (Q57–65)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linked from
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Learning Notes
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../aip-c01-exam-prep/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Learning
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    AWS Certified AI Practitioner - AIF C01
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    AWS Certified AI Practitioner   Remaining Lessons
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <a href="../../../../tags/#tag:ai-practitioner" class="md-tag">ai-practitioner</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../../tags/#tag:aws" class="md-tag">aws</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../../tags/#tag:certification" class="md-tag">certification</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../../../tags/#tag:mock-exam" class="md-tag">mock-exam</a>
+      
+    
+  </nav>
+
+
+
+<h1 id="mock-exam-2-65-questions">Mock Exam 2 (65 Questions)<a class="headerlink" href="#mock-exam-2-65-questions" title="Permanent link">&para;</a></h1>
+<p><small>22 min read</small></p>
+<blockquote>
+<p>Same domain weighting as <a href="../38%20-%20Mock%20Exam%201/">38 - Mock Exam 1</a>: Domain 1 – Fundamentals of AI/ML (~20%), Domain 2 – Fundamentals of Generative AI (~24%), Domain 3 – Applications of Foundation Models (~28%), Domain 4 – Guidelines for Responsible AI (~14%), Domain 5 – Security, Compliance &amp; Governance (~14%).</p>
+<p>Time yourself: 90 minutes. Click each answer to reveal it — don't peek before you've committed to a choice. All 65 questions here are new, not repeats of Mock 1.</p>
+</blockquote>
+<h2 id="domain-1-fundamentals-of-ai-and-ml-q113">Domain 1 – Fundamentals of AI and ML (Q1–13)<a class="headerlink" href="#domain-1-fundamentals-of-ai-and-ml-q113" title="Permanent link">&para;</a></h2>
+<p><strong>1.</strong> What is the primary purpose of a validation set during model training?
+A. To provide the final, unbiased performance number B. To tune hyperparameters and select between candidate models during training C. To serve as the production inference data D. To replace the need for a test set entirely</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — the validation set guides hyperparameter tuning and model selection; the test set (held out separately) provides the final unbiased evaluation.</p>
+</details>
+<p><strong>2.</strong> A model performs poorly on both training and test data. This is best described as:
+A. Overfitting B. Underfitting C. Perfect generalization D. Data leakage</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — underfitting: the model is too simple to capture the underlying pattern, so it performs poorly everywhere, including on the data it trained on.</p>
+</details>
+<p><strong>3.</strong> The bias-variance tradeoff describes:
+A. A tradeoff between model cost and GPU usage B. Balancing a model too simple to fit the data against a model too complex and overfit C. A tradeoff unique to reinforcement learning D. The tradeoff between training and inference latency</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — high bias (underfitting) and high variance (overfitting) sit on opposite ends of model complexity; the goal is a balance that generalizes well.</p>
+</details>
+<p><strong>4.</strong> Recall in a classification context measures:
+A. Of all predicted positives, how many were correct B. Of all actual positives, how many were correctly identified C. Overall accuracy across all classes D. Model inference latency</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — recall = true positives / (true positives + false negatives): out of everything that was actually positive, how much did the model catch.</p>
+</details>
+<p><strong>5.</strong> The F1 score is best described as:
+A. The average of training and validation loss B. The harmonic mean of precision and recall C. A measure of regression error D. A measure of model training speed</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — F1 balances precision and recall into a single number, useful when you care about both and neither alone tells the full story.</p>
+</details>
+<p><strong>6.</strong> RMSE (Root Mean Squared Error) is a metric primarily used to evaluate:
+A. Classification models B. Regression models C. Clustering models D. Tokenization quality</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — RMSE measures the average magnitude of prediction error for continuous numeric outputs, a regression-specific metric.</p>
+</details>
+<p><strong>7.</strong> AUC-ROC is used to evaluate:
+A. A regression model's average error B. A classification model's ability to distinguish classes across different thresholds C. A clustering model's silhouette score D. A vector database's query latency</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — AUC-ROC summarizes how well a classifier separates positive from negative classes across all possible decision thresholds, not just one.</p>
+</details>
+<p><strong>8.</strong> Semi-supervised learning refers to:
+A. Training with only labeled data B. Training with only unlabeled data C. Training with a combination of a small labeled dataset and a larger unlabeled dataset D. A synonym for reinforcement learning</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>C</strong> — semi-supervised learning leverages a small amount of labeled data alongside a much larger pool of unlabeled data, cheaper than fully labeling everything.</p>
+</details>
+<p><strong>9.</strong> Feature engineering refers to:
+A. Designing a model's neural network architecture B. Transforming raw data into representations that better help a model learn the underlying problem C. Encrypting features before training D. Selecting which AWS Region to train in</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — feature engineering shapes raw input data into a form (derived variables, transformations) that makes the underlying pattern easier for a model to learn.</p>
+</details>
+<p><strong>10.</strong> Which SageMaker capability is purpose-built for labeling large training datasets, including with human annotators?
+A. SageMaker Autopilot B. SageMaker Ground Truth C. SageMaker Debugger D. SageMaker Model Monitor</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — Ground Truth is SageMaker's data-labeling service, supporting human-in-the-loop annotation workflows for building training datasets.</p>
+</details>
+<p><strong>11.</strong> Which SageMaker capability provides a centralized repository for storing, sharing, and reusing ML features across teams and models?
+A. SageMaker Feature Store B. SageMaker Studio C. SageMaker Clarify D. SageMaker Neo</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>A</strong> — Feature Store centralizes engineered features so they can be consistently reused across training and inference, and shared across teams.</p>
+</details>
+<p><strong>12.</strong> A fraud-detection model needs to score transactions instantly as they occur, one at a time. This calls for:
+A. Batch inference B. Real-time inference C. Offline inference only D. No inference is needed</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — real-time inference (a persistent, low-latency endpoint) fits scoring individual events as they happen; batch inference is for processing large datasets asynchronously, not instant per-event scoring.</p>
+</details>
+<p><strong>13.</strong> In model training, one "epoch" refers to:
+A. One single training example processed B. One complete pass through the entire training dataset C. One unit of GPU cost D. One hyperparameter tuning trial</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — an epoch is one full pass of the training algorithm over the entire training dataset; training typically runs for multiple epochs.</p>
+</details>
+<h2 id="domain-2-fundamentals-of-generative-ai-q1429">Domain 2 – Fundamentals of Generative AI (Q14–29)<a class="headerlink" href="#domain-2-fundamentals-of-generative-ai-q1429" title="Permanent link">&para;</a></h2>
+<p><strong>14.</strong> The transformer architecture largely replaced earlier recurrent (RNN-based) architectures for language tasks primarily because:
+A. It requires no training data B. Self-attention allows parallel processing of a sequence instead of processing tokens strictly one at a time C. It eliminates the need for tokenization D. It only works for image data</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — self-attention lets a transformer weigh relationships between all tokens in a sequence in parallel, unlike RNNs' inherently sequential, one-token-at-a-time processing — a major reason transformers train faster at scale.</p>
+</details>
+<p><strong>15.</strong> Diffusion models are most commonly associated with:
+A. Text tokenization B. Image generation, by iteratively denoising random noise into a coherent image C. Speech-to-text transcription D. Database indexing</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — diffusion models generate images by starting from random noise and iteratively refining it into a coherent image, a different underlying mechanism than the transformer-based text generation covered elsewhere.</p>
+</details>
+<p><strong>16.</strong> "Top-K" sampling during generation works by:
+A. Selecting from the smallest set of tokens whose cumulative probability exceeds a threshold B. Restricting the next-token choice to only the K most probable candidate tokens C. Limiting the total output length to K tokens D. Setting the model's temperature to K</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — Top-K restricts sampling to the K highest-probability next tokens, a fixed-count relative of Top-P's cumulative-probability approach.</p>
+</details>
+<p><strong>17.</strong> A "zero-shot" prompt is one that:
+A. Includes several worked examples before the actual task B. Gives the model an instruction with no examples at all C. Fine-tunes the model before generating D. Only works with image inputs</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — zero-shot prompting gives the model a task instruction directly, with no example input-output pairs to guide it, relying entirely on the model's pretrained knowledge.</p>
+</details>
+<p><strong>18.</strong> "Chain-of-thought" prompting improves performance on complex reasoning tasks by:
+A. Reducing the model's context window B. Asking the model to show intermediate reasoning steps before the final answer C. Encrypting the prompt for security D. Increasing the temperature parameter</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — explicitly prompting the model to reason step by step, rather than jump straight to a final answer, measurably improves accuracy on multi-step reasoning tasks.</p>
+</details>
+<p><strong>19.</strong> A "system prompt" is best described as:
+A. An error message returned by the model B. Persistent instructions/context that shape the model's behavior across a conversation, separate from the user's own messages C. A prompt only used during fine-tuning D. A prompt that bypasses all safety guardrails</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — a system prompt sets standing behavior, role, or constraints for the model (e.g. "you are a helpful support assistant"), distinct from and typically prioritized over individual user messages.</p>
+</details>
+<p><strong>20.</strong> A model's context window refers to:
+A. The physical GPU memory allocated to it B. The maximum amount of text (input + output, measured in tokens) it can process in a single request C. The number of training epochs it completed D. The number of parameters in the model</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — context window is the token budget for a single request/response cycle; exceeding it means older content must be truncated or summarized.</p>
+</details>
+<p><strong>21.</strong> Vector similarity search commonly determines "how similar" two embeddings are using:
+A. Cosine similarity B. SQL JOIN operations C. B-Tree range scans D. Regular expression matching</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>A</strong> — cosine similarity (measuring the angle between two vectors) is the standard way to compare embeddings for semantic closeness in a vector database.</p>
+</details>
+<p><strong>22.</strong> In the phrase "large language model," the word "large" primarily refers to:
+A. The size of the company that built it B. The number of parameters (learned weights) in the model C. The number of GPUs used at inference time D. The size of the user's prompt</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — "large" refers to the model's parameter count (often billions), which is what "large" scales as model capability generally grows.</p>
+</details>
+<p><strong>23.</strong> During pretraining, a foundation model:
+A. Is trained on a small, narrowly labeled dataset for one specific task B. Learns broad, general language/data patterns from a massive, largely unlabeled corpus C. Is only trained using reinforcement learning D. Requires no computation at all</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — pretraining exposes the model to a massive, general corpus to learn broad patterns, before any task-specific fine-tuning narrows its behavior.</p>
+</details>
+<p><strong>24.</strong> Instruction tuning refers to:
+A. Encrypting model instructions B. Fine-tuning a model specifically on instruction-response pairs so it better follows explicit directions C. Increasing the model's context window D. A synonym for prompt engineering</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — instruction tuning is a fine-tuning technique using examples of instructions paired with desired responses, improving the model's ability to follow directions generally, not just one narrow task.</p>
+</details>
+<p><strong>25.</strong> RLHF (Reinforcement Learning from Human Feedback) is used to:
+A. Replace pretraining entirely B. Align a model's outputs with human preferences, using human-ranked responses to train a reward signal C. Reduce the model's parameter count D. Speed up tokenization</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — RLHF uses human feedback (typically rankings of candidate outputs) to train a reward model, then uses reinforcement learning to steer the base model's behavior toward outputs humans prefer.</p>
+</details>
+<p><strong>26.</strong> "Prompt injection" refers to:
+A. A technique for compressing prompts B. A malicious input designed to override or manipulate a model's intended instructions C. A method for fine-tuning faster D. A type of embedding compression</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — prompt injection is an attack where crafted input tries to hijack the model's behavior (e.g. "ignore previous instructions and..."), a security concern for GenAI applications.</p>
+</details>
+<p><strong>27.</strong> Model distillation refers to:
+A. Removing all training data after training completes B. Training a smaller "student" model to mimic the behavior of a larger "teacher" model C. Converting a model to run only on CPUs D. A synonym for tokenization</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — distillation transfers knowledge from a large, expensive model into a smaller, cheaper one that approximates its behavior, trading some capability for lower cost/latency.</p>
+</details>
+<p><strong>28.</strong> An example of a genuinely multimodal input is:
+A. A text-only chatbot prompt B. A request that includes both an image and a text question about that image, processed together C. Two separate, unrelated text prompts sent one after another D. A prompt written in two different human languages</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — multimodal means the model processes multiple data types (e.g. image + text) together in a single request, not just text in different languages or sequential unrelated prompts.</p>
+</details>
+<p><strong>29.</strong> Foundation model usage is typically billed based primarily on:
+A. Number of <abbr title="Application Programming Interface">API</abbr> calls only, regardless of content length B. Number of tokens processed (input and/or output) C. Number of registered users D. Number of fine-tuning jobs run</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — most <abbr title="Foundation Model">FM</abbr> pricing (including Bedrock's on-demand pricing) is token-based, so both prompt length and response length directly affect cost.</p>
+</details>
+<h2 id="domain-3-applications-of-foundation-models-q3047">Domain 3 – Applications of Foundation Models (Q30–47)<a class="headerlink" href="#domain-3-applications-of-foundation-models-q3047" title="Permanent link">&para;</a></h2>
+<p><strong>30.</strong> Which Bedrock customization approach involves further training a model on your own labeled input-output examples to change its behavior for a narrow task?
+A. Prompt engineering B. Fine-tuning C. Retrieval-Augmented Generation D. Guardrails configuration</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — fine-tuning further trains a model on your own labeled examples, changing the model's learned behavior for a specific task, unlike <abbr title="Retrieval Augmented Generation — grounding a model's answers in retrieved documents">RAG</abbr> (which grounds answers in external data without changing weights).</p>
+</details>
+<p><strong>31.</strong> Amazon Bedrock's Custom Model Import feature is used to:
+A. Import third-party foundation models you've already fine-tuned elsewhere into Bedrock for unified access B. Import your AWS billing data into a model C. Import <abbr title="Identity and Access Management">IAM</abbr> policies into a model D. Import CloudWatch logs for analysis</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>A</strong> — Custom Model Import lets you bring your own already-trained/fine-tuned model weights into Bedrock, so you can invoke them through the same managed Bedrock <abbr title="Application Programming Interface">API</abbr> as built-in models.</p>
+</details>
+<p><strong>32.</strong> SageMaker JumpStart is primarily used to:
+A. Launch EC2 instances faster B. Provide a hub of pre-built, pre-trained models and solution templates to accelerate ML projects C. Automatically write <abbr title="Identity and Access Management">IAM</abbr> policies D. Encrypt training data at rest</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — JumpStart gives quick access to pre-trained models and prebuilt solution templates, reducing the time to get a working ML solution started.</p>
+</details>
+<p><strong>33.</strong> SageMaker Canvas is best described as:
+A. A no-code visual interface for building ML models without writing code B. A vector database C. A container orchestration service D. A <abbr title="Continuous Integration">CI</abbr>/CD pipeline tool for ML</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>A</strong> — Canvas gives business analysts a no-code, visual way to build and use ML models, without requiring ML/coding expertise.</p>
+</details>
+<p><strong>34.</strong> SageMaker Model Monitor is used to:
+A. Train new models automatically B. Continuously monitor deployed models for data quality drift and performance degradation C. Generate synthetic training data D. Manage <abbr title="Identity and Access Management">IAM</abbr> roles for SageMaker</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — Model Monitor watches production model inputs/outputs over time, flagging drift or quality degradation after deployment.</p>
+</details>
+<p><strong>35.</strong> SageMaker Pipelines is used to:
+A. Provide a managed vector store B. Orchestrate and automate the ML workflow (build, train, deploy) as a repeatable <abbr title="Continuous Integration">CI</abbr>/CD-style pipeline C. Translate text between languages D. Detect <abbr title="Personally Identifiable Information">PII</abbr> in documents</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — Pipelines automates and versions the steps of an ML workflow, similar in spirit to <abbr title="Continuous Integration">CI</abbr>/CD but for model build/train/deploy stages.</p>
+</details>
+<p><strong>36.</strong> Amazon Kendra is best described as:
+A. A managed, ML-powered enterprise search service B. A speech synthesis engine C. A container registry D. A model training service</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>A</strong> — Kendra is a managed enterprise search service using ML to return more relevant results than keyword search, and can also serve as a retriever behind a <abbr title="Retrieval Augmented Generation — grounding a model's answers in retrieved documents">RAG</abbr> application.</p>
+</details>
+<p><strong>37.</strong> Bedrock's Model Evaluation feature is used to:
+A. Encrypt model weights B. Compare foundation model outputs against each other or against ground truth, via automatic and/or human evaluation C. Bill customers for model usage D. Manage <abbr title="Identity and Access Management">IAM</abbr> permissions</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — Model Evaluation lets you run automatic metric-based or human-review evaluation jobs to compare candidate models/outputs before choosing one for production.</p>
+</details>
+<p><strong>38.</strong> AWS Trainium and AWS Inferentia are:
+A. Foundation models available in Bedrock B. Custom AWS-designed chips optimized for ML training (Trainium) and inference (Inferentia) C. <abbr title="Identity and Access Management">IAM</abbr> policy types D. Amazon SageMaker algorithm names</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — Trainium is AWS's custom chip optimized for training workloads, Inferentia for inference workloads — both aimed at improving price/performance over general-purpose GPUs for ML at scale.</p>
+</details>
+<p><strong>39.</strong> Textract's "Analyze Document" <abbr title="Application Programming Interface">API</abbr> differs from "Detect Document Text" in that Analyze Document additionally:
+A. Translates the document B. Extracts structured data like forms and tables, not just raw text C. Generates a summary of the document D. Converts the document to speech</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — Detect Document Text is OCR-only (raw text extraction); Analyze Document adds structured extraction of forms (key-value pairs) and tables.</p>
+</details>
+<p><strong>40.</strong> Amazon Rekognition Custom Labels is used to:
+A. Train a custom image classification or object detection model on your own labeled images B. Translate labels between languages C. Generate synthetic images D. Detect <abbr title="Personally Identifiable Information">PII</abbr> in text documents</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>A</strong> — Custom Labels lets you train Rekognition on your own labeled image dataset for domain-specific detection/classification beyond its built-in general labels.</p>
+</details>
+<p><strong>41.</strong> Amazon Comprehend Custom Classification is used to:
+A. Classify images by content B. Train a custom text classifier on your own labeled text categories C. Detect faces in video D. Generate speech from text</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — Custom Classification lets you train Comprehend on your own labeled text categories, beyond its built-in sentiment/entity detection.</p>
+</details>
+<p><strong>42.</strong> Amazon Translate supports which translation modes?
+A. Real-time (synchronous) only B. Batch (asynchronous) only C. Both real-time and batch translation D. Neither — it requires a custom-trained model first</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>C</strong> — Translate supports both real-time translation for interactive use cases and batch/asynchronous translation for large document sets.</p>
+</details>
+<p><strong>43.</strong> In Amazon Lex, "slots" refer to:
+A. The chatbot's overall conversation goal B. The specific pieces of information needed to fulfill a user's intent (e.g. date, location) C. A synonym for "intent" D. The underlying foundation model powering the bot</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — an "intent" is the user's overall goal (e.g. "book a flight"); "slots" are the specific parameters needed to fulfill that intent (e.g. departure city, date).</p>
+</details>
+<p><strong>44.</strong> Amazon Personalize handles the "cold start" problem (a brand-new user or item with no interaction history) primarily by:
+A. Refusing to generate any recommendations B. Falling back to recommendations based on available metadata rather than historical interactions C. Waiting 30 days before serving any recommendations D. Always recommending the single most popular item</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — Personalize can use item/user metadata (category, attributes) to generate reasonable recommendations even without interaction history, rather than being unable to recommend anything at all.</p>
+</details>
+<p><strong>45.</strong> The distinction between Amazon Q Business and Amazon Q Developer is:
+A. There is no distinction, they are the same product B. Q Business is a GenAI assistant for business/work data and tasks; Q Developer is focused on coding assistance C. Q Business only works with AWS billing data D. Q Developer only works with images</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — Q Business targets enterprise knowledge/work tasks (grounded in your company's data); Q Developer targets software development tasks (code generation, debugging, AWS-specific coding help).</p>
+</details>
+<p><strong>46.</strong> When selecting a foundation model in Bedrock for a production application, which factor is generally NOT a primary selection consideration?
+A. Latency requirements B. Cost per token C. The specific EC2 instance type running your unrelated web servers D. Context window size needed for the use case</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>C</strong> — model selection depends on capability, latency, cost, context window, and modality fit for the task; the instance type of unrelated infrastructure has no bearing on foundation model choice.</p>
+</details>
+<p><strong>47.</strong> A company needs a chatbot to answer questions using their constantly-updated internal wiki, without retraining a model every time the wiki changes. The best-fit approach is:
+A. Fine-tuning a new model version every time the wiki updates B. Retrieval-Augmented Generation (<abbr title="Retrieval Augmented Generation — grounding a model's answers in retrieved documents">RAG</abbr>) via a Knowledge Base pointed at the wiki content C. Increasing the model's temperature D. Using a smaller foundation model</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — <abbr title="Retrieval Augmented Generation — grounding a model's answers in retrieved documents">RAG</abbr> grounds responses in current external data at query time, so wiki updates are reflected immediately without any retraining — exactly the scenario fine-tuning is a poor fit for.</p>
+</details>
+<h2 id="domain-4-guidelines-for-responsible-ai-q4856">Domain 4 – Guidelines for Responsible AI (Q48–56)<a class="headerlink" href="#domain-4-guidelines-for-responsible-ai-q4856" title="Permanent link">&para;</a></h2>
+<p><strong>48.</strong> A "model card" is best described as:
+A. A payment method for AWS billing B. Standardized documentation describing a model's intended use, limitations, training data, and performance characteristics C. A physical hardware component D. A type of <abbr title="Identity and Access Management">IAM</abbr> credential</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — a model card is documentation that transparently communicates what a model is for, how it performs, and where its limitations lie, supporting informed and responsible use.</p>
+</details>
+<p><strong>49.</strong> Detecting and filtering toxic or harmful generated content is primarily a concern of which responsible AI dimension?
+A. Cost optimization B. Safety C. Data residency D. Model latency</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — filtering toxic, harmful, or offensive output is a core part of the "safety" dimension of responsible AI, commonly implemented via guardrails/content filters.</p>
+</details>
+<p><strong>50.</strong> Data poisoning refers to:
+A. Encrypting training data B. Deliberately corrupting or manipulating training data to bias or compromise a model's behavior C. Deleting unused training data D. A normal part of the data cleaning process</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — data poisoning is an adversarial attack where training data is deliberately manipulated to introduce bias, backdoors, or degraded performance into the resulting model.</p>
+</details>
+<p><strong>51.</strong> "Inclusivity" in the context of responsible AI dataset practices refers to:
+A. Including as much data as possible regardless of quality B. Ensuring training data represents diverse populations to reduce skewed or unfair outcomes C. Including only data from a single demographic for consistency D. A synonym for data encryption</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — inclusivity means training data should represent the diversity of the population the model will affect, reducing the risk of the model performing poorly or unfairly for underrepresented groups.</p>
+</details>
+<p><strong>52.</strong> Which Bedrock Guardrails capability specifically helps prevent sensitive personal information from appearing in model output?
+A. Denied topics B. <abbr title="Personally Identifiable Information">PII</abbr> redaction C. Latency optimization D. Model versioning</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — Guardrails support <abbr title="Personally Identifiable Information">PII</abbr> detection and redaction policies, specifically targeting personal data appearing in generated output, distinct from denied-topics filtering.</p>
+</details>
+<p><strong>53.</strong> "Robustness" as a responsible AI dimension refers to:
+A. How fast a model responds B. A model's ability to maintain reliable performance under edge cases, noisy input, or adversarial conditions C. How large a model's parameter count is D. How many AWS Regions a model is deployed in</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — robustness is about the model continuing to behave reliably and predictably even under unusual, noisy, or adversarial inputs, not just on clean, expected data.</p>
+</details>
+<p><strong>54.</strong> "Veracity" as one of AWS's core responsible AI dimensions refers to:
+A. How quickly a model was trained B. The truthfulness/factual accuracy of a model's outputs C. The legal jurisdiction governing the model D. The model's storage cost</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — veracity concerns whether a model's outputs are factually accurate and truthful, directly related to (but broader than) the specific problem of hallucination.</p>
+</details>
+<p><strong>55.</strong> "Controllability" as a responsible AI dimension refers to:
+A. The ability to monitor, guide, and intervene in a model's behavior (e.g. via guardrails or human oversight) B. The model's inference cost C. The number of <abbr title="Application Programming Interface">API</abbr> keys issued D. The size of the training dataset</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>A</strong> — controllability is about having mechanisms (guardrails, human-in-the-loop review, override capability) to guide or stop a model's behavior, not letting it act unchecked.</p>
+</details>
+<p><strong>56.</strong> A hiring-screening model is found to reject qualified candidates from a specific demographic at a higher rate than others, despite similar qualifications. This is a violation of which responsible AI dimension?
+A. Latency B. Fairness C. Cost efficiency D. Explainability</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — this is a fairness violation: the model's outcomes are systematically skewed against a specific group, regardless of intent, which is exactly what the fairness dimension addresses.</p>
+</details>
+<h2 id="domain-5-security-compliance-and-governance-for-ai-solutions-q5765">Domain 5 – Security, Compliance, and Governance for AI Solutions (Q57–65)<a class="headerlink" href="#domain-5-security-compliance-and-governance-for-ai-solutions-q5765" title="Permanent link">&para;</a></h2>
+<p><strong>57.</strong> Encryption at rest protects data:
+A. As it travels between a client and a server B. While it is stored on disk C. Only inside application memory D. Only during the <abbr title="Transport Layer Security — the encryption behind HTTPS">TLS</abbr> handshake</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — encryption at rest protects stored data (e.g. on disk, in S3, in a database), complementing encryption in transit, which protects data while it's moving over a network.</p>
+</details>
+<p><strong>58.</strong> The difference between an <abbr title="Identity and Access Management">IAM</abbr> role and an <abbr title="Identity and Access Management">IAM</abbr> user is:
+A. There is no difference B. A role is an identity assumed temporarily (e.g. by a service or federated user) without long-term credentials; a user has persistent, long-term credentials C. Roles are only for AWS employees D. Users can only be created via the CLI</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — an <abbr title="Identity and Access Management">IAM</abbr> role is assumed temporarily and doesn't have permanent credentials tied to it (commonly used by services, applications, or federated identities); an <abbr title="Identity and Access Management">IAM</abbr> user has its own long-term credentials.</p>
+</details>
+<p><strong>59.</strong> AWS Config is primarily used to:
+A. Encrypt data at rest B. Track and evaluate AWS resource configurations for compliance over time C. Translate text between languages D. Train foundation models</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — Config continuously records resource configurations and evaluates them against rules, helping track compliance drift over time.</p>
+</details>
+<p><strong>60.</strong> Amazon Macie is used to:
+A. Detect and classify sensitive data (like <abbr title="Personally Identifiable Information">PII</abbr>) stored in Amazon S3 using ML B. Train custom foundation models C. Manage <abbr title="Identity and Access Management">IAM</abbr> policies D. Load-balance <abbr title="Application Programming Interface">API</abbr> traffic</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>A</strong> — Macie uses ML to automatically discover, classify, and help protect sensitive data (such as <abbr title="Personally Identifiable Information">PII</abbr>) stored in S3.</p>
+</details>
+<p><strong>61.</strong> Using a VPC endpoint to access Amazon Bedrock provides which specific security benefit?
+A. Faster model inference speed B. Private connectivity to Bedrock without traversing the public internet C. Automatic model fine-tuning D. Free <abbr title="Application Programming Interface">API</abbr> usage</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — a VPC endpoint (via AWS PrivateLink) allows traffic to reach Bedrock privately within the AWS network, without going over the public internet, reducing exposure.</p>
+</details>
+<p><strong>62.</strong> AWS Artifact is best described as:
+A. A model training service B. A self-service portal for accessing AWS compliance reports and agreements (e.g. SOC, ISO, PCI) C. A container image registry D. A vector database</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — Artifact provides on-demand access to AWS's compliance documentation and agreements, useful for audits and regulatory requirements.</p>
+</details>
+<p><strong>63.</strong> A company must ensure customer data used in a GenAI application never leaves the European Union, per regulatory requirements. This is primarily addressed by:
+A. Increasing the model's context window B. Choosing an AWS Region within the EU and applying appropriate data residency controls C. Disabling CloudTrail D. Using a smaller foundation model</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — data residency requirements are addressed by deliberately selecting AWS Regions within the required geography and applying controls to keep data (and processing) within that boundary.</p>
+</details>
+<p><strong>64.</strong> Enabling Bedrock model invocation logging allows a company to:
+A. Automatically fine-tune models based on usage B. Capture and store the inputs and outputs of model invocations (e.g. to S3/CloudWatch) for audit and monitoring purposes C. Reduce inference cost D. Bypass Guardrails for trusted users</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — invocation logging captures request/response data from Bedrock model calls into S3 and/or CloudWatch Logs, supporting audit trails, debugging, and compliance monitoring.</p>
+</details>
+<p><strong>65.</strong> Multi-factor authentication (MFA) primarily strengthens security by:
+A. Encrypting data at rest automatically B. Requiring an additional verification factor beyond just a password, reducing the risk from compromised credentials alone C. Replacing the need for <abbr title="Identity and Access Management">IAM</abbr> policies D. Automatically rotating encryption keys</p>
+<details class="success">
+<summary>Answer</summary>
+<p><strong>B</strong> — MFA adds a second independent verification factor (e.g. a one-time code) beyond a password, so a compromised password alone isn't sufficient to gain access.</p>
+</details>
+<h2 id="next">Next<a class="headerlink" href="#next" title="Permanent link">&para;</a></h2>
+<p>40 - Mock Exam 3 — a third timed pass; per the <a href="../15-Day%20Exam%20Countdown/">15-Day Exam Countdown</a>, the value at this point is repeated timed-pressure practice and a shrinking Missed Questions Log, not novelty.</p>
+<h2 id="linked-from">Linked from<a class="headerlink" href="#linked-from" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../15-Day%20Exam%20Countdown/">15-Day Exam Countdown</a></li>
+<li><a href="../">AWS Certified AI Practitioner — Remaining Lessons</a></li>
+<li><a href="../38%20-%20Mock%20Exam%201/">Mock Exam 1 (65 Questions)</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../38%20-%20Mock%20Exam%201/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Mock Exam 1 (65 Questions)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Mock Exam 1 (65 Questions)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../../aws-genai-developer-aip-c01/" class="md-footer__link md-footer__link--next" aria-label="Next: AWS Certified Generative AI Developer - Professional (AIP-C01)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                AWS Certified Generative AI Developer - Professional (AIP-C01)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.prune", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../../javascripts/reading.js"></script>
+      
+    
+  </body>
+</html>
